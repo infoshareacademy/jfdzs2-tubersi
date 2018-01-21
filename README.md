@@ -1,8 +1,9 @@
 # "Tubersi"
 
-W tym repozytorium znajduje się projekt w ramch kursu infoShare Academy
+W tym miejscu powstaje aplikacja webowa która ma ułatwić życie wszystkim melomanom na świecie. 
+Każdy kto zaloguje się do niej będzie mógł tworzyć playlisty w dowolnych konfiguracjach ze swojej ulubionej muzyki. 
 
-## Autorzy
+## Autorzy - członkowie zespołu "Tubersi"
 - Dorota 
 - Piotrek
 - Eryk
