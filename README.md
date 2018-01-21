@@ -1,19 +1,21 @@
-# Nazwa aplikacji: "Tubersi"
+# "Tubersi"
 
 W tym repozytorium znajduje się projekt w ramch kursu infoShare Academy
 
-## Autorzy:
+## Autorzy
 - Dorota 
 - Piotrek
 - Eryk
 
-## API: Youtube Data API
+## Technologie 
+- Youtube Data API
 
-## Funkcjonalności: 
-- aplikacja będzie obsługiwała tworzenie playlist dla użytkowników na podstawie wybranych kryteriów
-funkcjonalność: tworzenie playlist na podstawie np. wybranego czasu trwania - mam 30 minut, lubię muzykę jazz i classic, chcę utworzyć playlistę z najczęściej wyświetlanych utworów z tego rodzaju muzyką 
+## Funkcjonalności 
+- tworzenie playlist dla użytkownika na podstawie np.:
+  - wybranego czasu trwania - mam 30 minut, 
+  - lubię muzykę jazz i classic, chcę utworzyć playlistę z najczęściej wyświetlanych utworów z tego rodzaju muzyką 
 
-## Definition of done: 
+## Definition of done 
 - spełnienie funkcjonalności 
 - responsywaność strony
 - szybkość ładowania poniżej 10s/ optymalnie 7s
