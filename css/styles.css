@@ -1,0 +1,8 @@
+
+.parallax{
+    /* Create the parallax scrolling effect */
+    background-size: cover;
+    height: 100%;
+    background: url("../images/night-roof-blue-sky__L.jpeg")no-repeat fixed center;
+}
+
