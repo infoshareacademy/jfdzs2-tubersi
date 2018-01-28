@@ -1,24 +1,3 @@
-body {
-    margin: 0;
-    background-color: #cdbff5;
-}
-
-
-header {
-    width: 100%;
-    height: 100px;
-    position: fixed;
-    background-color: white;
-}
-
-main {
-    margin-top: 100px;
-}
-
-section{
-    height: 300px;
-}
-
 /*Pasek nawigacyjny
 -ma być position fixed
 -w obrębie strony
@@ -36,10 +15,25 @@ section{
 
 
 
+
+
+
 /*Informacja o zespole
 - 3 zdjecia
 - linku do social-media
 */
+.team{
+    background: #ACAEBA;
+    text-align: center;
+
+}
+
+.member-foto {
+    display: block;
+    margin: auto;
+}
+
+
 
 
 
