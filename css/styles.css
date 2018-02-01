@@ -1,48 +1,19 @@
-body {
-    margin: 0;
-    background-color: #cdbff5;
-}
+/*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
 
-header {
-    width: 100%;
-    height: 100px;
-    position: fixed;
-    background-color: white;
-}
-
-main {
-    margin-top: 100px;
-}
-
-section{
-    height: 300px;
-}
-
-/*Pasek nawigacyjny
--ma być position fixed
--w obrębie strony
-*/
+/*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
 
 
-/*Zjawka*/
+/*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
 
-/*Spi planowanych funkcji*/
+/*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
 
 
-
-/*Zapis na premierę - formularz*/
-
+/*### PIOTREK ### feature-team ### Informacja o zespole*/
 
 
-/*Informacja o zespole
-- 3 zdjecia
-- linku do social-media
-*/
+/*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
 
 
-
-/*Dodatkowe informacje o produkcie*/
-
-
+/* ### PIOTREK ### feature-footer ### Stopka */
