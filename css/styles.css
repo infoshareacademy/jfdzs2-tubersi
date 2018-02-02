@@ -1,15 +1,22 @@
+/*### Wspólne style ### */
 
-.parallax{
-    /* Create the parallax scrolling effect */
-    background-size: cover;
-    height: 100%;
-    background: url("../images/night-roof-blue-sky__L.jpeg")no-repeat fixed center;
-}
 
-section{
-    height: 100vh;
-}
+/*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
-p{
 
-}
+/*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
+
+
+/*### ERYK ### feature-functions ### Spis planowanych funkcji*/
+
+
+/*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
+
+
+/*### PIOTREK ### feature-team ### Informacja o zespole*/
+
+
+/*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
+
+
+/* ### PIOTREK ### feature-footer ### Stopka */
