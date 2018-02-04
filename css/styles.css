@@ -1,3 +1,5 @@
+
+
 /*Pasek nawigacyjny
 -ma być position fixed
 -w obrębie strony
@@ -22,10 +24,27 @@
 - 3 zdjecia
 - linku do social-media
 */
-.team{
-    background: #ACAEBA;
-    text-align: center;
 
+
+.team{
+    background-image: url("../images/5.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    /*background: #ACAEBA;*/
+    /*background: #4D586A;*/
+
+    text-align: center;
+}
+
+h3, h2 {
+    background-color: #FE0000;
+    color: #fff;
+    display: inline;
+    padding: 0.5rem;
+    line-height: 1.4;
 }
 
 .member-foto {
@@ -38,5 +57,3 @@
 
 
 /*Dodatkowe informacje o produkcie*/
-
-
