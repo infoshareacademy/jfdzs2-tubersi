@@ -1,30 +1,19 @@
+/*### Wspólne style ### */
 
 
-/*Pasek nawigacyjny
--ma być position fixed
--w obrębie strony
-*/
+/*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
 
-/*Zjawka*/
+/*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
 
 
-/*Spi planowanych funkcji*/
+/*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
 
-
-/*Zapis na premierę - formularz*/
-
+/*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
 
 
-
-
-
-/*Informacja o zespole
-- 3 zdjecia
-- linku do social-media
-*/
-
+/*### PIOTREK ### feature-team ### Informacja o zespole*/
 
 .team{
     background-image: url("../images/5.jpg");
@@ -53,7 +42,10 @@ h3, h2 {
 }
 
 
+/*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
 
 
 
-/*Dodatkowe informacje o produkcie*/
+
+
+/* ### PIOTREK ### feature-footer ### Stopka */
