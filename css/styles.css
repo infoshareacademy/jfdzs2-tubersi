@@ -1,19 +1,15 @@
-body
-{
-    margin: 0px;
+/*### Wspólne style ### */
+.container-fluid{
+
 }
 
-/*Pasek nawigacyjny
--ma być position fixed
--w obrębie strony
-*/
+
+/*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
 
-/*Zjawka*/
+/*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
 
-
-/*Spi planowanych funkcji*/
-
+/*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 .container-fluid.Function
 {
     margin: 0px;
@@ -49,17 +45,7 @@ body
 
 }
 
-/*Zapis na premierę - formularz*/
-
-
-
-/*Informacja o zespole
-- 3 zdjecia
-- linku do social-media
-*/
-
-
-
-/*Dodatkowe informacje o produkcie*/
-
-
+/*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
+/*### PIOTREK ### feature-team ### Informacja o zespole*/
+/*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
+/* ### PIOTREK ### feature-footer ### Stopka */
