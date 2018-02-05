@@ -14,27 +14,38 @@ body
 
 /*Spi planowanych funkcji*/
 
-.Function
+.container-fluid.Function
 {
+    margin: 0px;
+    padding: 0px;
     background-color: #FE0000;
+    min-height: 200px;
+    color: whitesmoke;
+}
 
-    height: 300px;
+.container-fluid h2
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    box-shadow: 3px 3px 30px 5px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
     border: 2px solid black;
     border-radius: 10px;
-    text-align: center;
+
 }
 
-.Function h2
-{
-    text-align: center;
-}
-
-.Function p
+.container-fluid p
 {
     width: 100%;
     border: 2px solid black;
     border-radius: 10px;
-    min-height:     50px;
+    min-height: 100px;
+    box-shadow: 3px 3px 30px 5px;
+    padding:10px;
+    margin-bottom: 40px;
 
 }
 
