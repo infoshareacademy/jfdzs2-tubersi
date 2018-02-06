@@ -1,5 +1,15 @@
 /*### Wspólne style ### */
+section{
+    padding-top: 66px;
+    height: 500px;
+    background: #ACAEBA;
+}
 
+@media all and (max-width: 283px){
+    section{
+        padding-top: 112px;
+    }
+}
 
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
@@ -12,18 +22,6 @@
     padding: 0;
     margin: 0;
     width: 50px;
-}
-
-section{
-    padding-top: 66px;
-    height: 500px;
-    background: #ACAEBA;
-}
-
-@media all and (max-width: 283px){
-    section{
-        padding-top: 112px;
-    }
 }
 
 .navbar{
