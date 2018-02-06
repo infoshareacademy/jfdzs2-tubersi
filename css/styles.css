@@ -1,7 +1,7 @@
 /*### Wspólne style ### */
 section{
     padding-top: 66px;
-    /*height: 500px;*/
+    height: 500px;
     /*background: #ACAEBA;*/
 }
 
@@ -15,9 +15,24 @@ section{
 
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
-main #zajawka{
-    background: url("images/night-roof-blue-sky__L.jpg")
+.parallax{
+    background: url("../images/night-roof-blue-sky__L.jpeg") no-repeat center fixed;
+    background-size: cover;
+    height: 100%;
 }
+
+.flash{
+    background: #ACAEBA;
+}
+span{
+    color: white;
+    opacity: 0.7;
+}
+
+.form{
+    background: #ACAEBA;
+}
+
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
