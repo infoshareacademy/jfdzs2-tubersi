@@ -2,15 +2,11 @@
 
 
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
-header{
-    position: fixed;
-    width: 100%;
-}
 
-.container-fluid{
-    padding: 0;
-    margin: 0;
-}
+/*.container-fluid{*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+/*}*/
 
 .logo{
     padding: 0;
@@ -18,15 +14,32 @@ header{
     width: 50px;
 }
 
+.navbar{
+    background: #4D586A;
+}
+
 .navbar-brand{
     height: 100%;
     text-align: center;
     line-height: normal;
+    font-size: 2em;
+    font-weight: bold;
+    color: #FE0000;
     /*margin-left: 10%;*/
 }
 
+.navbar-default .navbar-nav>li>a {
+    color: #FE0000;
+    font-size: 1.5em;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #FE0000;
+}
+
+
 .navbar-brand > img{
-   float: left;
+    float: left;
 }
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
