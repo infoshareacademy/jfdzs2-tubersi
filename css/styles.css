@@ -1,5 +1,7 @@
 /*### Wspólne style ### */
+.container-fluid{
 
+}
 
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
@@ -14,6 +16,61 @@
 
 
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
+
+
+.team{
+    background-image: url("../images/4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0;
+    text-align: center;
+}
+
+
+h2.team-title {
+    background-color: white;
+    border-radius: 5px;
+    color: #4D586A;
+    display: inline;
+    padding: 0.5rem;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+}
+
+p.member-name {
+    background-color: white;
+    font-size: 2em;
+    border-radius: 5px;
+    color: #4D586A;
+    display: inline;
+    padding: 0.5rem;
+    line-height: 1.4;
+
+    letter-spacing: 0.1em;
+}
+
+
+/*team{*/
+    /*background: #ACAEBA;*/
+    /*background: #2D2E32;*/
+    /*background: #FE0000;*/
+    /*background: #4D586A;*/
+/*}*/
+
+.member-foto {
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+    border: 0.7em solid whitesmoke;
+
+}
+
+
 
 
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
@@ -43,6 +100,9 @@ h2.product-info {
 /*background: #FE0000;*/
 /*background: #4D586A;*/
 /*}*/
+
+
+
 
 
 /* ### PIOTREK ### feature-footer ### Stopka */
