@@ -18,38 +18,8 @@
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
 
 
-.team1{
-    background-image: url("../images/3.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    padding: 0;
-    text-align: center;
-}
-
-.team2{
+.team{
     background-image: url("../images/4.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    padding: 0;
-    text-align: center;
-}
-
-.team3{
-    background-image: url("../images/5.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    padding: 0;
-    text-align: center;
-}
-
-.team7{
-    background-image: url("../images/close-3111177_1280.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -73,9 +43,9 @@ h2 {
     border-radius: 5px;
 }
 
-h3 {
+h3.member-name {
 
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
 }
 
 
