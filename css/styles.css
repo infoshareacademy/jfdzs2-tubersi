@@ -28,22 +28,28 @@
     text-align: center;
 }
 
-h3, h2 {
+
+h2.team-title {
     background-color: white;
     border-radius: 5px;
     color: #4D586A;
     display: inline;
     padding: 0.5rem;
     line-height: 1.4;
-}
 
-h2 {
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    border-radius: 5px;
+
 }
 
-h3.member-name {
+p.member-name {
+    background-color: white;
+    font-size: 2em;
+    border-radius: 5px;
+    color: #4D586A;
+    display: inline;
+    padding: 0.5rem;
+    line-height: 1.4;
 
     letter-spacing: 0.1em;
 }
