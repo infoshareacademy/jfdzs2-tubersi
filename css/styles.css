@@ -17,6 +17,32 @@
 
 
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
+.product {
+    padding:0;
+    background: #4D586A;
+    text-align: center;
+}
+
+h2.product-info {
+    background-color: white;
+    border-radius: 5px;
+    color: #4D586A;
+    display: inline;
+    padding: 0.5rem;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+}
+
+
+/*Paleta kolorów{*/
+/*background: #ACAEBA;*/
+/*background: #2D2E32;*/
+/*background: #FE0000;*/
+/*background: #4D586A;*/
+/*}*/
 
 
 /* ### PIOTREK ### feature-footer ### Stopka */
