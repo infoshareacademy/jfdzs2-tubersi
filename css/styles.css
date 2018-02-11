@@ -1,7 +1,32 @@
+<<<<<<< Temporary merge branch 1
+
+.parallax{
+    /* Create the parallax scrolling effect */
+    background-size: cover;
+    height: 100%;
+    background: url("../images/night-roof-blue-sky__L.jpeg")no-repeat fixed center;
+}
+
+=======
 /*### Wspólne style ### */
+
+
+/*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
+
+    /*color: #4D586A;*/
+    /*color: #2D2E32;*/
+    /*color: #ACAEBA;*/
+    /*color: #FE0000;*/
+
+.logo{
+    padding: 0;
+    margin: 0;
+    width: 50px;
+}
+
 section{
     padding-top: 66px;
-    height: 500px;
+    /*height: 500px;*/
     /*background: #ACAEBA;*/
 }
 
@@ -11,8 +36,43 @@ section{
     }
 }
 
-/*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
+.navbar{
+    background: #2D2E32;
+}
 
+.navbar-default .navbar-brand {
+    color: #ACAEBA;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #ACAEBA;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ACAEBA;
+}
+
+.navbar-brand{
+    height: 100%;
+    text-align: center;
+    line-height: normal;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #FE0000;
+    font-size: 1.5em;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #FE0000;
+}
+
+.navbar-brand > img{
+    float: left;
+}
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
 .parallax{
@@ -43,7 +103,111 @@ span{
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
 
 
+.team{
+    background-image: url("../images/4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0;
+    text-align: center;
+}
+
+
+h2.team-title {
+    background-color: white;
+    border-radius: 5px;
+    color: #4D586A;
+    display: inline;
+    padding: 0.5rem;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+}
+
+p.member-name {
+    background-color: white;
+    font-size: 2em;
+    border-radius: 5px;
+    color: #4D586A;
+    display: inline;
+    padding: 0.5rem;
+    line-height: 1.4;
+
+    letter-spacing: 0.1em;
+}
+
+
+/*team{*/
+    /*background: #ACAEBA;*/
+    /*background: #2D2E32;*/
+    /*background: #FE0000;*/
+    /*background: #4D586A;*/
+/*}*/
+
+.member-foto {
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+    border: 0.7em solid whitesmoke;
+
+}
+
+
+
+
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
+.product {
+    padding:0;
+    background: #4D586A;
+    text-align: center;
+}
+
+h2.product-info {
+    background-color: white;
+    border-radius: 5px;
+    color: #4D586A;
+    display: inline;
+    padding: 0.5rem;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+}
+
+
+/*Paleta kolorów{*/
+/*background: #ACAEBA;*/
+/*background: #2D2E32;*/
+/*background: #FE0000;*/
+/*background: #4D586A;*/
+/*}*/
+
+
+
 
 
 /* ### PIOTREK ### feature-footer ### Stopka */
+
+.copyright
+{
+    padding: 3em 0em;
+    /*background: #4D586A;*/
+    /*background: #4D586A;*/
+    background: #ACAEBA;
+    /*background: #FE0000;*/
+}
+
+.copyright p
+{
+    letter-spacing: 0.20em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: whitesmoke;
+}
+
+
