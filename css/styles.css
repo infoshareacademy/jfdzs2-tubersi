@@ -5,6 +5,66 @@
 
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
+    /*color: #4D586A;*/
+    /*color: #2D2E32;*/
+    /*color: #ACAEBA;*/
+    /*color: #FE0000;*/
+
+.logo{
+    padding: 0;
+    margin: 0;
+    width: 50px;
+}
+
+section{
+    padding-top: 66px;
+    height: 500px;
+    background: #ACAEBA;
+}
+
+@media all and (max-width: 283px){
+    section{
+        padding-top: 112px;
+    }
+}
+
+.navbar{
+    background: #2D2E32;
+}
+
+.navbar-default .navbar-brand {
+    color: #ACAEBA;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #ACAEBA;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ACAEBA;
+}
+
+.navbar-brand{
+    height: 100%;
+    text-align: center;
+    line-height: normal;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #FE0000;
+    font-size: 1.5em;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #FE0000;
+}
+
+.navbar-brand > img{
+    float: left;
+}
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
 

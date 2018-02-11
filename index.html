@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tubersi</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/logo_400x400.jpg"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 
@@ -12,20 +13,50 @@
 </head>
 <body>
 <!--### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED)-->
-    <header class="container-fluid">
 
+    <header class="container-fluid">
+        <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo_wektor.svg" class="logo" alt="logo">
+                    </a>
+                    <a class="navbar-brand" href="#zajawka">Tubersi</a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#zajawka">Start</a></li>
+                        <li><a href="#funk">Funkcje</a></li>
+                        <li><a href="#form">Zapisy</a></li>
+                        <li><a href="#zesp">O nas</a></li>
+                        <li><a href="#info">O aplikacji</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <!--### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -->
-        <section class="container-fluid">
+        <section id="zajawka" class="container-fluid">
+            zajawka
         </section>
 
         <!--### ERYK ### feature-functions ### Spis planowanych funkcji-->
-        <section class="container-fluid">
+        <section id="funk" class="container-fluid">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet animi autem consequuntur corporis cum, delectus est eum expedita ipsam iste iusto laudantium maiores minima neque non obcaecati rerum sit!
         </section>
 
         <!--### ERYK ### feature-signin ### Zapis na premiera - formularz -->
-        <section class="container-fluid">
+        <section id="form" class="container-fluid">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid atque blanditiis commodi corporis, dicta ducimus expedita id maiores modi nam numquam omnis praesentium qui reprehenderit totam ullam vel voluptas.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium aliquam aperiam architecto, eum eveniet explicabo facere harum laudantium molestiae necessitatibus odio perspiciatis quod rem sapiente sint, sit sunt temporibus.
         </section>
 
         <!--Informacja o zespole -->
@@ -87,10 +118,13 @@
 
 
         <!--### PIOTREK ### feature-team ### Informacja o zespole -->
-        <section class="container-fluid">
+        <section id="zesp" class="container-fluid">
+            zespół
         </section>
 
         <!--### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie -->
+        <section id="info" class="container-fluid">
+            informacje
         <div class="product">
         <section class="container-fluid">
             <div class="row">
@@ -109,7 +143,7 @@
                     <p class="lead well well-lg"><i class="glyphicon glyphicon-shopping-cart"></i> Za nic nie płacisz!<br> Korzystanie z aplikacji jest w pełni darmowe
                     </p>
                 </div>
-                
+
             </div>
 
             <div class="row">
@@ -140,5 +174,12 @@
     <footer class="container-fluid copyright">
         <p class="text-muted">&copy; Copyright 2018 by Tubersi</p>
     </footer>
+
+
+<!-- miejsce na biblioteki dla js i bootstrapa potrzebne do menu -->
+
+<script src="bootstrap/jquery.min.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+
 </body>
 </html>
