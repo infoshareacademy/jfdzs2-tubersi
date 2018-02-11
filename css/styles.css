@@ -18,8 +18,8 @@
 
 section{
     padding-top: 66px;
-    height: 500px;
-    background: #ACAEBA;
+    /*height: 500px;*/
+    /*background: #ACAEBA;*/
 }
 
 @media all and (max-width: 283px){
