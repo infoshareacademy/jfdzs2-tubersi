@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*### Wspólne style ### */
 .container-fluid{
 =======
@@ -18,9 +18,9 @@
 {
     margin: 0px;
     padding: 0px;
-    background-color: #FE0000;
-    min-height: 200px;
-    color: whitesmoke;
+    background-color: #ACAEBA;
+    min-height: 250px;
+    font-size: 20px;
 }
 
 .container-fluid h2
@@ -46,7 +46,8 @@
     box-shadow: 3px 3px 30px 5px;
     padding:10px;
     margin-bottom: 40px;
-
+    min-height:  140px;
+    text-align: center;
 }
 
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
