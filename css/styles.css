@@ -66,29 +66,41 @@ section{
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
 .parallax{
-    background: url("../images/night-roof-blue-sky__L.jpeg") no-repeat center fixed;
+    background: url("../images/music-sound.jpg") no-repeat center fixed;
     background-size: cover;
+}
+
+.jumbotron .container-fluid{
+    max-width: 100%;
+}
+
+.jumbotron{
+    padding: 0;
+    margin-bottom: 0;
 }
 
 .flash{
     background: rgba(255,255,255,0.3);
-    padding: 4em;
+    padding: 1em;
     font-size: 30px;
-    color: #ffffff;
-}
-
-.inner{
     color: #2D2E32;
 }
 
-.left{
-    font-size: 50px;
-    font-weight: bold;
+.inner{
+    color: #ffffff;
 }
 
-.right{
-    color: #ffffff;
-    font-size: 40px;
+.top{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.bottom{
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 button.btn.btn-success.btn-lg{
