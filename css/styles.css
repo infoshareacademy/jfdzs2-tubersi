@@ -1,5 +1,10 @@
 /*### Wspólne style ### */
 
+@media all and (max-width: 283px){
+    section{
+        padding-top: 112px;
+    }
+}
 
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
@@ -14,16 +19,18 @@
     width: 50px;
 }
 
+ul.nav.navbar-nav.navbar-right{
+    height: 100%;
+    margin-top: 0.5em;
+
 section{
     padding-top: 66px;
     /*height: 500px;*/
     /*background: #ACAEBA;*/
 }
 
-@media all and (max-width: 283px){
-    section{
-        padding-top: 112px;
-    }
+nav.navbar.navbar-default.navbar-fixed-top{
+    margin: 0 auto;
 }
 
 .navbar{
@@ -45,6 +52,7 @@ section{
 
 .navbar-brand{
     height: 100%;
+    padding: 0.5em;
     text-align: center;
     line-height: normal;
     font-size: 2em;
