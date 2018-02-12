@@ -19,9 +19,10 @@
     width: 50px;
 }
 
-ul.nav.navbar-nav.navbar-right{
+ul.nav.navbar-nav.navbar-right {
     height: 100%;
     margin-top: 0.5em;
+}
 
 section{
     padding-top: 66px;
