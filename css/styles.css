@@ -17,7 +17,6 @@
 
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
 
-
 .team{
     background-image: url("../images/4.jpg");
     background-repeat: no-repeat;
@@ -28,7 +27,6 @@
     text-align: center;
 }
 
-
 h2.team-title {
     background-color: white;
     font-size: 2.5em;
@@ -37,10 +35,8 @@ h2.team-title {
     display: inline;
     padding: 0.5rem;
     line-height: 1.4;
-
     text-transform: uppercase;
     letter-spacing: 0.1em;
-
 }
 
 p.member-name {
@@ -51,10 +47,8 @@ p.member-name {
     display: inline;
     padding: 0.5rem;
     line-height: 1.4;
-
     letter-spacing: 0.1em;
 }
-
 
 /*team{*/
     /*background: #ACAEBA;*/
@@ -68,11 +62,7 @@ p.member-name {
     margin: auto;
     box-sizing: border-box;
     border: 0.7em solid whitesmoke;
-
 }
-
-
-
 
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
 
