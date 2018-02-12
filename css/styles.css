@@ -21,14 +21,12 @@
 
 /* ### PIOTREK ### feature-footer ### Stopka */
 
-.copyright
-{
+.copyright {
     padding: 3em 0em;
     background: #2D2E32;
 }
 
-.copyright p
-{
+.copyright p {
     letter-spacing: 0.20em;
     text-align: center;
     text-transform: uppercase;
