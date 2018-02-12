@@ -24,10 +24,7 @@
 .copyright
 {
     padding: 3em 0em;
-    /*background: #4D586A;*/
-    /*background: #4D586A;*/
-    background: #ACAEBA;
-    /*background: #FE0000;*/
+    background: #2D2E32;
 }
 
 .copyright p
@@ -37,6 +34,7 @@
     text-transform: uppercase;
     font-size: 1em;
     color: whitesmoke;
+    margin: 0;
 }
 
 
