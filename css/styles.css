@@ -14,40 +14,24 @@
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
-.container-fluid.Function
+
+.container-fluid
 {
-    margin: 0px;
-    padding: 0px;
-    background-color: #ACAEBA;
-    min-height: 250px;
-    font-size: 20px;
+    background: linear-gradient(#ACAEBA,white,#ACAEBA);
+    text-align: center;
 }
 
-.container-fluid h2
+h2.title-function
 {
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    box-shadow: 3px 3px 30px 5px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid black;
-    border-radius: 10px;
-
+    font-family: "monospace", monospace, serif;
+    font-size: 2.5em;
+    padding: 0.5rem;
+    line-height: 1.4;
 }
 
-.container-fluid p
+p.text-function
 {
-    width: 100%;
-    border: 2px solid black;
-    border-radius: 10px;
-    min-height: 100px;
-    box-shadow: 3px 3px 30px 5px;
-    padding:10px;
-    margin-bottom: 40px;
-    min-height:  140px;
-    text-align: center;
+    font-family: "monospace", monospace, serif;
 }
 
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
