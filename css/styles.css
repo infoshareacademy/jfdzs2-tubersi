@@ -1,48 +1,49 @@
-body {
-    margin: 0;
-    background-color: #cdbff5;
-}
 
 
-header {
-    width: 100%;
-    height: 100px;
-    position: fixed;
-    background-color: white;
-}
 
-main {
-    margin-top: 100px;
-}
-
-section{
-    height: 300px;
-}
-
-/*Pasek nawigacyjny
--ma być position fixed
--w obrębie strony
-*/
-
-
-/*Zjawka*/
-
-
-/*Spi planowanych funkcji*/
 
 
 
 /*Zapis na premierę - formularz*/
 
+.form-contact
+{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #4D586A;
+    color: white;
+}
 
+.form-contact-messege
+{
+    background-color: #4D586A;
+}
 
-/*Informacja o zespole
-- 3 zdjecia
-- linku do social-media
-*/
+.text-form
+{
+    text-align: center;
+    word-spacing: 10px;
+    color: white;
+    font-size: 20px;
+}
 
+.text-form-1
+{
+	margin-top: 5px;
+    text-align: center;
+    word-spacing: 10px;
+    color: white;
+    font-size: 20px;
+}
+.btn.btn-default
+{
+    width: 100%;
+}
 
-
-/*Dodatkowe informacje o produkcie*/
-
-
+.form-control
+{
+    width: 100%;
+}
