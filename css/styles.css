@@ -126,7 +126,47 @@ button.btn.btn-success.btn-lg{
 
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
 
+.form-contact
+{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #4D586A;
+    color: white;
+}
 
+.form-contact-messege
+{
+    background-color: #4D586A;
+}
+
+.text-form
+{
+    text-align: center;
+    word-spacing: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.text-form-1
+{
+    margin-top: 5px;
+    text-align: center;
+    word-spacing: 10px;
+    color: white;
+    font-size: 20px;
+}
+.btn.btn-default
+{
+    width: 100%;
+}
+
+.form-control
+{
+    width: 100%;
+}
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
 
 
