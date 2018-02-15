@@ -183,6 +183,10 @@ p.member-name {
 
 }
 
+/*Pasek nawigacyjny
+-ma być position fixed
+-w obrębie strony
+*/
 
 
 
@@ -220,7 +224,46 @@ h2.product-info-header {
 /*}*/
 
 /*Zapis na premierę - formularz*/
+.form-contact
+{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #4D586A;
+    color: white;
+}
 
+.form-contact-messege
+{
+    background-color: #4D586A;
+}
+
+.text-form
+{
+    text-align: center;
+    color:white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-control.send
+{
+    text-align: center;
+}
+
+.text-form-email
+{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+.btn.contact-submit
+{
+    width: 100%;
+}
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
 .functions
@@ -260,3 +303,8 @@ p.text-function
 }
 
 
+@media screen and (max-width: 991px){
+    .btn.contact-submit {
+        margin-top: 10px
+    }
+}
