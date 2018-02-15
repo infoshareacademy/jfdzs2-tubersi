@@ -25,25 +25,30 @@
 .text-form
 {
     text-align: center;
-    word-spacing: 10px;
-    color: white;
-    font-size: 20px;
+    color:white;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.text-form-1
+.form-control.send
 {
-	margin-top: 5px;
     text-align: center;
-    word-spacing: 10px;
-    color: white;
-    font-size: 20px;
 }
-.btn.btn-default
+
+.text-form-email
+{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+.btn.contact-submit
 {
     width: 100%;
 }
 
-.form-control
-{
-    width: 100%;
+@media screen and (max-width: 991px){
+    .btn.contact-submit {
+        margin-top: 10px
+    }
 }
