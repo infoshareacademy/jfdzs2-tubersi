@@ -21,34 +21,56 @@
     background-image: url("../images/4.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-size: cover;
-    padding: 0;
+    padding-top: 20px;
     text-align: center;
 }
 
+.three-foto{
+    margin-top: 40px;
+}
+
+
 h2.team-title {
-    background-color: white;
-    font-size: 2.5em;
+    background-color: rgba(255,255,255,0.3);
     border-radius: 5px;
-    color: #4D586A;
+    color: #2D2E32;
     display: inline;
-    padding: 0.5rem;
-    line-height: 1.4;
+    padding: 0.5em;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    line-height: 2em;
 }
 
 p.member-name {
-    background-color: white;
-    font-size: 2em;
+    background-color: rgba(255,255,255,0.3);
     border-radius: 5px;
-    color: #4D586A;
+    color: #2D2E32;
     display: inline;
-    padding: 0.5rem;
-    line-height: 1.4;
-    letter-spacing: 0.1em;
+    font-size: 1.5em;
+    padding: 0.5em;
+    font-weight: 700;
+    text-transform: uppercase;
 }
+
+.social,
+.member{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-social{
+    background-color: rgba(255,255,255,0.3);
+}
+
+.fa.fa-linkedin,
+.fa.fa-github {
+    font-size: 30px;
+    color: #2D2E32;
+}
+
+
 
 /*team{*/
     /*background: #ACAEBA;*/
@@ -61,7 +83,8 @@ p.member-name {
     display: block;
     margin: auto;
     box-sizing: border-box;
-    border: 0.7em solid whitesmoke;
+    border: 0.7em solid;
+    border-color: rgba(255,255,255,0.7);
 }
 
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
