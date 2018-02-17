@@ -29,6 +29,7 @@ h2.product-info-header {
     margin-bottom: 40px;
     color: #f5f5f5;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .fa.fa-shopping-cart,
