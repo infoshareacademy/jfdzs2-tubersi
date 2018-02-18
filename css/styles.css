@@ -15,11 +15,6 @@
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
-.container-fluid
-{
-    background-color: #2D2E32;
-    text-align: center;
-}
 
 h2.title-function
 {
@@ -37,6 +32,8 @@ p.text-function
 .Function_sec
 {
     padding-bottom: 50px;
+    background-color: #2D2E32;
+    text-align: center;
 }
 
 .fa.fa-headphones,
