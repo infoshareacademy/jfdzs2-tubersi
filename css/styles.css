@@ -16,21 +16,21 @@
 
 
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
-
 .team{
     background-image: url("../images/team-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    /*background-attachment: fixed;*/
+    background-attachment: fixed;
     background-size: cover;
     padding-top: 20px;
+    padding-bottom: 40px;
     text-align: center;
+
 }
 
 .three-foto{
     margin-top: 40px;
 }
-
 
 h2.team-title {
     background-color: rgba(255,255,255,0.3);
@@ -68,15 +68,6 @@ p.member-name {
     font-size: 30px;
     color: whitesmoke;
 }
-
-
-
-/*team{*/
-    /*background: #ACAEBA;*/
-    /*background: #2D2E32;*/
-    /*background: #FE0000;*/
-    /*background: #4D586A;*/
-/*}*/
 
 .member-foto {
     display: block;
