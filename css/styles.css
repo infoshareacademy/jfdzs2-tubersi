@@ -1,5 +1,14 @@
 /*### Wspólne style ### */
 
+section{
+    padding-top: 66px;
+}
+
+@media all and (max-width: 283px){
+    section{
+        padding-top: 112px;
+    }
+}
 
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
@@ -12,18 +21,6 @@
     padding: 0;
     margin: 0;
     width: 50px;
-}
-
-section{
-    padding-top: 66px;
-    /*height: 500px;*/
-    /*background: #ACAEBA;*/
-}
-
-@media all and (max-width: 283px){
-    section{
-        padding-top: 112px;
-    }
 }
 
 .navbar{
@@ -102,123 +99,10 @@ button.btn.btn-success.btn-lg{
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
-
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
-
 
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
 
-
-.team{
-    background-image: url("../images/4.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    padding: 0;
-    text-align: center;
-}
-
-
-h2.team-title {
-    background-color: white;
-    font-size: 2.5em;
-    border-radius: 5px;
-    color: #4D586A;
-    display: inline;
-    padding: 0.5rem;
-    line-height: 1.4;
-
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-
-}
-
-p.member-name {
-    background-color: white;
-    font-size: 2em;
-    border-radius: 5px;
-    color: #4D586A;
-    display: inline;
-    padding: 0.5rem;
-    line-height: 1.4;
-
-    letter-spacing: 0.1em;
-}
-
-
-/*team{*/
-    /*background: #ACAEBA;*/
-    /*background: #2D2E32;*/
-    /*background: #FE0000;*/
-    /*background: #4D586A;*/
-/*}*/
-
-.member-foto {
-    display: block;
-    margin: auto;
-    box-sizing: border-box;
-    border: 0.7em solid whitesmoke;
-
-}
-
-
-
-
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
-.product {
-    padding:0;
-    background: #ACAEBA;
-    text-align: center;
-}
-
-
-h2.product-info-header {
-    margin-top: 20px;
-    margin-bottom: 40px;
-    color: #f5f5f5;
-    text-transform: uppercase;
-}
-
-.fa.fa-shopping-cart,
-.fa.fa-headphones,
-.fa.fa-film,
-.fa.fa-toggle-right,
-.fa.fa-cog,
-.fa.fa-calendar{
-    font-size: 50px;
-}
-
-
-/*Paleta kolorów{*/
-/*background: #ACAEBA;*/
-/*background: #2D2E32;*/
-/*background: #FE0000;*/
-/*background: #4D586A;*/
-/*}*/
-
-
-
-
 
 /* ### PIOTREK ### feature-footer ### Stopka */
-
-.copyright
-{
-    padding: 3em 0em;
-    /*background: #4D586A;*/
-    /*background: #4D586A;*/
-    background: #ACAEBA;
-    /*background: #FE0000;*/
-}
-
-.copyright p
-{
-    letter-spacing: 0.20em;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1em;
-    color: whitesmoke;
-}
-
-
