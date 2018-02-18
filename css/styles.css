@@ -23,6 +23,21 @@ section{
     width: 50px;
 }
 
+ul.nav.navbar-nav.navbar-right {
+    height: 100%;
+    margin-top: 0.5em;
+}
+
+section{
+    padding-top: 64px;
+    /*height: 500px;*/
+    /*background: #ACAEBA;*/
+}
+
+nav.navbar.navbar-default.navbar-fixed-top{
+    margin: 0 auto;
+}
+
 .navbar{
     background: #2D2E32;
 }
@@ -42,6 +57,7 @@ section{
 
 .navbar-brand{
     height: 100%;
+    padding: 0.5em;
     text-align: center;
     line-height: normal;
     font-size: 2em;
