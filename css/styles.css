@@ -23,15 +23,28 @@
 
 h2.title-function
 {
-    font-family: "monospace", monospace, serif;
     font-size: 2.5em;
     padding: 0.5rem;
-    line-height: 1.4;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 40px;
 }
 
 p.text-function
 {
-    font-family: "monospace", monospace, serif;
+    background-size: cover;
+}
+
+.Function_sec
+{
+    padding-bottom: 50px;
+}
+
+.fa.fa-headphones,
+.fa.fa-toggle-right
+{
+    font-size: 50px;
 }
 
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
