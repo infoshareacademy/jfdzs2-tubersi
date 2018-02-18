@@ -18,7 +18,7 @@
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
 
 .team{
-    background-image: url("../images/4.jpg");
+    background-image: url("../images/team-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     /*background-attachment: fixed;*/
@@ -35,7 +35,7 @@
 h2.team-title {
     background-color: rgba(255,255,255,0.3);
     border-radius: 5px;
-    color: #2D2E32;
+    color: whitesmoke;
     display: inline;
     padding: 0.5em;
     font-weight: 700;
@@ -46,7 +46,7 @@ h2.team-title {
 p.member-name {
     background-color: rgba(255,255,255,0.3);
     border-radius: 5px;
-    color: #2D2E32;
+    color: whitesmoke;
     display: inline;
     font-size: 1.5em;
     padding: 0.5em;
@@ -67,7 +67,7 @@ p.member-name {
 .fa.fa-linkedin,
 .fa.fa-github {
     font-size: 30px;
-    color: #2D2E32;
+    color: whitesmoke;
 }
 
 
