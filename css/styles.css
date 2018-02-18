@@ -6,28 +6,29 @@
 
 /*Zapis na premierę - formularz*/
 
-.form-contact
-{
-    text-transform: uppercase;
-    text-align: center;
-    margin: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #4D586A;
-    color: white;
-}
+
 
 .form-contact-messege
 {
-    background-color: #4D586A;
+    background-color: #ACAEBA;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.text-form
+.form-contact-messege h2
 {
     text-align: center;
-    color:white;
-    font-size: 16px;
-    font-weight: bold;
+    color: whitesmoke;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.under-text
+{
+    text-align: center;
+    color: whitesmoke;
+    padding-bottom: 10px;
 }
 
 .form-control.send
@@ -40,6 +41,7 @@
     text-align: center;
     color: white;
     font-size: 12px;
+    padding-top: 10px;
 }
 
 .btn.contact-submit
