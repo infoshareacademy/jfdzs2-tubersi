@@ -1,7 +1,7 @@
 /*### Wspólne style ### */
 
 section{
-    padding-top: 66px;
+    padding-top: 64px;
 }
 
 @media all and (max-width: 283px){
@@ -26,12 +26,6 @@ section{
 ul.nav.navbar-nav.navbar-right {
     height: 100%;
     margin-top: 0.5em;
-}
-
-section{
-    padding-top: 64px;
-    /*height: 500px;*/
-    /*background: #ACAEBA;*/
 }
 
 nav.navbar.navbar-default.navbar-fixed-top{
