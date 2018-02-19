@@ -1,22 +1,7 @@
 /*### Wspólne style ### */
-section{
-    padding-top: 66px;
-    height: 500px;
-    background: #ACAEBA;
-}
 
-@media all and (max-width: 283px){
-    section{
-        padding-top: 112px;
-    }
-}
 
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
-
-    /*color: #4D586A;*/
-    /*color: #2D2E32;*/
-    /*color: #ACAEBA;*/
-    /*color: #FE0000;*/
 
 .logo{
     padding: 0;
@@ -31,8 +16,12 @@ ul.nav.navbar-nav.navbar-right {
 
 section{
     padding-top: 64px;
-    /*height: 500px;*/
-    /*background: #ACAEBA;*/
+}
+
+@media all and (max-width: 283px){
+    section{
+        padding-top: 112px;
+    }
 }
 
 nav.navbar.navbar-default.navbar-fixed-top{
