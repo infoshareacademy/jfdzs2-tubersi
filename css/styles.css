@@ -33,16 +33,16 @@ nav.navbar.navbar-default.navbar-fixed-top{
 }
 
 .navbar-default .navbar-brand {
-    color: #ACAEBA;
+    color: #f5f5f5;
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-    color: #ACAEBA;
+    color: #f5f5f5;
     background-color: transparent;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #ACAEBA;
+    background-color: #f5f5f5;
 }
 
 .navbar-brand{
@@ -55,8 +55,8 @@ nav.navbar.navbar-default.navbar-fixed-top{
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #FE0000;
-    font-size: 1.5em;
+    color: #f5f5f5;
+    font-size: 14px;
 }
 
 .navbar-default .navbar-toggle {
@@ -174,13 +174,6 @@ p.member-name {
 
 }
 
-/*Pasek nawigacyjny
--ma być position fixed
--w obrębie strony
-*/
-
-
-
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
 .product {
     padding-bottom: 40px;
@@ -205,15 +198,6 @@ h2.product-info-header {
 .fa.fa-calendar{
     font-size: 70px;
 }
-
-/*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
-
-/*Paleta kolorów{*/
-/*background: #ACAEBA;*/
-/*background: #2D2E32;*/
-/*background: #FE0000;*/
-/*background: #4D586A;*/
-/*}*/
 
 /*Zapis na premierę - formularz*/
 .form-contact
@@ -290,7 +274,6 @@ p.text-function
     font-size: 1em;
     margin: 0;
     color: whitesmoke;
-    margin: 0;
 }
 
 
