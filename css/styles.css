@@ -3,15 +3,63 @@
 
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
+    /*color: #4D586A; ciemny*/
+    /*color: #2D2E32; najciemniejszy*/
+    /*color: #ACAEBA; jasny szary*/
+    /*color: #FE0000; czerwony*/
+
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
+.parallax{
+    background: url("../images/music-sound.jpg") no-repeat center fixed;
+    background-size: cover;
+}
 
+.jumbotron .container-fluid{
+    max-width: 100%;
+}
+
+.jumbotron{
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.flash{
+    background: rgba(255,255,255,0.3);
+    padding: 1em;
+    font-size: 30px;
+    color: #2D2E32;
+}
+
+.inner{
+    color: #ffffff;
+}
+
+.top{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.bottom{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+button.btn.btn-success.btn-lg{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px 25px;
+    color: #FE0000;
+    background: #2D2E32;
+    border-color: #FE0000;
+}
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
-
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
-
 
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
 .team{
@@ -89,9 +137,120 @@ button.btn-social:hover{
 }
 
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
+.product {
+    padding-bottom: 40px;
+    background: #2D2E32;
+    text-align: center;
+}
 
 
+h2.product-info-header {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 
+.fa.fa-shopping-cart,
+.fa.fa-headphones,
+.fa.fa-film,
+.fa.fa-toggle-right,
+.fa.fa-cog,
+.fa.fa-calendar{
+    font-size: 70px;
+}
 
+/*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
+/*Paleta kolorów{*/
+/*background: #ACAEBA;*/
+/*background: #2D2E32;*/
+/*background: #FE0000;*/
+/*background: #4D586A;*/
+/*}*/
+
+/*Zapis na premierę - formularz*/
+.form-contact
+{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #4D586A;
+    color: white;
+}
+
+.form-contact-messege
+{
+    background-color: #4D586A;
+}
+
+.text-form
+{
+    text-align: center;
+    color:white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-control.send
+{
+    text-align: center;
+}
+
+.text-form-email
+{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+.btn.contact-submit
+{
+    width: 100%;
+}
+/*### ERYK ### feature-functions ### Spis planowanych funkcji*/
+
+.functions
+{
+    background-color: #ACAEBA;
+    text-align: center;
+}
+
+h2.title-function
+{
+    font-family: "monospace", monospace, serif;
+    font-size: 2.5em;
+    padding: 0.5rem;
+    line-height: 1.4;
+}
+
+p.text-function
+{
+    font-family: "monospace", monospace, serif;
+}
 /* ### PIOTREK ### feature-footer ### Stopka */
+
+.copyright {
+    padding: 3em 0em;
+    background: #2D2E32;
+}
+
+.copyright p {
+    letter-spacing: 0.20em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin: 0;
+    color: whitesmoke;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 991px){
+    .btn.contact-submit {
+        margin-top: 10px
+    }
+}
