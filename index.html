@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tubersi</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/logo_400x400.jpg"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <!--load font awesome-->
@@ -11,12 +12,29 @@
 </head>
 <body>
 <!--### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED)-->
-    <header class="container-fluid">
+
+    <header class="container">
 
     </header>
+
     <main>
         <!--### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -->
-        <section class="container-fluid">
+
+        <section id="zajawka" >
+            <div class="jumbotron">
+                <div class="container-fluid parallax">
+                    <div class="row flash">
+                        <div class="col-xs-12 top">
+                            <span>Z nami <span class="inner">słuchanie ulubionej muzyki</span> będzie jeszcze prostsze.</span>
+                        </div>
+                        <div class="col-xs-12 bottom">
+                            <span>
+                                <button type="button" onclick="window.location.href='#form'" class="btn btn-success btn-lg">Zapisz się!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!--### ERYK ### feature-functions ### Spis planowanych funkcji-->
@@ -126,5 +144,13 @@
     <footer class="copyright">
         <p class="text-muted">&copy; Copyright 2018 by Tubersi</p>
     </footer>
+
+
+<!-- miejsce na biblioteki dla js i bootstrapa potrzebne do menu -->
+
+<script src="bootstrap/jquery.min.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+
+
 </body>
 </html>
