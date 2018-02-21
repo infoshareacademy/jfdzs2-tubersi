@@ -9,8 +9,14 @@
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
+.Function
+{
+    padding-bottom: 50px;
+    background-color: #2D2E32;
+    text-align: center;
+}
 
-h2.title-function
+.Title-Function
 {
     color: #f5f5f5;
     text-transform: uppercase;
@@ -18,16 +24,9 @@ h2.title-function
     padding-bottom: 40px;
 }
 
-p.text-function
+.Text-Function
 {
     background-size: cover;
-}
-
-.Function_sec
-{
-    padding-bottom: 50px;
-    background-color: #2D2E32;
-    text-align: center;
 }
 
 .fa.fa-headphones,
