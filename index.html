@@ -7,6 +7,8 @@
     <link rel="shortcut icon" type="image/jpg" href="images/logo_400x400.jpg"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <!--load font awesome-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 <!--### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED)-->
@@ -17,7 +19,7 @@
                     <a class="navbar-brand" href="#">
                         <img src="images/logo_wektor.svg" class="logo" alt="logo">
                     </a>
-                    <a class="navbar-brand" href="#zajawka">Tubersi</a>
+                    <a class="navbar-brand" href="#start">Tubersi</a>
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -29,19 +31,35 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#zajawka">Start</a></li>
-                        <li><a href="#funk">Funkcje</a></li>
-                        <li><a href="#form">Zapisy</a></li>
-                        <li><a href="#zesp">O nas</a></li>
-                        <li><a href="#info">O aplikacji</a></li>
+                        <li><a href="#start">Start</a></li>
+                        <li><a href="#functions">Funkcje</a></li>
+                        <li><a href="#registration">Zapisy</a></li>
+                        <li><a href="#aboutus">O nas</a></li>
+                        <li><a href="#aboutapp">O aplikacji</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     <main>
         <!--### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -->
-        <section class="container-fluid">
+
+        <section id="start" >
+            <div class="jumbotron">
+                <div class="container-fluid parallax">
+                    <div class="row flash">
+                        <div class="col-xs-12 top">
+                            <span>Z nami <span class="inner">słuchanie ulubionej muzyki</span> będzie jeszcze prostsze.</span>
+                        </div>
+                        <div class="col-xs-12 bottom">
+                            <span>
+                                <button type="button" onclick="window.location.href='#form'" class="btn btn-success btn-lg">Zapisz się!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!--### ERYK ### feature-functions ### Spis planowanych funkcji-->
@@ -57,8 +75,95 @@
         </section>
 
         <!--### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie -->
+        <div id="aboutapp" class="product">
         <section class="container-fluid">
+            <h2 class="product-info-header">Więcej informacji o aplikacji</h2>
+            <div class="container">
+
+                <!-- row number 1-->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="lead well well-lg">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-3">
+                                    <i class="fa fa-headphones"></i>
+                                </div>
+                                <div class="col-xs-12 col-sm-9">
+                                    <p class=>Szybki wybór opcji. Brak trendów, polecanych i subskrypcji.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="lead well well-lg">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-3">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </div>
+                                <div class="col-xs-12 col-sm-9">
+                                    <p class=> Za nic nie płacisz! Korzystanie z naszej z aplikacji jest w pełni darmowe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row number 2 -->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="lead well well-lg">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-3">
+                                    <i class="fa fa-toggle-right"></i>
+                                </div>
+                                <div class="col-xs-12 col-sm-9">
+                                    <p class=>Korzystamy z Youtube API. Największego serwisu serwisu stremingowego.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="lead well well-lg">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-3">
+                                    <i class="fa fa-cog"></i>
+                                </div>
+                                <div class="col-xs-12 col-sm-9">
+                                    <p class=>Planowana premiera już wkrótce. Kiedy dokładnie? Jak się nauczymy to zrobimy !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row number 3 -->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="lead well well-lg">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-3">
+                                    <i class="fa fa-film"></i>
+                                </div>
+                                <div class="col-xs-12 col-sm-9">
+                                    <p class=>Klipy i video specjalnie dla Ciebie w najwyższej jakości HD i 4K</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="lead well well-lg">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-3">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <div class="col-xs-12 col-sm-9">
+                                    <p class=>Ostatnia aktualizacja aplikacji 15/02/2018 Kolejna już niebawem</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        </div>
 
     </main>
     <footer class="copyright">
