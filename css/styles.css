@@ -116,8 +116,9 @@ button.btn-social:hover{
 
 .fa.fa-linkedin,
 .fa.fa-github {
-    font-size: 40px;
+    font-size: 30px;
     color: whitesmoke;
+    padding: 3px
 }
 
 .fa.fa-linkedin:hover{
