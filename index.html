@@ -13,19 +13,44 @@
 <body>
 <!--### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED)-->
 
-    <header class="container">
-
+    <header class="container-fluid">
+        <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo_wektor.svg" class="logo" alt="logo">
+                    </a>
+                    <a class="navbar-brand" href="#start">Tubersi</a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#start">Start</a></li><!-- nowy ajdik dla sekcji -->
+                        <li><a href="#functions">Funkcje</a></li> <!-- nowy ajdik dla sekcji -->
+                        <li><a href="#registration">Zapisy</a></li><!-- nowy ajdik dla sekcji -->
+                        <li><a href="#aboutus">O nas</a></li><!-- nowy ajdik dla sekcji -->
+                        <li><a href="#aboutapp">O aplikacji</a></li><!-- nowy ajdik dla sekcji -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
         <!--### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -->
 
-        <section id="zajawka" >
+        <section id="start" >
             <div class="jumbotron">
                 <div class="container-fluid parallax">
                     <div class="row flash">
                         <div class="col-xs-12 top">
-                            <span>Z nami <span class="inner">słuchanie ulubionej muzyki</span> będzie jeszcze prostsze.</span>
+                            <span class="inner">Z nami słuchanie ulubionej muzyki będzie jeszcze prostsze.</span>
                         </div>
                         <div class="col-xs-12 bottom">
                             <span>
@@ -88,7 +113,7 @@
         </section>
 
         <!--### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie -->
-        <div id="info" class="product">
+        <div id="aboutapp" class="product">
         <section class="container-fluid">
             <h2 class="product-info-header">Więcej informacji o aplikacji</h2>
             <div class="container">
@@ -188,7 +213,6 @@
 
 <script src="bootstrap/jquery.min.js"></script>
 <script src="bootstrap/bootstrap.min.js"></script>
-
 
 </body>
 </html>

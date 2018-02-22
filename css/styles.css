@@ -3,11 +3,69 @@
 
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
-    /*color: #4D586A; ciemny*/
-    /*color: #2D2E32; najciemniejszy*/
-    /*color: #ACAEBA; jasny szary*/
-    /*color: #FE0000; czerwony*/
+.logo{
+    padding: 0;
+    margin: 0;
+    width: 50px;
+}
 
+ul.nav.navbar-nav.navbar-right {
+    height: 100%;
+    margin-top: 0.5em;
+}
+
+section{
+    padding-top: 64px;
+}
+
+@media all and (max-width: 283px){
+    section{
+        padding-top: 112px;
+    }
+}
+
+nav.navbar.navbar-default.navbar-fixed-top{
+    margin: 0 auto;
+}
+
+.navbar{
+    background: #2D2E32;
+}
+
+.navbar-default .navbar-brand {
+    color: #f5f5f5;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #f5f5f5;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #f5f5f5;
+}
+
+.navbar-brand{
+    height: 100%;
+    padding: 0.5em;
+    text-align: center;
+    line-height: normal;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #FE0000;
+}
+
+.navbar-brand > img{
+    float: left;
+}
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
 .parallax{
@@ -57,7 +115,6 @@ button.btn.btn-success.btn-lg{
     border-color: #FE0000;
 }
 
-/*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
 
@@ -162,15 +219,6 @@ h2.product-info-header {
     font-size: 70px;
 }
 
-/*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
-
-/*Paleta kolorów{*/
-/*background: #ACAEBA;*/
-/*background: #2D2E32;*/
-/*background: #FE0000;*/
-/*background: #4D586A;*/
-/*}*/
-
 /*Zapis na premierę - formularz*/
 .form-contact
 {
@@ -246,7 +294,6 @@ p.text-function
     font-size: 1em;
     margin: 0;
     color: whitesmoke;
-    margin: 0;
 }
 
 
