@@ -115,6 +115,7 @@ button.btn.btn-success.btn-lg{
     border-color: #FE0000;
 }
 
+/*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
 
@@ -219,6 +220,15 @@ h2.product-info-header {
     font-size: 70px;
 }
 
+/*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
+
+/*Paleta kolorów{*/
+/*background: #ACAEBA;*/
+/*background: #2D2E32;*/
+/*background: #FE0000;*/
+/*background: #4D586A;*/
+/*}*/
+
 /*Zapis na premierę - formularz*/
 .form-contact
 {
@@ -262,23 +272,25 @@ h2.product-info-header {
 }
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
-.functions
+.main-functions
 {
-    background-color: #ACAEBA;
+    padding-bottom: 50px;
+    background-color: #2D2E32;
     text-align: center;
+    padding-top: 50px;
 }
 
-h2.title-function
+.title-function
 {
-    font-family: "monospace", monospace, serif;
-    font-size: 2.5em;
-    padding: 0.5rem;
-    line-height: 1.4;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 40px;
 }
 
-p.text-function
+.text-function
 {
-    font-family: "monospace", monospace, serif;
+    background-size: cover;
 }
 /* ### PIOTREK ### feature-footer ### Stopka */
 
