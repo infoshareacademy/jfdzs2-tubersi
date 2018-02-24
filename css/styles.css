@@ -117,8 +117,76 @@ button.btn.btn-success.btn-lg{
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
+.main-functions
+{
+    padding-bottom: 50px;
+    background-color: #2D2E32;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.title-function
+{
+    color: #f5f5f5;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 40px;
+}
+
+.text-function
+{
+    background-size: cover;
+}
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
 
+.form-contact-messege
+{
+    background-color: #2D2E32;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.form-contact-messege h2
+{
+    text-align: center;
+    color: whitesmoke;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.under-text
+{
+    text-align: center;
+    color: whitesmoke;
+    padding-bottom: 10px;
+    word-spacing: 5px;
+}
+
+.form-control.send
+{
+    text-align: center;
+}
+
+.text-form-email
+{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    padding-top: 10px;
+    opacity: 0.5;
+}
+
+.btn.contact-submit
+{
+    width: 100%;
+}
+
+@media screen and (max-width: 991px){
+    .btn.contact-submit {
+        margin-top: 10px
+    }
+}
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
 .team{
     background-image: url("../images/team-background.jpg");
@@ -220,80 +288,6 @@ h2.product-info-header {
     font-size: 70px;
 }
 
-/*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
-
-/*Paleta kolorów{*/
-/*background: #ACAEBA;*/
-/*background: #2D2E32;*/
-/*background: #FE0000;*/
-/*background: #4D586A;*/
-/*}*/
-
-/*Zapis na premierę - formularz*/
-.form-contact-messege
-{
-    background-color: #2D2E32;
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-.form-contact-messege h2
-{
-    text-align: center;
-    color: whitesmoke;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.under-text
-{
-    text-align: center;
-    color: whitesmoke;
-    padding-bottom: 10px;
-    word-spacing: 5px;
-}
-
-.form-control.send
-{
-    text-align: center;
-}
-
-.text-form-email
-{
-    text-align: center;
-    color: white;
-    font-size: 12px;
-    padding-top: 10px;
-    opacity: 0.5;
-}
-
-.btn.contact-submit
-{
-    width: 100%;
-}
-/*### ERYK ### feature-functions ### Spis planowanych funkcji*/
-
-.main-functions
-{
-    padding-bottom: 50px;
-    background-color: #2D2E32;
-    text-align: center;
-    padding-top: 50px;
-}
-
-.title-function
-{
-    color: #f5f5f5;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding-bottom: 40px;
-}
-
-.text-function
-{
-    background-size: cover;
-}
 /* ### PIOTREK ### feature-footer ### Stopka */
 
 .copyright {
@@ -301,8 +295,12 @@ h2.product-info-header {
     background: #2D2E32;
 }
 
-@media screen and (max-width: 991px){
-    .btn.contact-submit {
-        margin-top: 10px
-    }
+.copyright p {
+    letter-spacing: 0.20em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin: 0;
+    color: whitesmoke;
 }
+
