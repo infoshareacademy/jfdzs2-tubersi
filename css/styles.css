@@ -1,6 +1,3 @@
-/*### Wspólne style ### */
-
-
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
 .logo{
@@ -14,13 +11,20 @@ ul.nav.navbar-nav.navbar-right {
     margin-top: 0.5em;
 }
 
+main{
+    padding-top: 64px;
+
+}
+
 section{
     padding-top: 64px;
+    margin-top: -64px;
 }
 
 @media all and (max-width: 283px){
     section{
         padding-top: 112px;
+        margin-top: -112px;
     }
 }
 
@@ -68,6 +72,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
 }
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
+
 .parallax{
     background: url("../images/music-sound.jpg") no-repeat center fixed;
     background-size: cover;
@@ -83,7 +88,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
 }
 
 .flash{
-    background: rgba(255,255,255,0.3);
+    /*background: rgba(255,255,255,0.3);*/
     padding: 1em;
     font-size: 30px;
     color: #2D2E32;
@@ -106,14 +111,6 @@ nav.navbar.navbar-default.navbar-fixed-top{
     margin-bottom: 1em;
 }
 
-button.btn.btn-success.btn-lg{
-    font-size: 40px;
-    font-weight: bold;
-    padding: 20px 25px;
-    color: #FE0000;
-    background: #2D2E32;
-    border-color: #FE0000;
-}
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
@@ -188,6 +185,7 @@ button.btn.btn-success.btn-lg{
     }
 }
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
+
 .team{
     background-image: url("../images/team-background.jpg");
     background-repeat: no-repeat;
@@ -264,12 +262,12 @@ button.btn-social:hover{
 }
 
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
+
 .product {
     padding-bottom: 40px;
     background: #2D2E32;
     text-align: center;
 }
-
 
 h2.product-info-header {
     margin-top: 40px;
