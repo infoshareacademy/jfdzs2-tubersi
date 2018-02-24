@@ -78,15 +78,6 @@ nav.navbar.navbar-default.navbar-fixed-top{
     background-size: cover;
 }
 
-.jumbotron .container-fluid{
-    max-width: 100%;
-}
-
-.jumbotron{
-    padding: 0;
-    margin-bottom: 0;
-}
-
 .flash{
     /*background: rgba(255,255,255,0.3);*/
     padding: 1em;
@@ -195,7 +186,6 @@ nav.navbar.navbar-default.navbar-fixed-top{
     padding-top: 20px;
     padding-bottom: 60px;
     text-align: center;
-
 }
 
 .three-foto{
