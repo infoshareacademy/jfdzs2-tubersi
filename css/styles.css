@@ -274,8 +274,32 @@ h2.product-info-header {
 }
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
+.main-functions
+{
+    padding-bottom: 50px;
+    background-color: #2D2E32;
+    text-align: center;
+    padding-top: 50px;
+}
 
+.title-function
+{
+    color: #f5f5f5;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 40px;
+}
 
+.text-function
+{
+    background-size: cover;
+}
+/* ### PIOTREK ### feature-footer ### Stopka */
+
+.copyright {
+    padding: 3em 0em;
+    background: #2D2E32;
+}
 
 @media screen and (max-width: 991px){
     .btn.contact-submit {
