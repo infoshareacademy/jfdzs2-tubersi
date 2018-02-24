@@ -79,8 +79,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
 }
 
 .flash{
-    /*background: rgba(255,255,255,0.3);*/
-    padding: 1em;
+    padding: 40px 0;
     font-size: 30px;
     color: #2D2E32;
 }
@@ -107,10 +106,10 @@ nav.navbar.navbar-default.navbar-fixed-top{
 
 .main-functions
 {
-    padding-bottom: 50px;
+    padding-bottom: 60px;
     background-color: #2D2E32;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 .title-function
@@ -138,7 +137,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
 {
     text-align: center;
     color: whitesmoke;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -147,8 +146,17 @@ nav.navbar.navbar-default.navbar-fixed-top{
 {
     text-align: center;
     color: whitesmoke;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     word-spacing: 5px;
+}
+
+.form-control{
+    height: auto;
+    padding: 10px 16px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3333333;
+    border-radius: 6px;
 }
 
 .form-control.send
@@ -161,7 +169,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     text-align: center;
     color: white;
     font-size: 12px;
-    padding-top: 10px;
+    padding-top: 20px;
     opacity: 0.5;
 }
 
