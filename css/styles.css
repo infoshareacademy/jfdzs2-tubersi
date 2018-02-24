@@ -230,28 +230,28 @@ h2.product-info-header {
 /*}*/
 
 /*Zapis na premierę - formularz*/
-.form-contact
-{
-    text-transform: uppercase;
-    text-align: center;
-    margin: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #4D586A;
-    color: white;
-}
-
 .form-contact-messege
 {
-    background-color: #4D586A;
+    background-color: #2D2E32;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
-.text-form
+.form-contact-messege h2
 {
     text-align: center;
-    color:white;
-    font-size: 16px;
-    font-weight: bold;
+    color: whitesmoke;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.under-text
+{
+    text-align: center;
+    color: whitesmoke;
+    padding-bottom: 10px;
+    word-spacing: 5px;
 }
 
 .form-control.send
@@ -264,6 +264,8 @@ h2.product-info-header {
     text-align: center;
     color: white;
     font-size: 12px;
+    padding-top: 10px;
+    opacity: 0.5;
 }
 
 .btn.contact-submit
@@ -298,16 +300,6 @@ h2.product-info-header {
     padding: 3em 0em;
     background: #2D2E32;
 }
-
-.copyright p {
-    letter-spacing: 0.20em;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1em;
-    margin: 0;
-    color: whitesmoke;
-}
-
 
 @media screen and (max-width: 991px){
     .btn.contact-submit {
