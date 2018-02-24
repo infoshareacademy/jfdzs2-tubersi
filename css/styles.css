@@ -63,6 +63,10 @@ nav.navbar.navbar-default.navbar-fixed-top{
     font-size: 14px;
 }
 
+.navbar-default .navbar-nav>li>a:hover{
+    color: #5e5e5e;
+}
+
 .navbar-default .navbar-toggle {
     border-color: #FE0000;
 }
