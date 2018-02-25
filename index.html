@@ -13,7 +13,7 @@
 <body>
 <!--### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED)-->
 
-    <header class="container-fluid">
+    <header>
         <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="container">
                     <a class="navbar-brand" href="#">
@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#start">Start</a></li><!-- nowy ajdik dla sekcji -->
-                        <li><a href="#functions-application">Funkcje</a></li> <!-- nowy ajdik dla sekcji -->
+                        <li><a href="#functions">Funkcje</a></li> <!-- nowy ajdik dla sekcji -->
                         <li><a href="#registration">Zapisy</a></li><!-- nowy ajdik dla sekcji -->
                         <li><a href="#aboutus">O nas</a></li><!-- nowy ajdik dla sekcji -->
                         <li><a href="#aboutapp">O aplikacji</a></li><!-- nowy ajdik dla sekcji -->
@@ -45,25 +45,21 @@
     <main>
         <!--### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -->
 
-        <section id="start" >
-            <div class="jumbotron">
-                <div class="container-fluid parallax">
-                    <div class="row flash">
-                        <div class="col-xs-12 top">
-                            <span class="inner">Z nami słuchanie ulubionej muzyki będzie jeszcze prostsze.</span>
-                        </div>
-                        <div class="col-xs-12 bottom">
-                            <span>
-                                <button type="button" onclick="window.location.href='#form'" class="btn btn-success btn-lg">Zapisz się!</button>
-                            </span>
-                        </div>
+        <section id="start" class="parallax">
+            <div class="container">
+                <div class="row flash">
+                    <div class="top">
+                        <span class="inner">Z nami słuchanie ulubionej muzyki będzie jeszcze prostsze.</span>
+                    </div>
+                    <div class="bottom">
+                        <a href='#registration' class="btn btn-default btn-lg">Zapisz się!</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!--### ERYK ### feature-functions ### Spis planowanych funkcji-->
-        <div id="functions-application">
+        <section id="functions">
             <div class="main-functions">
                 <div class="container">
                     <h2 class="title-function">FUNKCJE APLIKACJI</h2>
@@ -87,10 +83,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!--### ERYK ### feature-signin ### Zapis na premiera - formularz -->
 
-        <div id="registration">
+        <section id="registration">
             <div class="form-contact-messege">
                 <div class="container">
                     <h2 class="text-form ">Zarejestruj się!</h2>
@@ -101,7 +97,7 @@
                                 <input type="email" class="form-control send" name="Adres e-mail" placeholder="E-mail">
                             </div>
                             <div class="col-md-4 col-lg-3">
-                                <input type="button" class="btn contact-submit" value="Wyślij">
+                                <input type="button" class="btn btn-lg btn-default contact-submit" value="Wyślij">
                             </div>
                         </div>
                     </form>
@@ -110,7 +106,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
 
         <!--### PIOTREK ### feature-team ### Informacja o zespole -->
@@ -120,17 +116,17 @@
                 <div class="container three-foto">
                     <div class="row">
                         <div class="col-sm-4 member">
-                            <img src="images/piotr.JPG" width="70%" class="img-responsive img-circle margin member-foto">
+                            <img src="images/piotr.jpg" width="70%" class="img-responsive img-circle margin member-foto">
                             <div class="social">
                                 <p class="member-name">Piotr Majkowski</p><br>
                             </div>
                             <div class="btn-group">
-                                <button type="button" class="btn btn-default btn-social"><a href="https://www.linkedin.com/in/piotr-majkowski-6a56a75b/" target="_blank"><i class="fa fa-lg fa-linkedin"></a></i></button>
-                                <button type="button" class="btn btn-default btn-social"><a href="https://github.com/PiotrMajkowski" target="_blank"><i class="fa fa-lg fa-github"></i></button></a>
+                                <button type="button" class="btn btn-default btn-social"><a href="https://www.linkedin.com/in/piotr-majkowski-6a56a75b/" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a></button>
+                                <button type="button" class="btn btn-default btn-social"><a href="https://github.com/PiotrMajkowski" target="_blank"><i class="fa fa-lg fa-github"></i></a></button>
                             </div>
                         </div>
                         <div class="col-sm-4 member">
-                            <img src="images/dorota.png" width="70%" class="img-responsive img-circle margin member-foto">
+                            <img src="images/dorota.jpg" width="70%" class="img-responsive img-circle margin member-foto">
                             <div class="social">
                                 <p class="member-name">Dorota Pawłowska</p><br>
                             </div>
@@ -140,7 +136,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 member">
-                            <img src="images/Eryk.png" width="70%" class="img-responsive img-circle margin member-foto">
+                            <img src="images/eryk.jpg" width="70%" class="img-responsive img-circle margin member-foto">
                             <div class="social">
                                 <p class="member-name">Eryk Sandecki</p><br>
                             </div>
@@ -156,8 +152,8 @@
         </section>
 
         <!--### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie -->
-        <div id="aboutapp" class="product">
-        <section class="container-fluid">
+        <section id="aboutapp" class="product">
+        <div class="container-fluid">
             <h2 class="product-info-header">Więcej informacji o aplikacji</h2>
             <div class="container">
 
@@ -243,8 +239,8 @@
                     </div>
                 </div>
             </div>
-        </section>
         </div>
+        </section>
 
     </main>
     <footer class="copyright">
