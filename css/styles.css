@@ -77,9 +77,14 @@ nav.navbar.navbar-default.navbar-fixed-top{
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
 
-.parallax{
-    background: url("../images/music-sound.jpg") no-repeat center fixed;
-    background-size: cover;
+
+#start{
+    height: 100%;
+    background-color: #2D2E32;
+}
+
+div.picture{
+    height: 100%;
 }
 
 .flash{
