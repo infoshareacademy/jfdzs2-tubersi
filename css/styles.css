@@ -309,28 +309,21 @@ h2.product-info-header {
 .fa.fa-angle-up{
     font-size: 40px;
     color: #2D2E32;
-    padding: 6px;
 }
 .fa.fa-angle-up:hover{
     font-size: 50px;
-    color: whitesmoke;
-    padding: 6px;
 }
 
-#scroll-up {
+.btn-scroll {
     background: whitesmoke;
     display: none;
     position: fixed;
     bottom: 10px;
-    right: 30px;
+    right: 15px;
     cursor: pointer;
     border: solid 1px;
     color: #2D2E32;
 }
 
-#scroll-up:hover {
-    background-color: #2D2E32;
-    border: solid 1px;
-    border-color: whitesmoke;
-}
+
 
