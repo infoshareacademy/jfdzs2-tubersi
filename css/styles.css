@@ -304,3 +304,19 @@ h2.product-info-header {
     color: whitesmoke;
 }
 
+/*### PIOTREK ### feature-cookies*/
+
+.cookies{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: rgba(45,46,50,1);
+}
+
+.cookies p {
+    margin: 0px;
+    padding: 10px;
+    color: whitesmoke;
+}
+
