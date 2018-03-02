@@ -266,9 +266,10 @@ button.btn-social:hover{
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
 
 .product {
-    padding-bottom: 40px;
+    padding-bottom: 150px;
     background: #2D2E32;
     text-align: center;
+    padding-top: 150px;
 }
 
 h2.product-info-header {
