@@ -83,6 +83,19 @@ nav.navbar.navbar-default.navbar-fixed-top{
     background-color: #2D2E32;
 }
 
+@media all and (max-width: 450px){
+    div.carousel-caption h1{
+        font-size: 21px;
+    }
+}
+
+@media all and (min-width: 1000px){
+    div.carousel-caption h1{
+        font-size: 51px;
+    }
+}
+
+
 
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
