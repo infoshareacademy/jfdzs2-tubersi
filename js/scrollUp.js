@@ -2,7 +2,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.documentElement.scrollTop > 100) {
-        $('button.btn-scroll').slideDown('slow') ;
+        $('button.btn-scroll').show('slow') ;
         document.getElementById("scroll-up").style.display = "block";
     } else {
         $('button.btn-scroll').hide('slow') ;
