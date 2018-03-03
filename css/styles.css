@@ -83,32 +83,6 @@ nav.navbar.navbar-default.navbar-fixed-top{
     background-color: #2D2E32;
 }
 
-div.picture{
-    height: 100%;
-}
-
-.flash{
-    padding: 40px 0;
-    font-size: 30px;
-    color: #2D2E32;
-}
-
-.inner{
-    color: #ffffff;
-}
-
-.top{
-    font-size: 50px;
-    font-weight: bold;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    text-align: center;
-}
-
-.bottom{
-    text-align: center;
-    margin-bottom: 1em;
-}
 
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/

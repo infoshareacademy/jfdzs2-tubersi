@@ -46,15 +46,13 @@
         <!--### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -->
 
         <section id="start">
-            <div class="container">
+            <div class="wraper">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
                     </ol>
 
                     <!-- Wrapper for slides -->
@@ -62,36 +60,19 @@
                         <div class="item active picture">
                             <img src="images/carousel/black_adapter.jpg" alt="adapter">
                             <div class="carousel-caption">
-                                <h3>..sdf.</h3>
-                                <p>.sdfsdf..</p>
-                            </div>
-                        </div>
-                        <div class="item picture">
-                            <img src="images/carousel/dude_headphones.jpg" alt="dude">
-                            <div class="carousel-caption">
-                                <h3>.sdf..</h3>
-                                <p>.sdfsdf..</p>
-                            </div>
-                        </div>
-                        <div class="item picture">
-                            <img src="images/carousel/lass_headphones.jpg" alt="lass">
-                            <div class="carousel-caption">
-                                <h3>.sfsdf..</h3>
-                                <p>..sdfsdf.</p>
+                                <h1>Z nami słuchanie ulubionej muzyki będzie jeszcze prostsze.</h1>
                             </div>
                         </div>
                         <div class="item picture">
                             <img src="images/carousel/black_headphones.jpg" alt="headphones">
                             <div class="carousel-caption">
-                                <h3>..sdfsdf.</h3>
-                                <p>..fsdf.</p>
+                                <h1>Z nami słuchanie ulubionej muzyki będzie jeszcze prostsze.</h1>
                             </div>
                         </div>
                         <div class="item picture">
                             <img src="images/carousel/music-sound.jpg" alt="headphones">
                             <div class="carousel-caption">
-                                <h3>...gfsh</h3>
-                                <p>.dffdf..</p>
+                                <h1>Z nami słuchanie ulubionej muzyki będzie jeszcze prostsze.</h1>
                             </div>
                         </div>
                     </div>
@@ -303,7 +284,12 @@
 
 <script src="bootstrap/jquery.min.js"></script>
 <script src="bootstrap/bootstrap.min.js"></script>
-
+<script>
+    $( window ).resize(function() {
+        if($(window).width() >=1200) $('.wraper').addClass("container");
+        else $('.wraper').removeClass("container");
+    });
+</script>
 
 </body>
 </html>
