@@ -1,16 +1,15 @@
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollButtonCheck()};
 
-function scrollFunction() {
+function scrollButtonCheck() {
     if (document.documentElement.scrollTop > 100) {
         $('button.btn-scroll').show('slow') ;
         document.getElementById("scroll-up").style.display = "block";
     } else {
         $('button.btn-scroll').hide('slow') ;
-        // document.getElementById("scroll-up").style.display = "none";
     }
 }
 
-function topFunction(start) {
+function goTop(start) {
     $('html,body').animate({scrollTop: $(start).offset().top}, 1000);
     return false;
 }
