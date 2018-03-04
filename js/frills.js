@@ -1,3 +1,5 @@
+// ##### PIOTREK - scrollTOP ######
+
 window.onscroll = function() {scrollButtonCheck()};
 
 function scrollButtonCheck() {
