@@ -111,38 +111,57 @@
 
         <!--### PIOTREK ### feature-team ### Informacja o zespole -->
         <section id="aboutus">
-            <div class="container-fluid team">
+            <div class="container-fluid team" ontouchstart="this.classList.toggle('hover');">
                 <h2 class="team-title">Poznaj zespół Tubersów</h2>
                 <div class="container three-foto">
                     <div class="row">
                         <div class="col-sm-4 member">
-                            <a href="https://www.facebook.com/piotr.majkowski.7" target="_blank""><img src="images/piotr.jpg"  width="70%" class="img-responsive img-circle margin member-foto team-foto-1"></a>
+                                <div id="flipper-1">
+                                    <div class="front-1">
+                                        <img src="images/piotr.jpg"  width="70%" class="img-responsive img-circle margin member-foto team-foto-1">
+                                    </div>
+                                    <div class="back-1">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default btn-social"><a href="https://www.linkedin.com/in/piotr-majkowski-6a56a75b/" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a></button>
+                                            <button type="button" class="btn btn-default btn-social"><a href="https://github.com/PiotrMajkowski" target="_blank"><i class="fa fa-lg fa-github"></i></a></button>
+                                        </div>
+                                    </div>
+                                </div>
                             <div class="social">
                                 <p class="member-name">Piotr Majkowski</p><br>
                             </div>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default btn-social"><a href="https://www.linkedin.com/in/piotr-majkowski-6a56a75b/" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a></button>
-                                <button type="button" class="btn btn-default btn-social"><a href="https://github.com/PiotrMajkowski" target="_blank"><i class="fa fa-lg fa-github"></i></a></button>
-                            </div>
                         </div>
                         <div class="col-sm-4 member">
-                            <a href="https://www.facebook.com/profile.php?id=100000483529663" target="_blank" > <img src="images/dorota.jpg"width="70%" class="img-responsive img-circle margin member-foto team-foto-2"></a>
+                                <div id="flipper-2">
+                                    <div class="front-2">
+                                        <img src="images/dorota.jpg"width="70%" class="img-responsive img-circle margin member-foto team-foto-2">
+                                    </div>
+                                    <div class="back-2 img-circle">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default btn-social"><a href="https://www.linkedin.com/in/dorota-pawłowska-b517b4b3/" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a></button>
+                                            <button type="button" class="btn btn-default btn-social"><a href="https://github.com/DorotaPawlowska" target="_blank"><i class="fa fa-lg fa-github"></i></a></button>
+                                        </div>
+                                    </div>
+                                </div>
                             <div class="social">
                                 <p class="member-name">Dorota Pawłowska</p><br>
                             </div>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default btn-social"><a href="https://www.linkedin.com/in/dorota-pawłowska-b517b4b3/" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a></button>
-                                <button type="button" class="btn btn-default btn-social"><a href="https://github.com/DorotaPawlowska" target="_blank"><i class="fa fa-lg fa-github"></i></a></button>
-                            </div>
                         </div>
                         <div class="col-sm-4 member">
-                            <a href="https://www.facebook.com/eryk.sandecki" target="_blank" > <img src="images/eryk.jpg" width="70%" class="img-responsive img-circle margin member-foto team-foto-3"></a>
+                                <div id="flipper-3">
+                                    <div class="front-3">
+                                        <img src="images/eryk.jpg" width="70%" id="team-foto-3" class="img-responsive img-circle margin member-foto">
+                                    </div>
+                                    <div class="back-3">
+                                        <p class="social-media-text">@eryk</p>
+                                        <div class="btn-group ">
+                                            <button type="button" class="btn btn-default btn-social"><a href="https://www.linkedin.com/in/eryk-sandecki-25a516154/" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a></button>
+                                            <button type="button" class="btn btn-default btn-social"><a href="https://github.com/ErykSandecki" target="_blank"><i class="fa fa-lg fa-github"></i></a></button>
+                                        </div>
+                                    </div>
+                                </div>
                             <div class="social">
                                 <p class="member-name">Eryk Sandecki</p><br>
-                            </div>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default btn-social"><a href="https://www.linkedin.com/in/eryk-sandecki-25a516154/" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a></button>
-                                <button type="button" class="btn btn-default btn-social"><a href="https://github.com/ErykSandecki" target="_blank"><i class="fa fa-lg fa-github"></i></a></button>
                             </div>
                             <br><br>
                         </div>
@@ -252,6 +271,6 @@
 
 <script src="bootstrap/jquery.min.js"></script>
 <script src="bootstrap/bootstrap.min.js"></script>
-<script src="script/animatePictureTeam.js"></script>
+<script src="js/frills.js"></script>
 </body>
 </html>
