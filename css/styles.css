@@ -12,20 +12,37 @@ ul.nav.navbar-nav.navbar-right {
 }
 
 main{
-    padding-top: 64px;
+    padding-top: 93px;
 
 }
 
 section{
-    padding-top: 64px;
-    margin-top: -64px;
+    padding-top: 93px;
+    margin-top: -93px;
 }
 
 @media all and (max-width: 283px){
-    section{
-        padding-top: 112px;
-        margin-top: -112px;
+
+    main{
+        padding-top: 153px;
     }
+
+    section{
+        padding-top: 153px;
+        margin-top: -153px;
+    }
+}
+
+.affix {
+    padding:0px;
+    transition:padding 0.2s linear;
+
+}
+
+.affix-top {
+    padding-top:15px;
+    padding-bottom:15px;
+    transition:padding 0.5s linear;
 }
 
 nav.navbar.navbar-default.navbar-fixed-top{
