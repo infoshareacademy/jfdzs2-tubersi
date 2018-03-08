@@ -304,3 +304,146 @@ h2.product-info-header {
     color: whitesmoke;
 }
 
+
+/*##### GAME #########*/
+
+.game{
+    padding-bottom: 40px;
+    background: #2D2E32;
+    text-align: center;
+    min-height: 400px;
+}
+
+h2.game-title {
+    background-color: rgba(45,46,50,0.8);
+    border-radius: 5px;
+    color: whitesmoke;
+    display: inline-block;
+    padding: 0.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.game-area {
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: white;
+    border: solid 5px #2D2E32;
+    border-radius: 5px;
+}
+
+#score-info {
+    width: 100%;
+    border-bottom:solid 5px #2D2E32;
+}
+
+#speaker-floor {
+    background-color: #2D2E32;
+    width: 100%;
+    top: 23%;
+    height: 2%;
+    position: absolute;
+}
+/*Głosniki*/
+
+.speaker{
+    z-index: 100;
+    position: absolute;
+    top: 10%;
+    width: 10%;
+}
+
+.speaker img{
+    max-height: 64px;
+}
+
+#speaker-1{
+    left: 15%;
+}
+
+#speaker-2{
+    left: 45%;
+}
+
+#speaker-3{
+    left: 75%;
+}
+
+/*Spadajaće nuty*/
+
+.tune {
+    position: absolute;
+    top: 25%;
+    z-index: 99;
+}
+
+#tune-1 {
+    left: 17%;
+}
+
+#tune-2 {
+    left: 47%;
+}
+
+#tune-3 {
+    left: 77%;
+}
+/*folder zbierający nuty*/
+
+#music-folder{
+    position: absolute;
+    bottom: 10%;
+    text-align: center;
+    z-index: 11;
+}
+
+/*podłoga z ocenami kciuk up i dwon*/
+
+#floor{
+    position: absolute;
+    z-index: 10;
+    height: 10%;
+    width: 100%;
+    background-color: #2D2E32;
+    bottom: 0;
+}
+
+/*Ztracone punkty kciuk w dół*/
+.thumb-down{
+    position: absolute;
+}
+
+#thumb-down-1{
+    left: 17%;
+    display: none;
+}
+
+#thumb-down-2{
+    left: 47%;
+    display: none;
+}
+
+#thumb-down-3{
+    left: 77%;
+}
+
+/*Zdobyte punktu kciuk w góre*/
+.thumb-up{
+    position: absolute;
+}
+
+#thumb-up-1{
+    left: 17%;
+}
+
+#thumb-up-2{
+    left: 47%;
+    display: none;
+}
+
+#thumb-up-3{
+    left: 77%;
+    display: none;
+}
