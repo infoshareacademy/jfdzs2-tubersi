@@ -342,7 +342,7 @@ h2.game-title {
 #speaker-floor {
     background-color: #2D2E32;
     width: 100%;
-    top: 23%;
+    top: 22%;
     height: 2%;
     position: absolute;
 }
@@ -351,8 +351,7 @@ h2.game-title {
 .speaker{
     z-index: 100;
     position: absolute;
-    top: 10%;
-    width: 10%;
+    top: 8%;
 }
 
 .speaker img{
@@ -377,18 +376,19 @@ h2.game-title {
     position: absolute;
     top: 25%;
     z-index: 99;
+
 }
 
 #tune-1 {
-    left: 17%;
+    left: 15%;
 }
 
 #tune-2 {
-    left: 47%;
+    left: 45%;
 }
 
 #tune-3 {
-    left: 77%;
+    left: 75%;
 }
 /*folder zbierający nuty*/
 
@@ -416,17 +416,17 @@ h2.game-title {
 }
 
 #thumb-down-1{
-    left: 17%;
+    left: 15%;
     display: none;
 }
 
 #thumb-down-2{
-    left: 47%;
+    left: 45%;
     display: none;
 }
 
 #thumb-down-3{
-    left: 77%;
+    left: 75%;
 }
 
 /*Zdobyte punktu kciuk w góre*/
@@ -435,15 +435,15 @@ h2.game-title {
 }
 
 #thumb-up-1{
-    left: 17%;
+    left: 15%;
 }
 
 #thumb-up-2{
-    left: 47%;
+    left: 45%;
     display: none;
 }
 
 #thumb-up-3{
-    left: 77%;
+    left: 75%;
     display: none;
 }
