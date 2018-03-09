@@ -1,8 +1,12 @@
 $(setStyleFlipRotation = function setPicture ()
 {
-    for(var i = 1; i <= 3; i++ )
+    for(var i = 0; i <= 5; i++)
     {
         setDivClassBtnSocialWidthAndFontSize(i);
+    }
+
+    for(var i = 1; i <= 3; i++ )
+    {
         setDivClassBtnGroupPosition(i);
         setDivIdBack(i);
         setDivClassSocialMedia(i);
@@ -11,24 +15,26 @@ $(setStyleFlipRotation = function setPicture ()
 
 setDivClassBtnSocialWidthAndFontSize = function (number)
 {
-    $('.btn-social').css('width' , document.getElementById('picture-team-' + number).offsetWidth / 2 - document.getElementById('picture-team-' + number).offsetWidth / 10 + 'px').css('font-size', document.getElementById('picture-team-' + number).offsetHeight / 14);
+    document.getElementsByClassName('btn-social')[number].style.width =  document.getElementsByClassName('member-foto')[0].offsetWidth / 2 - document.getElementsByClassName('member-foto')[0].offsetWidth / 10 + 'px';
+    document.getElementsByClassName('btn-social')[number].style.fontSize = document.getElementsByClassName('member-foto')[0].offsetHeight / 14 + 'px';
 };
 
 setDivClassBtnGroupPosition = function (number)
 {
-    $('.btn-group').css('top', document.getElementById('picture-team-' + number).offsetHeight / 2 - document.getElementById('btn-' + number).offsetHeight / 1.5 + 'px');
+    document.getElementsByClassName('btn-group')[number - 1].style.top = document.getElementsByClassName('member-foto')[0].offsetHeight / 2 -  document.getElementsByClassName('btn-group')[0].offsetHeight / 1.5 + 'px';
 };
 
 setDivIdBack = function (number)
 {
-    $('#back-' + number).css('height', document.getElementById('front-' + number).offsetHeight + 'px');
+    document.getElementById('back-' + number).style.height = document.getElementById('front-' + number).offsetHeight + 'px';
 };
 
 setDivClassSocialMedia = function (number)
 {
-    $('.social-media').css('width' , document.getElementById('picture-team-' + number).offsetWidth + 'px');
-    $('.social-media').css('border-radius', document.getElementById('picture-team-' + number).offsetHeight / 2 + 'px');
-    $('.social-media').css('height', document.getElementById('picture-team-' + number).offsetHeight + 'px');
+    document.getElementsByClassName('social-media')[number - 1].style.width = document.getElementsByClassName('member-foto')[0].offsetWidth + 'px';
+    document.getElementsByClassName('social-media')[number - 1].style.borderRadius = document.getElementsByClassName('member-foto')[0].offsetHeight / 2 + 'px';
+    document.getElementsByClassName('social-media')[number - 1].style.height = document.getElementsByClassName('member-foto')[0].offsetHeight + 'px';
 };
 
 window.addEventListener('resize', setStyleFlipRotation);
+
