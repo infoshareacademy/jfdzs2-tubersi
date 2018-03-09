@@ -29,7 +29,6 @@ setDivIdBack = function (number)
 setDivClassSocialMedia = function (number)
 {
     $('.social-media').css('width' , document.getElementById('picture-team-' + number).offsetWidth + 'px');
-    $('.social-media').css('width' , document.getElementById('picture-team-' + number).offsetWidth + 'px');
     $('.social-media').css('border-radius', document.getElementById('picture-team-' + number).offsetHeight / 2 + 'px');
     $('.social-media').css('height', document.getElementById('picture-team-' + number).offsetHeight + 'px');
 };
