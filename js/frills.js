@@ -1,4 +1,4 @@
-$(setIconMedia = function setPicture ()
+$(setStyleFlipRotation = function setPicture ()
 {
     for(var i = 1; i <= 3; i++ )
     {
@@ -8,8 +8,6 @@ $(setIconMedia = function setPicture ()
         setDivClassSocialMedia(i);
     }
 });
-
-window.addEventListener('resize', setIconMedia);
 
 setDivClassBtnSocialWidthAndFontSize = function (number)
 {
@@ -32,3 +30,5 @@ setDivClassSocialMedia = function (number)
     $('.social-media').css('border-radius', document.getElementById('picture-team-' + number).offsetHeight / 2 + 'px');
     $('.social-media').css('height', document.getElementById('picture-team-' + number).offsetHeight + 'px');
 };
+
+window.addEventListener('resize', setStyleFlipRotation);
