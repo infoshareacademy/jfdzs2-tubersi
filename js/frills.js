@@ -1,4 +1,4 @@
-$(setStyleFlipRotation = function setPicture ()
+setStyleFlipRotation = function setPicture ()
 {
     for(var i = 0; i <= 5; i++)
     {
@@ -11,7 +11,7 @@ $(setStyleFlipRotation = function setPicture ()
         setDivIdBack(i);
         setDivClassSocialMedia(i);
     }
-});
+};
 
 setDivClassBtnSocialWidthAndFontSize = function (number)
 {
@@ -36,5 +36,6 @@ setDivClassSocialMedia = function (number)
     document.getElementsByClassName('social-media')[number - 1].style.height = document.getElementsByClassName('member-foto')[0].offsetHeight + 'px';
 };
 
+setStyleFlipRotation();
 window.addEventListener('resize', setStyleFlipRotation);
 
