@@ -339,23 +339,11 @@ h2.game-title {
     border-bottom:solid 5px #2D2E32;
 }
 
-#speaker-floor {
-    background-color: #2D2E32;
-    width: 100%;
-    top: 22%;
-    height: 2%;
-    position: absolute;
-}
-/*Głosniki*/
-
 .speaker{
     z-index: 100;
     position: absolute;
-    top: 8%;
-}
-
-.speaker img{
-    max-height: 64px;
+    top: 10%;
+    width: 15%;
 }
 
 #speaker-1{
@@ -374,9 +362,9 @@ h2.game-title {
 
 .tune {
     position: absolute;
-    top: 25%;
+    top: 21%;
     z-index: 99;
-
+    width: 15%;
 }
 
 #tune-1 {
@@ -397,6 +385,7 @@ h2.game-title {
     bottom: 10%;
     text-align: center;
     z-index: 11;
+    width: 15%;
 }
 
 /*podłoga z ocenami kciuk up i dwon*/
@@ -413,6 +402,7 @@ h2.game-title {
 /*Ztracone punkty kciuk w dół*/
 .thumb-down{
     position: absolute;
+    width: 15%;
 }
 
 #thumb-down-1{
@@ -432,6 +422,7 @@ h2.game-title {
 /*Zdobyte punktu kciuk w góre*/
 .thumb-up{
     position: absolute;
+    width: 15%;
 }
 
 #thumb-up-1{
