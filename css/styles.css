@@ -381,12 +381,18 @@ h2.game-title {
 /*folder zbierający nuty*/
 
 #music-folder{
+    padding: 0;
+    margin: 0;
     position: absolute;
     bottom: 10%;
-    text-align: center;
+    left: 45px;
     z-index: 11;
-    width: 15%;
+    /*width: 15%;*/
 }
+
+#music-folder img{
+    width: 50px;
+ }
 
 /*podłoga z ocenami kciuk up i dwon*/
 
