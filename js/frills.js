@@ -1,9 +1,6 @@
 setStyleFlipRotation = function setPicture ()
 {
-    for(var i = 0; i <= 5; i++)
-    {
-        setDivClassBtnSocialWidthAndFontSize(i);
-    }
+    setDivClassBtnSocialWidthAndFontSize(0);
 
     for(var i = 1; i <= 3; i++ )
     {
@@ -17,6 +14,15 @@ setDivClassBtnSocialWidthAndFontSize = function (number)
 {
     document.getElementsByClassName('btn-social')[number].style.width =  document.getElementsByClassName('member-foto')[0].offsetWidth / 2 - document.getElementsByClassName('member-foto')[0].offsetWidth / 10 + 'px';
     document.getElementsByClassName('btn-social')[number].style.fontSize = document.getElementsByClassName('member-foto')[0].offsetHeight / 14 + 'px';
+
+    if(number === 5)
+    {
+        return;
+    }
+    else
+    {
+        setDivClassBtnSocialWidthAndFontSize(number + 1);
+    }
 };
 
 setDivClassBtnGroupPosition = function (number)
