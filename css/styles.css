@@ -431,7 +431,7 @@ h2.game-title {
     display: none;
 }
 
-@media all and (min-width: 800px) and (max-width: 1200px) {
+@media all and (min-width: 768px) and (max-width: 1170px) {
     .game-area {
         height: 500px;
         width: 600px;
@@ -474,9 +474,8 @@ h2.game-title {
     }
 }
 
-/*@media all and (min-width: 800px) and (max-width: 1200px)*/
 
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1170px) {
     .game-area {
         height: 500px;
         width: 900px;
