@@ -1,17 +1,16 @@
 // ##### PIOTREK - scrollTOP ######
 
-window.onscroll = function() {scrollButtonCheck()};
-
-function scrollButtonCheck() {
-    if (document.documentElement.scrollTop > 100) {
+$(document).scroll(function() {
+    var $toTop = $(window).scrollTop();
+    if ($toTop> 100) {
         $('button.btn-scroll').show('slow') ;
-        document.getElementById("scroll-up").style.display = "block";
+        $('#scroll-up').css("display", "block");
     } else {
         $('button.btn-scroll').hide('slow') ;
     }
-}
+});
 
-function goTop(start) {
+$('#scroll-up').click(function () {
     $('html,body').animate({scrollTop: $(start).offset().top}, 1000);
     return false;
-}
+});
