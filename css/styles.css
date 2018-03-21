@@ -313,6 +313,15 @@ h2.product-info-header {
     text-align: center;
 }
 
+#select-level{
+    text-align: center;
+    top: 150px;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+
+}
+
 h2.game-title {
     background-color: rgba(45,46,50,0.8);
     border-radius: 5px;
