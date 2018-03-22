@@ -1,19 +1,11 @@
-var positionFolder,
-    tune1,
-    tune2,
-    tune3;
+var positionFolder;
 var screenWidth = window.innerWidth;
 
 
 function init()
 {
-    console.log(123);
     document.getElementById('music-folder').style.left ='0';
-    document.getElementById('tune-1').style.top ='90';
     positionFolder = parseInt(document.getElementById('music-folder').style.left);
-    tune1 = parseInt(document.getElementById('tune-1').style.top);
-    tune2 = parseInt(document.getElementById('tune-2').style.top);
-    tune3 = parseInt(document.getElementById('tune-3').style.top);
 }
 init();
 
@@ -41,31 +33,6 @@ const folderMove = (e) =>
             break;
     }
 }
-
-// function tunesDown(tune1) {
-//
-//     document.getElementById('tune-1').style.top = (tune1 + 2).toString()+ 'px';
-//     // document.getElementById('tune-2').style.top = (tune2 + 2).toString()+ 'px';
-//     // document.getElementById('tune-3').style.top = (tune3 + 2).toString()+ 'px';
-//     window.requestAnimationFrame(tunesDown);
-//
-// }
-// window.requestAnimationFrame(tunesDown);
-
-
-var start = null;
-var element = document.getElementById("tune-1");
-
-function step(timestamp) {
-    if (!start) start = timestamp;
-    var progress = timestamp - start;
-    element.style.top = Math.min(progress/10, 1000).toString() + "px";
-    if (progress < 3500) {
-        window.requestAnimationFrame(step);
-    }
-}
-
-window.requestAnimationFrame(step);
 
 
 
