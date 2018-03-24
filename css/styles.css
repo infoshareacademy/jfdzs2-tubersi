@@ -195,8 +195,8 @@ nav.navbar.navbar-default.navbar-fixed-top{
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    padding-top: 20px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 80px;
     text-align: center;
 }
 
@@ -266,10 +266,10 @@ button.btn-social:hover{
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
 
 .product {
-    padding-bottom: 150px;
+    padding-bottom: 200px;
     background: #2D2E32;
     text-align: center;
-    padding-top: 150px;
+    padding-top: 50px;
 }
 
 h2.product-info-header {
