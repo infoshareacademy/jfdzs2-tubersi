@@ -89,14 +89,25 @@ nav.navbar.navbar-default.navbar-fixed-top{
     }
 }
 
-@media all and (min-width: 1000px){
+@media all and (min-width: 1200px){
     div.carousel-caption h1{
         font-size: 51px;
     }
 }
 
+#start div.wraper{
+    width: 100%;
+}
 
-
+@media screen and (min-width: 1200px){
+    #start div.wraper{
+        width: 1170px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
