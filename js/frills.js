@@ -11,6 +11,9 @@ $(document).scroll(function() {
 });
 
 $('#scroll-up').click(function () {
-    $('html,body').animate({scrollTop: $(start).offset().top}, 1000);
+    $('html,body').animate({scrollTop: $('body').offset().top}, 1000);
     return false;
 });
+
+
+
