@@ -45,15 +45,47 @@
     <main>
         <!--### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -->
 
-        <section id="start" class="parallax">
-            <div class="container">
-                <div class="row flash">
-                    <div class="top">
-                        <span class="inner">Z nami słuchanie ulubionej muzyki będzie jeszcze prostsze.</span>
+        <section id="start">
+            <div class="wraper">
+                <div id="carousel-ID" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner picture" role="listbox">
+                        <div class="item active picture">
+                            <img src="images/carousel/black_adapter.jpg" alt="adapter">
+                            <div class="carousel-caption">
+                                <h1>Z nami słuchanie ulubionej muzyki będzie jeszcze prostsze.</h1>
+                            </div>
+                        </div>
+                        <div class="item picture">
+                            <img src="images/carousel/black_headphones.jpg" alt="headphones">
+                            <div class="carousel-caption">
+                                <h1>Z nami słuchanie ulubionej muzyki będzie jeszcze prostsze.</h1>
+                            </div>
+                        </div>
+                        <div class="item picture">
+                            <img src="images/carousel/music-sound.jpg" alt="headphones">
+                            <div class="carousel-caption">
+                                <h1>Z nami słuchanie ulubionej muzyki będzie jeszcze prostsze.</h1>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bottom">
-                        <a href='#registration' class="btn btn-default btn-lg">Zapisz się!</a>
-                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-ID" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-ID" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -252,7 +284,7 @@
 
 <script src="bootstrap/jquery.min.js"></script>
 <script src="bootstrap/bootstrap.min.js"></script>
-
+<script src="js/frills.js"></script>
 
 </body>
 </html>
