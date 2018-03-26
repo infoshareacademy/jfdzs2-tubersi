@@ -75,6 +75,10 @@ nav.navbar.navbar-default.navbar-fixed-top{
     float: left;
 }
 
+.navbar-toggle{
+    margin-top: 14px;
+}
+
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -> etap II - Rotacja zawartości w zajawce */
 
 
@@ -133,15 +137,13 @@ nav.navbar.navbar-default.navbar-fixed-top{
 }
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
 
-.form-contact-messege
-{
+.form-contact-messege {
     background-color: #2D2E32;
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
-.form-contact-messege h2
-{
+.form-contact-messege h2 {
     text-align: center;
     color: whitesmoke;
     padding-bottom: 40px;
@@ -149,8 +151,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     font-weight: 700;
 }
 
-.under-text
-{
+.under-text {
     text-align: center;
     color: whitesmoke;
     padding-bottom: 20px;
@@ -166,13 +167,11 @@ nav.navbar.navbar-default.navbar-fixed-top{
     border-radius: 6px;
 }
 
-.form-control.send
-{
+.form-control.send {
     text-align: center;
 }
 
-.text-form-email
-{
+.text-form-email {
     text-align: center;
     color: white;
     font-size: 12px;
@@ -180,8 +179,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     opacity: 0.5;
 }
 
-.btn.contact-submit
-{
+.btn.contact-submit {
     width: 100%;
 }
 
