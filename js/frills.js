@@ -1,45 +1,44 @@
-setStyleFlipRotation = function setPicture ()
-{
+var btnSocial = document.getElementsByClassName('btn-social');
+var memberFoto = document.getElementsByClassName('member-foto');
+var btnGroup = document.getElementsByClassName('btn-group');
+var socialMedia =  document.getElementsByClassName('social-media');
+
+setStyleFlipRotation = function setPicture () {
     setDivClassBtnSocialWidthAndFontSize(0);
 
-    for(var i = 1; i <= 3; i++ )
-    {
+    for(var i = 1; i <= 3; i++ ) {
         setDivClassBtnGroupPosition(i);
         setDivIdBack(i);
         setDivClassSocialMedia(i);
     }
 };
 
-setDivClassBtnSocialWidthAndFontSize = function (number)
-{
-    document.getElementsByClassName('btn-social')[number].style.width =  document.getElementsByClassName('member-foto')[0].offsetWidth / 2 - document.getElementsByClassName('member-foto')[0].offsetWidth / 10 + 'px';
-    document.getElementsByClassName('btn-social')[number].style.fontSize = document.getElementsByClassName('member-foto')[0].offsetHeight / 14 + 'px';
+setDivClassBtnSocialWidthAndFontSize = function (number) {
 
-    if(number === 5)
-    {
+    btnSocial[number].style.width =  memberFoto[0].offsetWidth / 3 + 'px';
+    btnSocial[number].style.fontSize = memberFoto[0].offsetHeight / 15 + 'px';
+
+    if(number === 5) {
         return;
     }
-    else
-    {
+    else {
         setDivClassBtnSocialWidthAndFontSize(number + 1);
     }
 };
 
-setDivClassBtnGroupPosition = function (number)
-{
-    document.getElementsByClassName('btn-group')[number - 1].style.top = document.getElementsByClassName('member-foto')[0].offsetHeight / 2 -  document.getElementsByClassName('btn-group')[0].offsetHeight / 1.5 + 'px';
+setDivClassBtnGroupPosition = function (number) {
+    btnGroup[number - 1].style.top = memberFoto[0].offsetHeight / 2 -  btnGroup[0].offsetHeight / 1.5 + 'px';
 };
 
-setDivIdBack = function (number)
-{
+setDivIdBack = function (number) {
     document.getElementById('back-' + number).style.height = document.getElementById('front-' + number).offsetHeight + 'px';
 };
 
 setDivClassSocialMedia = function (number)
 {
-    document.getElementsByClassName('social-media')[number - 1].style.width = document.getElementsByClassName('member-foto')[0].offsetWidth + 'px';
-    document.getElementsByClassName('social-media')[number - 1].style.borderRadius = document.getElementsByClassName('member-foto')[0].offsetHeight / 2 + 'px';
-    document.getElementsByClassName('social-media')[number - 1].style.height = document.getElementsByClassName('member-foto')[0].offsetHeight + 'px';
+    socialMedia[number - 1].style.width = memberFoto[0].offsetWidth + 'px';
+    socialMedia[number - 1].style.borderRadius = memberFoto[0].offsetHeight / 2 + 'px';
+    socialMedia[number - 1].style.height = memberFoto[0].offsetHeight + 'px';
 };
 
 setStyleFlipRotation();

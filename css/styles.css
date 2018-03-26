@@ -1,66 +1,55 @@
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
-.logo
-{
+.logo {
     padding: 0;
     margin: 0;
     width: 50px;
 }
 
-ul.nav.navbar-nav.navbar-right
-{
+ul.nav.navbar-nav.navbar-right {
     height: 100%;
     margin-top: 0.5em;
 }
 
-main
-{
+main {
     padding-top: 64px;
 
 }
 
-section
-{
+section {
     padding-top: 64px;
     margin-top: -64px;
 }
 
-@media all and (max-width: 283px)
-{
+@media all and (max-width: 283px) {
     section{
         padding-top: 112px;
         margin-top: -112px;
     }
 }
 
-nav.navbar.navbar-default.navbar-fixed-top
-{
+nav.navbar.navbar-default.navbar-fixed-top {
     margin: 0 auto;
 }
 
-.navbar
-{
+.navbar {
     background: #2D2E32;
 }
 
-.navbar-default .navbar-brand
-{
+.navbar-default .navbar-brand {
     color: #f5f5f5;
 }
 
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover
-{
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color: #f5f5f5;
     background-color: transparent;
 }
 
-.navbar-default .navbar-toggle .icon-bar
-{
+.navbar-default .navbar-toggle .icon-bar {
     background-color: #f5f5f5;
 }
 
-.navbar-brand
-{
+.navbar-brand {
     height: 100%;
     padding: 0.5em;
     text-align: center;
@@ -69,19 +58,16 @@ nav.navbar.navbar-default.navbar-fixed-top
     font-weight: bold;
 }
 
-.navbar-default .navbar-nav>li>a
-{
+.navbar-default .navbar-nav>li>a {
     color: #f5f5f5;
     font-size: 14px;
 }
 
-.navbar-default .navbar-nav>li>a:hover
-{
+.navbar-default .navbar-nav>li>a:hover {
     color: #5e5e5e;
 }
 
-.navbar-default .navbar-toggle
-{
+.navbar-default .navbar-toggle {
     border-color: #FE0000;
 }
 
@@ -91,26 +77,22 @@ nav.navbar.navbar-default.navbar-fixed-top
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
 
-.parallax
-{
+.parallax {
     background: url("../images/music-sound.jpg") no-repeat center fixed;
     background-size: cover;
 }
 
-.flash
-{
+.flash {
     padding: 40px 0;
     font-size: 30px;
     color: #2D2E32;
 }
 
-.inner
-{
+.inner {
     color: #ffffff;
 }
 
-.top
-{
+.top {
     font-size: 50px;
     font-weight: bold;
     margin-top: 2em;
@@ -118,8 +100,7 @@ nav.navbar.navbar-default.navbar-fixed-top
     text-align: center;
 }
 
-.bottom
-{
+.bottom {
     text-align: center;
     margin-bottom: 1em;
 }
@@ -127,37 +108,32 @@ nav.navbar.navbar-default.navbar-fixed-top
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
-.main-functions
-{
+.main-functions {
     padding-bottom: 60px;
     background-color: #2D2E32;
     text-align: center;
     padding-top: 60px;
 }
 
-.title-function
-{
+.title-function {
     color: #f5f5f5;
     text-transform: uppercase;
     font-weight: 700;
     padding-bottom: 40px;
 }
 
-.text-function
-{
+.text-function {
     background-size: cover;
 }
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
 
-.form-contact-messege
-{
+.form-contact-messege {
     background-color: #2D2E32;
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
-.form-contact-messege h2
-{
+.form-contact-messege h2 {
     text-align: center;
     color: whitesmoke;
     padding-bottom: 40px;
@@ -165,16 +141,14 @@ nav.navbar.navbar-default.navbar-fixed-top
     font-weight: 700;
 }
 
-.under-text
-{
+.under-text {
     text-align: center;
     color: whitesmoke;
     padding-bottom: 20px;
     word-spacing: 5px;
 }
 
-.form-control
-{
+.form-control {
     height: auto;
     padding: 10px 16px;
     font-size: 18px;
@@ -183,13 +157,11 @@ nav.navbar.navbar-default.navbar-fixed-top
     border-radius: 6px;
 }
 
-.form-control.send
-{
+.form-control.send {
     text-align: center;
 }
 
-.text-form-email
-{
+.text-form-email {
     text-align: center;
     color: white;
     font-size: 12px;
@@ -197,22 +169,18 @@ nav.navbar.navbar-default.navbar-fixed-top
     opacity: 0.5;
 }
 
-.btn.contact-submit
-{
+.btn.contact-submit {
     width: 100%;
 }
 
-@media screen and (max-width: 991px)
-{
-    .btn.contact-submit
-    {
+@media screen and (max-width: 991px) {
+    .btn.contact-submit {
         margin-top: 10px
     }
 }
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
 
-.team
-{
+.team {
     background-image: url("../images/team-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -223,13 +191,11 @@ nav.navbar.navbar-default.navbar-fixed-top
     text-align: center;
 }
 
-.three-foto
-{
+.three-foto {
     margin-top: 40px;
 }
 
-h2.team-title
-{
+h2.team-title {
     background-color: rgba(45,46,50,0.8);
     border-radius: 5px;
     color: whitesmoke;
@@ -239,8 +205,7 @@ h2.team-title
     text-transform: uppercase;
 }
 
-p.member-name
-{
+p.member-name {
     background-color: rgba(45,46,50,0.8);
     border-radius: 5px;
     color: whitesmoke;
@@ -252,37 +217,37 @@ p.member-name
 }
 
 .social,
-.member
-{
+.member {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.btn-social
-{
+.btn-social {
     background-color: rgba(45,46,50,0.8);
     box-sizing: border-box;
     border: 2px solid black;
     transition: 1s;
 }
 
-button.btn-social:hover
-{
+button.btn-social:hover{
     background: rgba(45,46,50,0.8);
 }
 
-.fa.fa-linkedin:hover
-{
+button.btn-social:focus {
+    outline: none;
+    background-color: rgba(45,46,50,0.8);
+    border-color: black;
+}
+
+.fa.fa-linkedin:hover {
     color: #0077B5;
 }
 
-.fa.fa-github:hover
-{
+.fa.fa-github:hover {
     color: #6e5494;
 }
 
-.member-foto
-{
+.member-foto {
     display: block;
     margin: auto;
     box-sizing: border-box;
@@ -292,56 +257,44 @@ button.btn-social:hover
 }
 
 /* entire container, keeps perspective */
-.flip-container-1, .flip-container-2, .flip-container-3
-{
+.flip-container-1, .flip-container-2, .flip-container-3 {
     perspective: 1000px;
 }
-/* flip the pane when hovered */
-.flip-container-1:hover .flipper-1, .flip-container-2:hover .flipper-2, .flip-container-3:hover .flipper-3,.flip-container-1.hover .flipper-1,.flip-container-2.hover .flipper-2, .flip-container-3.hover .flipper-3
-{
+
+.flip-container-1:hover .flipper-1, .flip-container-2:hover .flipper-2, .flip-container-3:hover .flipper-3,.flip-container-1.hover .flipper-1,.flip-container-2.hover .flipper-2, .flip-container-3.hover .flipper-3 {
     transform: rotateY(180deg);
 }
 
-.flip-container-1, .flip-container-2, .flip-container-3, #front-1, #front-2, #front-3, #back-1, #back-2, #back-3
-{
+.flip-container-1, .flip-container-2, .flip-container-3, #front-1, #front-2, #front-3, #back-1, #back-2, #back-3 {
     width: 100%;
     height-min: 155px;
 }
 
-/* flip speed goes here */
-.flipper-1, .flipper-2, .flipper-3
-{
+.flipper-1, .flipper-2, .flipper-3 {
     transition: 0.6s;
     transform-style: preserve-3d;
     position: relative;
 }
 
-/* hide back of pane during swap */
-#front-1, #front-2, #front-3, #back-1, #back-2, #back-3
-{
+#front-1, #front-2, #front-3, #back-1, #back-2, #back-3 {
     backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
 }
 
-/* front pane, placed above back */
-#front-1, #front-2, #front-3
-{
+#front-1, #front-2, #front-3 {
     z-index: 2;
     transform: rotateY(0deg);
     position: relative;
 }
 
-/* back, initially hidden pane */
-#back-1, #back-2, #back-3
-{
+#back-1, #back-2, #back-3 {
     transform: rotateY(180deg);
     position: absolute;
 }
 
-.social-media
-{
+.social-media {
     border: 0.7em solid;
     border-color: rgba(45,46,50,0.8);
     margin-left: auto;
@@ -350,23 +303,20 @@ button.btn-social:hover
 }
 
 .fa.fa-linkedin,
-.fa.fa-github
-{
+.fa.fa-github {
     color: #f5f5f5;
 }
 
 
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
 
-.product
-{
+.product {
     padding-bottom: 40px;
     background: #2D2E32;
     text-align: center;
 }
 
-h2.product-info-header
-{
+h2.product-info-header {
     margin-top: 40px;
     margin-bottom: 40px;
     color: #f5f5f5;
@@ -385,14 +335,12 @@ h2.product-info-header
 
 /* ### PIOTREK ### feature-footer ### Stopka */
 
-.copyright
-{
+.copyright {
     padding: 3em 0em;
     background: #2D2E32;
 }
 
-.copyright p
-{
+.copyright p {
     letter-spacing: 0.20em;
     text-align: center;
     text-transform: uppercase;
