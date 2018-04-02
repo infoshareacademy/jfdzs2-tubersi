@@ -307,3 +307,11 @@ h2.product-info-header {
     color: whitesmoke;
 }
 
+/*google translator*/
+.goog-te-banner-frame {
+    display: none
+}
+
+body {
+    top: 0 !important;
+}
