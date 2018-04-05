@@ -1,4 +1,4 @@
-// lang en/pl pl/en
+// google translator lang en/pl pl/en
 
 $('#eng-lang').click(function googleTranslateElementInit() {
     new google.translate.TranslateElement(

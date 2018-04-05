@@ -308,10 +308,6 @@ h2.product-info-header {
 }
 
 /*google translator*/
-.goog-te-banner-frame {
-    display: none
-}
-
-body {
-    top: 0 !important;
+#google_translate_element{
+    display: none;
 }
