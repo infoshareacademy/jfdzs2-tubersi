@@ -1,17 +1,13 @@
-//language change pl-en /en - pl by google plugin
+// lang en/pl pl/en
 
-function googleTranslateElementInit() {
+$('#eng-lang').click(function googleTranslateElementInit() {
     new google.translate.TranslateElement(
         {pageLanguage: 'pl'},
-        'google_translate_element'
-    );
-}
+        'google_translate_element',
+        window.location='#googtrans(en)'
 
-$('#eng-lang').click(function () {
-    window.location='#googtrans(en)';
-    window.location.reload();
-    return event.returnValue=true;
-});
+    )}
+);
 
 $('#pol-lang').click(function () {
     window.location='#googtrans(pl)';
