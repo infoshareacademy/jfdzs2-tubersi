@@ -384,7 +384,7 @@ h2.game-title {
     margin: 0;
     position: absolute;
     top:330px;
-    left: 96px;
+    left: 0px;
     z-index: 11;
 }
 
@@ -479,7 +479,7 @@ h2.game-title {
 
     #music-folder{
         top:390px;
-        left: 276px;
+        left: 0px;
     }
 }
 
@@ -523,6 +523,6 @@ h2.game-title {
 
     #music-folder{
         top:390px;
-        left: 276px;
+        left: 0px;
     }
 }
