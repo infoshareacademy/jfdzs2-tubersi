@@ -7,7 +7,7 @@
 var level1 = document.getElementById("level-1");
 var level2 = document.getElementById("level-2");
 var time = document.getElementById('time-to-end');
-var sek = 60;
+var sek = 10;
 
 level1.addEventListener("click", init);
 level2.addEventListener("click", init);
@@ -21,9 +21,19 @@ function timeStart(){
         setTimeout(function(){timeStart(time,--sek)},1000)
     } else {
         time.innerHTML='Koniec czasu';
-
+        stop_the_game();
     }
 }
+
+
+function stop_the_game() {
+    clearInterval(moveInterval);
+    clearTimeout(tune2Timeout);
+    clearTimeout(tune3Timeout);
+    document.getElementById('select-level').style.display='';
+}
+
+
 
 // function sets the star position of the folder for different resolutions
 function startPositionFolder (){
@@ -47,9 +57,10 @@ function init() {
 
     positionFolder = parseInt(document.getElementById('music-folder').style.left);
     positionTune = parseInt(document.getElementById('tune-1').style.top);
-    setInterval(moveTunes,60);
-    setTimeout(activeTune2,500);
-    setTimeout(activeTune3,800);
+    moveInterval = setInterval(moveTunes,60);
+    tune2Timeout = setTimeout(activeTune2,500);
+    tune3Timeout = setTimeout(activeTune3,800);
+
 
 
 }
