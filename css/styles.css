@@ -296,6 +296,8 @@ h2.product-info-header {
 .copyright {
     padding: 3em 0em;
     background: #2D2E32;
+    border: solid 1px;
+    border-top-color: #e7e7e7;
 }
 
 .copyright p {
