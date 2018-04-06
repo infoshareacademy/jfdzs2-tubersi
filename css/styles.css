@@ -1,3 +1,4 @@
+
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
 .logo{
@@ -132,11 +133,25 @@ nav.navbar.navbar-default.navbar-fixed-top{
     background-size: cover;
 }
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
+.separator{
+    background-color: #2D2E32;
+}
+.photo-separator{
+    background-image: url("../images/city.jpg");
+    /*!*background-repeat: no-repeat;*!*/
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    height: 30vh;
+    clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+}
+
 
 .form-contact-messege
 {
     background-color: #2D2E32;
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 80px;
 }
 
