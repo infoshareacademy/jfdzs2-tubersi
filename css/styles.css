@@ -1,4 +1,22 @@
-/*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+@PiotrMajkowski
+Sign out
+7
+2 1 infoshareacademy/jfdzs2-tubersi
+Code  Issues 0  Pull requests 5  Projects 0  Wiki  Insights
+jfdzs2-tubersi/css/styles.css
+971f99a  10 hours ago
+@PiotrMajkowski PiotrMajkowski sets the star position of the folder for different resolutions
+@PiotrMajkowski @DorotaPawlowska @ErykSandecki
+
+528 lines (433 sloc)  7.73 KB
+    /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
 .logo{
     padding: 0;
@@ -305,224 +323,3 @@ h2.product-info-header {
 }
 
 
-/*##### GAME #########*/
-
-.game{
-    padding-bottom: 40px;
-    background: #2D2E32;
-    text-align: center;
-}
-
-#select-level{
-    text-align: center;
-    top: 150px;
-    width: 100%;
-    z-index: 100;
-    position: absolute;
-
-}
-
-h2.game-title {
-    background-color: rgba(45,46,50,0.8);
-    border-radius: 5px;
-    color: whitesmoke;
-    display: inline-block;
-    padding: 0.5em;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.game-area {
-    height: 440px;
-    width: 240px;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    background: white;
-    border: solid 5px #2D2E32;
-    border-radius: 5px;
-}
-
-#score-info {
-    width: 100%;
-    border-bottom:solid 5px #2D2E32;
-}
-
-.speaker{
-    z-index: 100;
-    position: absolute;
-    top: 38px;
-}
-
-#speaker-1,
-#tune-1{
-    left: 20px;
-}
-
-#speaker-2,
-#tune-2{
-    left: 96px;
-}
-
-#speaker-3,
-#tune-3{
-    left: 172px;
-}
-
-/*Spadajaće nuty*/
-
-.tune {
-    position: absolute;
-    top: 90px;
-    z-index: 99;
-}
-
-/*folder zbierający nuty*/
-
-#music-folder{
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top:330px;
-    left: 0px;
-    z-index: 11;
-}
-
-
-/*podłoga z ocenami kciuk up i dwon*/
-
-#floor{
-    border-top:solid 5px #2D2E32;
-    position: absolute;
-    z-index: 10;
-    height: 50px;
-    width: 100%;
-    background-color: white;
-    bottom: 0;
-}
-
-/*Ztracone punkty kciuk w dół*/
-.thumb-down{
-    position: absolute;
-    width: 15%;
-}
-
-#thumb-down-1{
-    left: 20px;
-    display: none;
-}
-
-#thumb-down-2{
-    left: 96px;
-    display: none;
-}
-
-#thumb-down-3{
-    left: 172px;
-}
-
-/*Zdobyte punktu kciuk w góre*/
-.thumb-up{
-    position: absolute;
-}
-
-#thumb-up-1{
-    left: 20px;
-}
-
-#thumb-up-2{
-    left: 96px;
-    display: none;
-}
-
-#thumb-up-3{
-    left: 172px;
-    display: none;
-}
-
-@media all and (min-width: 768px) and (max-width: 1170px) {
-    .game-area {
-        height: 500px;
-        width: 600px;
-    }
-
-    .speaker{
-        top: 40px;
-    }
-
-    #speaker-1,
-    #tune-1,
-    #thumb-down-1,
-    #thumb-up-1{
-        left: 60px;
-    }
-
-    #speaker-2,
-    #tune-2,
-    #thumb-down-2,
-    #thumb-up-2{
-        left: 260px;
-    }
-
-    #speaker-3,
-    #tune-3,
-    #thumb-down-3,
-    #thumb-up-3{
-        left: 470px;
-    }
-
-    .tune {
-        position: absolute;
-        top: px;
-        z-index: 99;
-    }
-
-    #music-folder{
-        top:390px;
-        left: 0px;
-    }
-}
-
-
-@media all and (min-width: 1170px) {
-    .game-area {
-        height: 500px;
-        width: 900px;
-    }
-
-    .speaker{
-        top: 40px;
-    }
-
-    #speaker-1,
-    #tune-1,
-    #thumb-down-1,
-    #thumb-up-1{
-        left: 120px;
-    }
-
-    #speaker-2,
-    #tune-2,
-    #thumb-down-2,
-    #thumb-up-2{
-        left: 426px;
-    }
-
-    #speaker-3,
-    #tune-3,
-    #thumb-down-3,
-    #thumb-up-3{
-        left: 730px;
-    }
-
-    .tune {
-        position: absolute;
-        top: px;
-        z-index: 99;
-    }
-
-    #music-folder{
-        top:390px;
-        left: 0px;
-    }
-}
