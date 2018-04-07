@@ -133,9 +133,6 @@ nav.navbar.navbar-default.navbar-fixed-top{
     background-size: cover;
 }
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
-.separator{
-    background-color: #2D2E32;
-}
 .photo-separator{
     background-image: url("../images/city.jpg");
     /*!*background-repeat: no-repeat;*!*/
