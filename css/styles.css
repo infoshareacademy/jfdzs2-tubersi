@@ -76,6 +76,10 @@ nav.navbar.navbar-default.navbar-fixed-top{
     float: left;
 }
 
+.navbar-toggle{
+    margin-top: 14px;
+}
+
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -> etap II - Rotacja zawartości w zajawce */
 
 
