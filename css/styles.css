@@ -216,6 +216,10 @@ p.member-name {
     display: inline-block;
 }
 
+.btn-group {
+    top: 40%;
+}
+
 .social,
 .member {
     margin-top: 20px;
@@ -227,6 +231,19 @@ p.member-name {
     box-sizing: border-box;
     border: 2px solid black;
     transition: 1s;
+    font-size: 2rem;
+}
+
+
+
+@media screen and (max-width: 991px) {
+    .btn-social {
+        font-size: 3rem;
+    }
+}
+
+.btn-social a {
+    display: inline-block;
 }
 
 button.btn-social:hover{
@@ -254,6 +271,7 @@ button.btn-social:focus {
     border: 0.7em solid;
     border-color: rgba(45,46,50,0.8);
     transition: 1s;
+    width: 70%;
 }
 
 /* entire container, keeps perspective */
@@ -265,10 +283,6 @@ button.btn-social:focus {
     transform: rotateY(180deg);
 }
 
-.flip-container-1, .flip-container-2, .flip-container-3, #front-1, #front-2, #front-3, #back-1, #back-2, #back-3 {
-    width: 100%;
-    height-min: 155px;
-}
 
 .flipper-1, .flipper-2, .flipper-3 {
     transition: 0.6s;
@@ -292,14 +306,21 @@ button.btn-social:focus {
 #back-1, #back-2, #back-3 {
     transform: rotateY(180deg);
     position: absolute;
+    height: 100%;
+    margin: auto;
+    width: 100%;
 }
 
 .social-media {
     border: 0.7em solid;
     border-color: rgba(45,46,50,0.8);
+    background-color: #dddddd;
+    height: 100%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #dddddd;
+    border-radius: 50%;
+
 }
 
 .fa.fa-linkedin,
