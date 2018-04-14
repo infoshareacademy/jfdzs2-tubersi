@@ -1,6 +1,6 @@
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
-.logo{
+.logo {
     padding: 0;
     margin: 0;
     width: 50px;
@@ -11,45 +11,45 @@ ul.nav.navbar-nav.navbar-right {
     margin-top: 0.5em;
 }
 
-main{
+main {
     padding-top: 93px;
 
 }
 
-section{
+section {
     padding-top: 93px;
     margin-top: -93px;
 }
 
-@media all and (max-width: 283px){
+@media all and (max-width: 283px) {
 
-    main{
+    main {
         padding-top: 153px;
     }
 
-    section{
+    section {
         padding-top: 153px;
         margin-top: -153px;
     }
 }
 
 .affix {
-    padding:0px;
-    transition:padding 0.2s linear;
+    padding: 0px;
+    transition: padding 0.2s linear;
 
 }
 
 .affix-top {
-    padding-top:15px;
-    padding-bottom:15px;
-    transition:padding 0.5s linear;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: padding 0.5s linear;
 }
 
-nav.navbar.navbar-default.navbar-fixed-top{
+nav.navbar.navbar-default.navbar-fixed-top {
     margin: 0 auto;
 }
 
-.navbar{
+.navbar {
     background: #2D2E32;
 }
 
@@ -57,7 +57,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     color: #f5f5f5;
 }
 
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
     color: #f5f5f5;
     background-color: transparent;
 }
@@ -66,7 +66,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     background-color: #f5f5f5;
 }
 
-.navbar-brand{
+.navbar-brand {
     height: 100%;
     padding: 0.5em;
     text-align: center;
@@ -75,12 +75,12 @@ nav.navbar.navbar-default.navbar-fixed-top{
     font-weight: bold;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > li > a {
     color: #f5f5f5;
     font-size: 14px;
 }
 
-.navbar-default .navbar-nav>li>a:hover{
+.navbar-default .navbar-nav > li > a:hover {
     color: #5e5e5e;
 }
 
@@ -88,28 +88,28 @@ nav.navbar.navbar-default.navbar-fixed-top{
     border-color: #FE0000;
 }
 
-.navbar-brand > img{
+.navbar-brand > img {
     float: left;
 }
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
 
-.parallax{
+.parallax {
     background: url("../images/music-sound.jpg") no-repeat center fixed;
     background-size: cover;
 }
 
-.flash{
+.flash {
     padding: 40px 0;
     font-size: 30px;
     color: #2D2E32;
 }
 
-.inner{
+.inner {
     color: #ffffff;
 }
 
-.top{
+.top {
     font-size: 50px;
     font-weight: bold;
     margin-top: 2em;
@@ -117,45 +117,40 @@ nav.navbar.navbar-default.navbar-fixed-top{
     text-align: center;
 }
 
-.bottom{
+.bottom {
     text-align: center;
     margin-bottom: 1em;
 }
 
-
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
-.main-functions
-{
+.main-functions {
     padding-bottom: 60px;
     background-color: #2D2E32;
     text-align: center;
     padding-top: 60px;
 }
 
-.title-function
-{
+.title-function {
     color: #f5f5f5;
     text-transform: uppercase;
     font-weight: 700;
     padding-bottom: 40px;
 }
 
-.text-function
-{
+.text-function {
     background-size: cover;
 }
+
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
 
-.form-contact-messege
-{
+.form-contact-messege {
     background-color: #2D2E32;
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
-.form-contact-messege h2
-{
+.form-contact-messege h2 {
     text-align: center;
     color: whitesmoke;
     padding-bottom: 40px;
@@ -163,15 +158,14 @@ nav.navbar.navbar-default.navbar-fixed-top{
     font-weight: 700;
 }
 
-.under-text
-{
+.under-text {
     text-align: center;
     color: whitesmoke;
     padding-bottom: 20px;
     word-spacing: 5px;
 }
 
-.form-control{
+.form-control {
     height: auto;
     padding: 10px 16px;
     font-size: 18px;
@@ -180,13 +174,11 @@ nav.navbar.navbar-default.navbar-fixed-top{
     border-radius: 6px;
 }
 
-.form-control.send
-{
+.form-control.send {
     text-align: center;
 }
 
-.text-form-email
-{
+.text-form-email {
     text-align: center;
     color: white;
     font-size: 12px;
@@ -194,19 +186,19 @@ nav.navbar.navbar-default.navbar-fixed-top{
     opacity: 0.5;
 }
 
-.btn.contact-submit
-{
+.btn.contact-submit {
     width: 100%;
 }
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px) {
     .btn.contact-submit {
         margin-top: 10px
     }
 }
+
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
 
-.team{
+.team {
     background-image: url("../images/team-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -217,12 +209,12 @@ nav.navbar.navbar-default.navbar-fixed-top{
     text-align: center;
 }
 
-.three-foto{
+.three-foto {
     margin-top: 40px;
 }
 
 h2.team-title {
-    background-color: rgba(45,46,50,0.8);
+    background-color: rgba(45, 46, 50, 0.8);
     border-radius: 5px;
     color: whitesmoke;
     display: inline-block;
@@ -232,7 +224,7 @@ h2.team-title {
 }
 
 p.member-name {
-    background-color: rgba(45,46,50,0.8);
+    background-color: rgba(45, 46, 50, 0.8);
     border-radius: 5px;
     color: whitesmoke;
     font-size: 1.5em;
@@ -243,18 +235,18 @@ p.member-name {
 }
 
 .social,
-.member{
+.member {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.btn-social{
-    background-color: rgba(45,46,50,0.8);
+.btn-social {
+    background-color: rgba(45, 46, 50, 0.8);
     border: none;
 }
 
-button.btn-social:hover{
-    background: rgba(45,46,50,0.8);
+button.btn-social:hover {
+    background: rgba(45, 46, 50, 0.8);
 }
 
 .fa.fa-linkedin,
@@ -264,7 +256,7 @@ button.btn-social:hover{
     padding: 6px;
 }
 
-.fa.fa-linkedin:hover{
+.fa.fa-linkedin:hover {
     color: #0077B5;
 }
 
@@ -277,7 +269,7 @@ button.btn-social:hover{
     margin: auto;
     box-sizing: border-box;
     border: 0.7em solid;
-    border-color: rgba(45,46,50,0.8);
+    border-color: rgba(45, 46, 50, 0.8);
 }
 
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
@@ -301,7 +293,7 @@ h2.product-info-header {
 .fa.fa-film,
 .fa.fa-toggle-right,
 .fa.fa-cog,
-.fa.fa-calendar{
+.fa.fa-calendar {
     font-size: 70px;
 }
 
