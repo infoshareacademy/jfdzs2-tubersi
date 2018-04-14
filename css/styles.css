@@ -92,7 +92,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
     float: left;
 }
 
-/*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
+/*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -> etap II - Rotacja zawartości w zajawce */
 
 .parallax {
     background: url("../images/music-sound.jpg") no-repeat center fixed;
@@ -105,8 +105,19 @@ nav.navbar.navbar-default.navbar-fixed-top {
     color: #2D2E32;
 }
 
+#start{
+    height: 100%;
+    background-color: #2D2E32;
+}
+
 .inner {
     color: #ffffff;
+}
+
+@media all and (max-width: 450px){
+    div.carousel-caption h1{
+        font-size: 21px;
+    }
 }
 
 .top {
@@ -115,11 +126,29 @@ nav.navbar.navbar-default.navbar-fixed-top {
     margin-top: 2em;
     margin-bottom: 2em;
     text-align: center;
+@media all and (min-width: 1200px){
+    div.carousel-caption h1{
+        font-size: 51px;
+    }
 }
 
 .bottom {
     text-align: center;
     margin-bottom: 1em;
+}
+
+#start div.wraper{
+    width: 100%;
+}
+
+@media screen and (min-width: 1200px){
+    #start div.wraper{
+        width: 1170px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
@@ -312,4 +341,24 @@ h2.product-info-header {
     margin: 0;
     color: whitesmoke;
 }
+
+/* ### PIOTREK ### feature-scrollUP */
+
+.fa.fa-angle-up{
+    font-size: 40px;
+    color: #2D2E32;
+}
+
+.btn-scroll {
+    background: whitesmoke;
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    cursor: pointer;
+    border: solid 1px;
+    color: #2D2E32;
+}
+
+
 
