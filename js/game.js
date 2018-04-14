@@ -51,13 +51,9 @@ function checkCollision(){
 
     if (positionFolder===121 && positionTune1===360){
         return true;
-    }
-
-    if (positionFolder===426 && positionTune2===360){
+    } else if (positionFolder===426 && positionTune2===360){
         return true;
-    }
-
-    if (positionFolder===731 && positionTune3===360){
+    } else if (positionFolder===731 && positionTune3===360){
         return true;
     }
 }
@@ -88,7 +84,6 @@ function init() {
 
     positionFolder = parseInt(document.getElementById('music-folder').style.left);
     positionTune = parseInt(document.getElementById('tune-1').style.top);
-    pointInterval = setInterval(addPoint,60);
     moveInterval = setInterval(moveTunes,60);
     tune2Timeout = setTimeout(activeTune2,500);
     tune3Timeout = setTimeout(activeTune3,800);
@@ -118,6 +113,7 @@ function moveTunes() {
     var element2 = document.getElementById("tune-2");
     var element3 = document.getElementById("tune-3");
 
+    addPoint();
 
     if(activeTunes1 === true){
         posY1+=10;
