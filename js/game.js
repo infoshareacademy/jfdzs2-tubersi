@@ -1,8 +1,6 @@
 // START GAME
 //
 
-
-
 //choic of level and start
 var level1 = document.getElementById("level-1");
 var level2 = document.getElementById("level-2");
@@ -21,16 +19,36 @@ function timeStart(){
         setTimeout(function(){timeStart(time,--sek)},1000)
     } else {
         time.innerHTML='Koniec czasu';
-        stop_the_game();
+        stopGame();
+    }
+}
+
+function stopGame() {
+    document.querySelector('#select-level').style.visibility= 'visible';
+    clearInterval(moveInterval);
+    clearTimeout(tune2Timeout);
+    clearTimeout(tune3Timeout);
+
+}
+//add Point and checkCollision
+
+function addPoint(){
+    if (checkCollision() === true){
+        var score = document.getElementById('score');
+        var scoreNumber = parseInt(document.getElementById('score').innerText);
+        var i = +1;
+        score.innerHTML = scoreNumber+i;
     }
 }
 
 
-function stop_the_game() {
-    clearInterval(moveInterval);
-    clearTimeout(tune2Timeout);
-    clearTimeout(tune3Timeout);
-    document.getElementById('select-level').style.display='';
+function checkCollision(){
+    var basketLeft = parseInt(document.getElementById('music-folder').style.left);
+    var tuneOneHeight = parseInt(document.getElementById('tune-1').style.top);
+
+    if (basketLeft===121 && tuneOneHeight===360){
+        return true;
+    }
 }
 
 
@@ -51,12 +69,15 @@ var positionTune;
 var screenWidth = window.innerWidth;
 
 function init() {
-    document.getElementById('select-level').style.display='none';
+    document.querySelector('#select-level').style.visibility='hidden';
     startPositionFolder();
     timeStart();
 
+
+
     positionFolder = parseInt(document.getElementById('music-folder').style.left);
     positionTune = parseInt(document.getElementById('tune-1').style.top);
+    pointInterval = setInterval(addPoint,60);
     moveInterval = setInterval(moveTunes,60);
     tune2Timeout = setTimeout(activeTune2,500);
     tune3Timeout = setTimeout(activeTune3,800);
