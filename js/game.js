@@ -12,6 +12,7 @@ level2.addEventListener("click", init);
 
 
 
+
 // function start game time
 function timeStart(){
     if(sek>0) {
@@ -43,20 +44,20 @@ function addPoint(){
 
 
 function checkCollision(){
-    var basketLeft = parseInt(document.getElementById('music-folder').style.left);
-    var tune1Height = parseInt(document.getElementById('tune-1').style.top);
-    var tune2Height = parseInt(document.getElementById('tune-2').style.top);
-    var tune3Height = parseInt(document.getElementById('tune-3').style.top);
+    var positionFolder = parseInt(document.getElementById('music-folder').style.left);
+    var positionTune1 = parseInt(document.getElementById('tune-1').style.top);
+    var positionTune2 = parseInt(document.getElementById('tune-2').style.top);
+    var positionTune3 = parseInt(document.getElementById('tune-3').style.top);
 
-    if (basketLeft===121 && tune1Height===360){
+    if (positionFolder===121 && positionTune1===360){
         return true;
     }
 
-    if (basketLeft===426 && tune2Height===360){
+    if (positionFolder===426 && positionTune2===360){
         return true;
     }
 
-    if (basketLeft===731 && tune3Height===360){
+    if (positionFolder===731 && positionTune3===360){
         return true;
     }
 }
