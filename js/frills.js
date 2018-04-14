@@ -20,7 +20,7 @@ $('#scroll-up').click(function () {
 // ##### Piotrek - cookies #####
 
 
-$('.cookies').click(function () {
+$('#cookies-close').click(function () {
     $('.cookies').fadeOut();
     document.cookie = "tubers";
 });
