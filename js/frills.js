@@ -15,5 +15,10 @@ $('#scroll-up').click(function () {
     return false;
 });
 
+function scroll_to(selector) {
+    $('html,body').animate({scrollTop: $(selector).offset().top}, 1000);
+    return false;
+}
+
 
 
