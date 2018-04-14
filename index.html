@@ -14,7 +14,7 @@
 <!--### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED)-->
 
     <header>
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="300">
                 <div class="container">
                     <a class="navbar-brand" href="#">
                         <img src="images/logo_wektor.svg" class="logo" alt="logo">
@@ -31,11 +31,11 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#start">Start</a></li><!-- nowy ajdik dla sekcji -->
-                        <li><a href="#functions">Funkcje</a></li> <!-- nowy ajdik dla sekcji -->
-                        <li><a href="#registration">Zapisy</a></li><!-- nowy ajdik dla sekcji -->
-                        <li><a href="#aboutus">O nas</a></li><!-- nowy ajdik dla sekcji -->
-                        <li><a href="#aboutapp">O aplikacji</a></li><!-- nowy ajdik dla sekcji -->
+                        <li><a href="#start">Start</a></li>
+                        <li><a href="#functions">Funkcje</a></li>
+                        <li><a href="#registration">Zapisy</a></li>
+                        <li><a href="#aboutus">O nas</a></li>
+                        <li><a href="#aboutapp">O aplikacji</a></li>
                     </ul>
                 </div>
             </div>
@@ -143,7 +143,7 @@
 
         <!--### PIOTREK ### feature-team ### Informacja o zespole -->
         <section id="aboutus">
-            <div class="container-fluid team">
+            <div class="team">
                 <h2 class="team-title">Poznaj zespół Tubersów</h2>
                 <div class="container three-foto">
                     <div class="row">
@@ -185,7 +185,7 @@
 
         <!--### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie -->
         <section id="aboutapp" class="product">
-        <div class="container-fluid">
+
             <h2 class="product-info-header">Więcej informacji o aplikacji</h2>
             <div class="container">
 
@@ -271,18 +271,21 @@
                     </div>
                 </div>
             </div>
-        </div>
         </section>
 
     </main>
     <footer class="copyright">
         <p class="text-muted">&copy; Copyright 2018 by Tubersi</p>
     </footer>
+<!--Button scrollUp -->
+    <button id="scroll-up" type="button" class="btn btn-scroll" title="Przejdź do początku strony">
+        <i class="fa fa-lg fa-angle-up"></i>
+    </button>
 
 <!--### feature-cookies PIOTREK ###-->
 <div class="cookies">
     <p>Strona korzysta z plików cookies w celu realizacji usług. Możesz określić warunki przechowywania lub dostępu do plików cookies w Twojej przeglądarce.
-        <a onclick="closeCookies()" id="cookies-close"><i class="fa fa-close"></i></a></p>
+        <a id="cookies-close"><i class="fa fa-close"></i></a></p>
 </div>
 
 
