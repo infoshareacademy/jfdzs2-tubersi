@@ -44,9 +44,19 @@ function addPoint(){
 
 function checkCollision(){
     var basketLeft = parseInt(document.getElementById('music-folder').style.left);
-    var tuneOneHeight = parseInt(document.getElementById('tune-1').style.top);
+    var tune1Height = parseInt(document.getElementById('tune-1').style.top);
+    var tune2Height = parseInt(document.getElementById('tune-2').style.top);
+    var tune3Height = parseInt(document.getElementById('tune-3').style.top);
 
-    if (basketLeft===121 && tuneOneHeight===360){
+    if (basketLeft===121 && tune1Height===360){
+        return true;
+    }
+
+    if (basketLeft===426 && tune2Height===360){
+        return true;
+    }
+
+    if (basketLeft===731 && tune3Height===360){
         return true;
     }
 }
