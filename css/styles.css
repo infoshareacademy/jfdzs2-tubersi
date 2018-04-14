@@ -307,3 +307,23 @@ h2.product-info-header {
     color: whitesmoke;
 }
 
+/* ### PIOTREK ### feature-scrollUP */
+
+.fa.fa-angle-up{
+    font-size: 40px;
+    color: #2D2E32;
+}
+
+.btn-scroll {
+    background: whitesmoke;
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    cursor: pointer;
+    border: solid 1px;
+    color: #2D2E32;
+}
+
+
+
