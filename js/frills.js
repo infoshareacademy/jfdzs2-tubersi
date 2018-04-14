@@ -1,19 +1,15 @@
 // ##### Piotrek - cookies #####
 
-function closeCookies() {
-    var $cookiesDisplay = $('.cookies');
-    $cookiesDisplay.fadeOut();
-    document.cookie = "tubers";
-}
 
-function removeCookiePopup() {
+$('.cookies').click(function () {
+    $('.cookies').fadeOut();
+    document.cookie = "tubers";
+});
+
+function checkAndDeletPopUp() {
     if(document.cookie === "tubers"){
-        var $cookiesDisplay = $('.cookies');
-        $cookiesDisplay.fadeOut();
+        $('.cookies').remove();
     }
 }
 
-removeCookiePopup();
-
-
-
+checkAndDeletPopUp();
