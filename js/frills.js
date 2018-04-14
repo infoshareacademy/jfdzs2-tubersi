@@ -4,8 +4,8 @@ $('#eng-lang').click(function googleTranslateElementInit() {
     new google.translate.TranslateElement(
         {pageLanguage: 'pl'},
         'google_translate_element',
-        window.location='#googtrans(en)'
-
+        window.location='#googtrans(en)',
+        $('nav.navbar.navbar-default.navbar-fixed-top').css({"top":"40px"})
     )}
 );
 
