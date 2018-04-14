@@ -94,17 +94,6 @@ nav.navbar.navbar-default.navbar-fixed-top {
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -> etap II - Rotacja zawartości w zajawce */
 
-.parallax {
-    background: url("../images/music-sound.jpg") no-repeat center fixed;
-    background-size: cover;
-}
-
-.flash {
-    padding: 40px 0;
-    font-size: 30px;
-    color: #2D2E32;
-}
-
 #start{
     height: 100%;
     background-color: #2D2E32;
