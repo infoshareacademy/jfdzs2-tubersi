@@ -274,7 +274,6 @@ p.member-name {
 }
 
 .social-media a {
-    display: inline-block;
     background: rgba(45,46,50,0.8);
     width: 40%;
     height: 40%;
@@ -304,8 +303,7 @@ p.member-name {
     display: block;
     margin: auto;
     box-sizing: border-box;
-    border: 0.7em solid;
-    border-color: rgba(45,46,50,0.8);
+    border: 0.7em solid rgba(45,46,50,0.8);
     transition: 1s;
     width: 70%;
 }
