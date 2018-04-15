@@ -1,6 +1,6 @@
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
-.logo{
+.logo {
     padding: 0;
     margin: 0;
     width: 50px;
@@ -11,28 +11,45 @@ ul.nav.navbar-nav.navbar-right {
     margin-top: 0.5em;
 }
 
-main{
-    padding-top: 64px;
+main {
+    padding-top: 93px;
 
 }
 
-section{
-    padding-top: 64px;
-    margin-top: -64px;
+section {
+    padding-top: 93px;
+    margin-top: -93px;
 }
 
-@media all and (max-width: 283px){
-    section{
-        padding-top: 112px;
-        margin-top: -112px;
+@media all and (max-width: 283px) {
+
+    main {
+        padding-top: 153px;
+    }
+
+    section {
+        padding-top: 153px;
+        margin-top: -153px;
     }
 }
 
-nav.navbar.navbar-default.navbar-fixed-top{
+.affix {
+    padding: 0;
+    transition: padding 0.2s linear;
+
+}
+
+.affix-top {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: padding 0.5s linear;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top {
     margin: 0 auto;
 }
 
-.navbar{
+.navbar {
     background: #2D2E32;
 }
 
@@ -40,7 +57,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     color: #f5f5f5;
 }
 
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
     color: #f5f5f5;
     background-color: transparent;
 }
@@ -58,12 +75,12 @@ nav.navbar.navbar-default.navbar-fixed-top{
     font-weight: bold;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > li > a {
     color: #f5f5f5;
     font-size: 14px;
 }
 
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav > li > a:hover {
     color: #5e5e5e;
 }
 
@@ -83,19 +100,36 @@ nav.navbar.navbar-default.navbar-fixed-top{
     background-color: #2D2E32;
 }
 
+.inner {
+    color: #ffffff;
+}
+
 @media all and (max-width: 450px){
     div.carousel-caption h1{
         font-size: 21px;
     }
 }
 
-@media all and (min-width: 1200px) {
+.top {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+@media all and (min-width: 1200px){
     div.carousel-caption h1{
         font-size: 51px;
     }
 }
 
-#start div.wraper {
+.bottom {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#start div.wraper{
     width: 100%;
 }
 
@@ -128,6 +162,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
 .text-function {
     background-size: cover;
 }
+
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
 
 .form-contact-messege {
@@ -176,11 +211,12 @@ nav.navbar.navbar-default.navbar-fixed-top{
     width: 100%;
 }
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px) {
     .btn.contact-submit {
         margin-top: 10px
     }
 }
+
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
 
 .team {
@@ -199,7 +235,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
 }
 
 h2.team-title {
-    background-color: rgba(45,46,50,0.8);
+    background-color: rgba(45, 46, 50, 0.8);
     border-radius: 5px;
     color: whitesmoke;
     display: inline-block;
@@ -209,7 +245,7 @@ h2.team-title {
 }
 
 p.member-name {
-    background-color: rgba(45,46,50,0.8);
+    background-color: rgba(45, 46, 50, 0.8);
     border-radius: 5px;
     color: whitesmoke;
     font-size: 1.5em;
@@ -226,12 +262,12 @@ p.member-name {
 }
 
 .btn-social {
-    background-color: rgba(45,46,50,0.8);
+    background-color: rgba(45, 46, 50, 0.8);
     border: none;
 }
 
 button.btn-social:hover {
-    background: rgba(45,46,50,0.8);
+    background: rgba(45, 46, 50, 0.8);
 }
 
 .fa.fa-linkedin,
@@ -254,7 +290,7 @@ button.btn-social:hover {
     margin: auto;
     box-sizing: border-box;
     border: 0.7em solid;
-    border-color: rgba(45,46,50,0.8);
+    border-color: rgba(45, 46, 50, 0.8);
 }
 
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
@@ -286,7 +322,7 @@ h2.product-info-header {
 /* ### PIOTREK ### feature-footer ### Stopka */
 
 .copyright {
-    padding: 3em 0em;
+    padding: 3em 0;
     background: #2D2E32;
 }
 
@@ -298,4 +334,24 @@ h2.product-info-header {
     margin: 0;
     color: whitesmoke;
 }
+
+/* ### PIOTREK ### feature-scrollUP */
+
+.fa.fa-angle-up{
+    font-size: 40px;
+    color: #2D2E32;
+}
+
+.btn-scroll {
+    background: whitesmoke;
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    cursor: pointer;
+    border: solid 1px;
+    color: #2D2E32;
+}
+
+
 
