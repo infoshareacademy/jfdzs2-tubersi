@@ -49,7 +49,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     background-color: #f5f5f5;
 }
 
-.navbar-brand{
+.navbar-brand {
     height: 100%;
     padding: 0.5em;
     text-align: center;
@@ -63,7 +63,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     font-size: 14px;
 }
 
-.navbar-default .navbar-nav>li>a:hover{
+.navbar-default .navbar-nav>li>a:hover {
     color: #5e5e5e;
 }
 
@@ -71,14 +71,14 @@ nav.navbar.navbar-default.navbar-fixed-top{
     border-color: #FE0000;
 }
 
-.navbar-brand > img{
+.navbar-brand > img {
     float: left;
 }
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -> etap II - Rotacja zawartości w zajawce */
 
 
-#start{
+#start {
     height: 100%;
     background-color: #2D2E32;
 }
@@ -89,13 +89,13 @@ nav.navbar.navbar-default.navbar-fixed-top{
     }
 }
 
-@media all and (min-width: 1200px){
+@media all and (min-width: 1200px) {
     div.carousel-caption h1{
         font-size: 51px;
     }
 }
 
-#start div.wraper{
+#start div.wraper {
     width: 100%;
 }
 
@@ -111,37 +111,32 @@ nav.navbar.navbar-default.navbar-fixed-top{
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
-.main-functions
-{
+.main-functions {
     padding-bottom: 60px;
     background-color: #2D2E32;
     text-align: center;
     padding-top: 60px;
 }
 
-.title-function
-{
+.title-function {
     color: #f5f5f5;
     text-transform: uppercase;
     font-weight: 700;
     padding-bottom: 40px;
 }
 
-.text-function
-{
+.text-function {
     background-size: cover;
 }
 /*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
 
-.form-contact-messege
-{
+.form-contact-messege {
     background-color: #2D2E32;
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
-.form-contact-messege h2
-{
+.form-contact-messege h2 {
     text-align: center;
     color: whitesmoke;
     padding-bottom: 40px;
@@ -149,15 +144,14 @@ nav.navbar.navbar-default.navbar-fixed-top{
     font-weight: 700;
 }
 
-.under-text
-{
+.under-text {
     text-align: center;
     color: whitesmoke;
     padding-bottom: 20px;
     word-spacing: 5px;
 }
 
-.form-control{
+.form-control {
     height: auto;
     padding: 10px 16px;
     font-size: 18px;
@@ -166,13 +160,11 @@ nav.navbar.navbar-default.navbar-fixed-top{
     border-radius: 6px;
 }
 
-.form-control.send
-{
+.form-control.send {
     text-align: center;
 }
 
-.text-form-email
-{
+.text-form-email {
     text-align: center;
     color: white;
     font-size: 12px;
@@ -180,8 +172,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     opacity: 0.5;
 }
 
-.btn.contact-submit
-{
+.btn.contact-submit {
     width: 100%;
 }
 
@@ -192,7 +183,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
 }
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
 
-.team{
+.team {
     background-image: url("../images/team-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -203,7 +194,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     text-align: center;
 }
 
-.three-foto{
+.three-foto {
     margin-top: 40px;
 }
 
@@ -229,17 +220,17 @@ p.member-name {
 }
 
 .social,
-.member{
+.member {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.btn-social{
+.btn-social {
     background-color: rgba(45,46,50,0.8);
     border: none;
 }
 
-button.btn-social:hover{
+button.btn-social:hover {
     background: rgba(45,46,50,0.8);
 }
 
@@ -250,7 +241,7 @@ button.btn-social:hover{
     padding: 6px;
 }
 
-.fa.fa-linkedin:hover{
+.fa.fa-linkedin:hover {
     color: #0077B5;
 }
 
@@ -288,7 +279,7 @@ h2.product-info-header {
 .fa.fa-film,
 .fa.fa-toggle-right,
 .fa.fa-cog,
-.fa.fa-calendar{
+.fa.fa-calendar {
     font-size: 70px;
 }
 
