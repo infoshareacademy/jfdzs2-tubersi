@@ -216,8 +216,19 @@ p.member-name {
     display: inline-block;
 }
 
-.btn-group {
-    top: 40%;
+.social-media {
+    border: 0.7em solid rgba(45, 46, 50, 0.8);
+    background-color: #dddddd;
+    height: 100%;
+    width: 70%;
+    border-radius: 50%;
+    flex: 1;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .social,
@@ -231,14 +242,12 @@ p.member-name {
     box-sizing: border-box;
     border: 2px solid black;
     transition: 1s;
-    font-size: 2rem;
+    font-size: 3.5rem;
 }
 
-
-
-@media screen and (max-width: 991px) {
+@media only screen and (min-width: 768px) {
     .btn-social {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 }
 
@@ -309,18 +318,6 @@ button.btn-social:focus {
     height: 100%;
     margin: auto;
     width: 100%;
-}
-
-.social-media {
-    border: 0.7em solid;
-    border-color: rgba(45,46,50,0.8);
-    background-color: #dddddd;
-    height: 100%;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-
 }
 
 .fa.fa-linkedin,
