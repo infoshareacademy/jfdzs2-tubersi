@@ -24,7 +24,6 @@ $('#eng-lang').click(function googleTranslateElementInit() {
         {pageLanguage: 'pl'},
         'google_translate_element',
         window.location='#googtrans(en)',
-        $('nav.navbar.navbar-default.navbar-fixed-top').css({"top":"40px"})
     )}
 );
 

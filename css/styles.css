@@ -49,6 +49,10 @@ nav.navbar.navbar-default.navbar-fixed-top {
     margin: 0 auto;
 }
 
+html.translated-ltr body nav.navbar.navbar-default.navbar-fixed-top {
+    padding-top: 40px;
+}
+
 .navbar {
     background: #2D2E32;
 }
