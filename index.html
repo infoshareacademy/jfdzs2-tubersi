@@ -98,8 +98,8 @@
                                 <input type="email" class="form-control send" name="Adres e-mail" placeholder="E-mail">
                             </div>
                             <div class="col-md-4 col-lg-3">
-                                <input type="button" class="btn btn-lg btn-default contact-submit" value="Wyślij">
-                                       <!--data-toggle="collapse" href="#start-game" aria-expanded="false" aria-controls="collapseExample" -->
+                                <input type="button" class="btn btn-lg btn-default contact-submit" value="Wyślij"  >
+                                <!--data-toggle="collapse" href="#start-game" aria-expanded="false" aria-controls="collapseExample"-->
 
                             </div>
                         </div>
@@ -111,26 +111,12 @@
             </div>
         </section>
 
-
         <!--### GAME ### -->
 
-
-        <section id="start-game" >
-                 <!--class="collapse"-->
-
-            <div class="game">
-                <h2 class="game-title">Dziękujemy za rejestrację</h2>
+        <section id="start-game" class="game"> <!--class=collapse-->
+            <h2 class="game-title">Dziękujemy za rejestrację</h2>
                 <div class="container">
-                    <!--I info na temata gry /INSTRUKCJA-->
-                    <div class="lead well well-lg">
-                        <div class="game-introduction">
-                            <p>W nagrodę przygotowaliśmy dla Ciebie małą niespodziankę w postaci krótkiej gry zręcznościowej. Gra będzie polegała na zbieraniu do folder spadających nut. Na wykonanie zadania masz tylko 60 sekund. Im więcej złapiesz tym więcej punktów zdobywasz. Za niezłapane nuty punkty są odejmowane. Gdy zwiększysz stopień trudności nuty będą spadać szybciej.
-                            </p>
-                        </div>
-                    </div>
 
-
-                    <!--II plansz z grą-->
                     <div class="lead well well-lg">
                         <div class="game-area">
                             <div id="score-info">
@@ -147,6 +133,10 @@
                             <div id="tune-3" class="tune"><img src="images/tune.png"></div>
 
                             <div id="select-level">
+                                <div id="game-instuction">
+                                    <p>Zapraszamy do krótkiej gry zręcznościowej. Gra poleg na zbieraniu spadających nut wykorzystują strzałki boczne klawiatury. Na wykonanie zadania masz jedynie 60 sekund. Im więcej złapiesz tym więcej punktów zdobywasz. Gdy zwiększysz stopień trudności nuty będą spadały szybciej.
+                                    </p>
+                                </div>
                                 <p>Wybierz poziom i rozpocznij grę</p>
                                 <button type="button" class="btn btn-default btn-lg" id="level-1">Poziom 1</button>
                                 <button type="button" class="btn btn-default btn-lg" id="level-2">Poziom 2</button>
@@ -165,14 +155,9 @@
 
                         </div>
                     </div>
-                    <!--IV wyniki + przycisk pozwaljacy rozpocząc grę raz jeszcze-->
-
-
-
-
                 </div>
-            </div>
         </section>
+
 
 
 

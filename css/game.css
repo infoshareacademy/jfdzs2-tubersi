@@ -27,7 +27,7 @@ h2.game-title {
 
 .game-area {
     height: 500px;
-    width: 240px;
+    width: 900px;
     display: inline-block;
     position: relative;
     overflow: hidden;
@@ -46,22 +46,22 @@ h2.game-title {
 .speaker{
     z-index: 100;
     position: absolute;
-    top: 38px;
+    top: 40px;
 }
 
 #speaker-1,
 #tune-1{
-    left: 20px;
+    left: 120px;
 }
 
 #speaker-2,
 #tune-2{
-    left: 96px;
+    left: 426px;
 }
 
 #speaker-3,
 #tune-3{
-    left: 172px;
+    left: 730px;
 }
 
 .tune {
@@ -92,17 +92,17 @@ h2.game-title {
 
 #thumb-down-1,
 #thumb-up-1{
-    left: 20px;
+    left: 80px;
 }
 
 #thumb-down-2,
 #thumb-up-2{
-    left: 96px;
+    left: 386px;
 }
 
 #thumb-down-3,
 #thumb-up-3{
-    left: 172px;
+    left: 690px;
 }
 
 #thumb-up-1,
@@ -116,105 +116,8 @@ h2.game-title {
 
 
 
-@media all and (min-width: 768px) and (max-width: 1170px) {
-    .game-area {
-        height: 500px;
-        width: 600px;
-    }
-
-    .speaker{
-        top: 40px;
-    }
-
-    #speaker-1,
-    #tune-1,
-    #thumb-down-1,
-    #thumb-up-1{
-        left: 60px;
-    }
-
-    #speaker-2,
-    #tune-2,
-    #thumb-down-2,
-    #thumb-up-2{
-        left: 260px;
-    }
-
-    #speaker-3,
-    #tune-3,
-    #thumb-down-3,
-    #thumb-up-3{
-        left: 470px;
-    }
-
-    #thumb-up-1,
-    #thumb-up-2,
-    #thumb-up-3,
-    #thumb-down-1,
-    #thumb-down-2,
-    #thumb-down-3{
+@media all and (max-width: 1170px) {
+    #start-game{
         display: none;
-    }
-
-    #music-folder{
-        top:395px;
-        position: absolute;
-    }
-}
-
-
-@media all and (min-width: 1170px) {
-    .game-area {
-        height: 500px;
-        width: 900px;
-    }
-
-    .speaker{
-        top: 40px;
-    }
-
-    #thumb-down-1,
-    #thumb-up-1{
-        left: 80px;
-    }
-
-    #speaker-1,
-    #tune-1{
-        left: 120px;
-    }
-
-    #thumb-down-2,
-    #thumb-up-2{
-        left: 386px;
-    }
-
-    #speaker-2,
-    #tune-2{
-        left: 426px;
-    }
-
-    #thumb-down-3,
-    #thumb-up-3{
-        left: 690px;
-    }
-    #speaker-3,
-    #tune-3{
-        left: 730px;
-    }
-
-
-    #thumb-up-1,
-    #thumb-up-2,
-    #thumb-up-3,
-    #thumb-down-1,
-    #thumb-down-2,
-    #thumb-down-3{
-        display: none;
-    }
-
-
-    #music-folder{
-        top:395px;
-        position: absolute;
     }
 }
