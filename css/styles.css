@@ -409,3 +409,25 @@ h2.product-info-header {
 
 
 
+/*### PIOTREK ### feature-cookies*/
+
+.cookies{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    border: solid 1px;
+    border-top-color: #e7e7e7;
+}
+
+.cookies p {
+    margin: 0;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.fa.fa-close{
+    color: #f5f5f5;
+}
+
