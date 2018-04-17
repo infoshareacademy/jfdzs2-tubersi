@@ -5,22 +5,22 @@
 var level1 = document.getElementById("level-1");
 var level2 = document.getElementById("level-2");
 var time = document.getElementById('time-to-end');
-var sek = 10;
+var timeToFinish = 60;
+var score;
+var positionFolder;
+var screenWidth = window.innerWidth;
 
 level1.addEventListener("click", init);
 level2.addEventListener("click", init);
 
-
-
-
-// function start game time
 function timeStart(){
-    if(sek>0) {
-        time.innerHTML='<b>'+sek+'</b>'+' sekund';
-        setTimeout(function(){timeStart(time,--sek)},1000)
+    if(timeToFinish>0) {
+        time.innerHTML='<b>'+timeToFinish+'</b>'+' sekund';
+        setTimeout(function(){timeStart(time,--timeToFinish)},1000)
     } else {
         time.innerHTML='Koniec czasu';
         stopGame();
+        timeToFinish = 60;
     }
 }
 
@@ -29,9 +29,7 @@ function stopGame() {
     clearInterval(moveInterval);
     clearTimeout(tune2Timeout);
     clearTimeout(tune3Timeout);
-
 }
-//add Point and checkCollision
 
 function addPoint(){
     if (checkCollision() === true){
@@ -42,23 +40,44 @@ function addPoint(){
     }
 }
 
-
 function checkCollision(){
     var positionFolder = parseInt(document.getElementById('music-folder').style.left);
     var positionTune1 = parseInt(document.getElementById('tune-1').style.top);
     var positionTune2 = parseInt(document.getElementById('tune-2').style.top);
     var positionTune3 = parseInt(document.getElementById('tune-3').style.top);
 
+    //when tune put in to folder
+
     if (positionFolder===121 && positionTune1===360){
+        posYtune1 = 90;
+        $('#thumb-up-1').fadeIn('fast').fadeOut('slow');  // trzebe zamienić na JS
         return true;
     } else if (positionFolder===426 && positionTune2===360){
+        posYtune2 = 90;
+        $('#thumb-up-2').fadeIn('fast').fadeOut('slow');
         return true;
     } else if (positionFolder===731 && positionTune3===360){
+        posYtune3 = 90;
+        $('#thumb-up-3').fadeIn('fast').fadeOut('slow');
         return true;
     }
+
+    //when tune crash with floor
+
+    if (positionTune1===390){
+        posYtune1 = 90;
+        $('#thumb-down-1').fadeIn('fast').fadeOut('slow');  // trzebe zamienić na JS
+        return false;
+    } else if (positionTune2 ===390){
+        posYtune2 = 90;
+        $('#thumb-down-2').fadeIn('fast').fadeOut('slow');
+        return false;
+    } else if (positionTune3 === 390){
+        posYtune3 = 90;
+        $('#thumb-down-3').fadeIn('fast').fadeOut('slow');
+        return false;
+    }
 }
-
-
 
 // function sets the star position of the folder for different resolutions
 function startPositionFolder (){
@@ -71,32 +90,25 @@ function startPositionFolder (){
     }
 }
 
-var positionFolder;
-var positionTune;
-var screenWidth = window.innerWidth;
-
 function init() {
     document.querySelector('#select-level').style.visibility='hidden';
     startPositionFolder();
     timeStart();
 
-
-
     positionFolder = parseInt(document.getElementById('music-folder').style.left);
-    positionTune = parseInt(document.getElementById('tune-1').style.top);
     moveInterval = setInterval(moveTunes,60);
     tune2Timeout = setTimeout(activeTune2,500);
     tune3Timeout = setTimeout(activeTune3,800);
 
-
-
 }
 
 
-//SPADAJĄCE NUTY
 var activeTunes1 = true;
 var activeTunes2 = false;
 var activeTunes3 = false;
+var posYtune1 = 90,
+    posYtune2 = 90,
+    posYtune3 = 90;
 
 function activeTune2(){
     activeTunes2 = true;
@@ -106,8 +118,6 @@ function activeTune3(){
     activeTunes3 = true;
 }
 
-var posY1 = 90, posY2 = 90, posY3 = 90;
-
 function moveTunes() {
     var element1 = document.getElementById("tune-1");
     var element2 = document.getElementById("tune-2");
@@ -116,30 +126,28 @@ function moveTunes() {
     addPoint();
 
     if(activeTunes1 === true){
-        posY1+=10;
-        element1.style.top = posY1+'px' ;
-        if(posY1 > 390){
-            posY1 = 90;
+        posYtune1+=10;
+        element1.style.top = posYtune1+'px' ;
+        if(posYtune1 > 390){
+            posYtune1 = 90;
         }
     }
     if(activeTunes2 === true){
-        posY2+=5;
-        element2.style.top = posY2+'px' ;
-        if(posY2 > 390){
-            posY2 = 90;
+        posYtune2+=5;
+        element2.style.top = posYtune2+'px' ;
+        if(posYtune2 > 390){
+            posYtune2 = 90;
         }
     }
     if(activeTunes3 === true){
-        posY3+=15;
-        element3.style.top = posY3+'px' ;
-        if(posY3 > 390){
-            posY3 = 90;
+        posYtune3+=15;
+        element3.style.top = posYtune3+'px' ;
+        if(posYtune3 > 390){
+            posYtune3 = 90;
         }
     }
 }
 
-
-//folder move by key
 const folderMove = (e) =>
 {
     switch (e.keyCode)
