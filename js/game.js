@@ -47,6 +47,16 @@ function addPoint(){
 }
 
 
+
+function youtubeFolderAnimation(){
+    $('#music-folder').css('transform', 'rotate(180deg)');
+
+    setTimeout(function () {
+        $('#music-folder').css('transform', 'rotate(0deg)');
+    },100);
+}
+
+
 //checkCollision for three other resolutions
 function checkCollision(){
     var positionFolder = parseInt(document.getElementById('music-folder').style.left);
@@ -56,17 +66,20 @@ function checkCollision(){
     var screenWidthDesktop = screenWidth>1170;
 
     //when tune put in to folder for DESKTOP
-    if (positionFolder===121 && positionTune1===360 && screenWidthDesktop){
+    if (positionFolder===101 && positionTune1>335 && positionTune1<389 && screenWidthDesktop){
         posYtune1 = 90;
+        youtubeFolderAnimation();
         $('#thumb-up-1').fadeIn('fast').fadeOut('slow');
         return true;
-    } else if (positionFolder===426 && positionTune2===360 && screenWidthDesktop){
+    } else if (positionFolder===406 && positionTune2>335 && positionTune2<389 && screenWidthDesktop){
         posYtune2 = 90;
         $('#thumb-up-2').fadeIn('fast').fadeOut('slow');
+        youtubeFolderAnimation();
         return true;
-    } else if (positionFolder===731 && positionTune3===360 && screenWidthDesktop){
+    } else if (positionFolder===711 && positionTune3>335 && positionTune3<389 && screenWidthDesktop){
         posYtune3 = 90;
         $('#thumb-up-3').fadeIn('fast').fadeOut('slow');
+        youtubeFolderAnimation();
         return true;
     }
 
@@ -89,7 +102,7 @@ function checkCollision(){
 
 function init() {
     document.querySelector('#select-level').style.visibility='hidden';
-    document.getElementById('music-folder').style.left ='426'+'px';
+    document.getElementById('music-folder').style.left ='406'+'px';
     positionFolder = parseInt(document.getElementById('music-folder').style.left);
     timeStart();
     moveInterval = setInterval(moveTunes,60);
@@ -149,12 +162,14 @@ const folderMove = (e) =>
         case 37:
             if (positionFolder>130 && screenWidth>1170){
                 document.getElementById('music-folder').style.left = (positionFolder - 305).toString() + 'px';
+                document.getElementById('music-folder').style.transition= '0.25s linear';
                 positionFolder-=305;
             }
             break;
         case 39:
-            if (positionFolder<730 && screenWidth>1170){
+            if (positionFolder<630 && screenWidth>1170){
                 document.getElementById('music-folder').style.left = (positionFolder + 305).toString() + 'px';
+                document.getElementById('music-folder').style.transition= '0.25s linear';
                 positionFolder+=305;
             }
             break;
