@@ -15,10 +15,26 @@ $('#scroll-up').click(function () {
     return false;
 });
 
-function scroll_to(selector) {
-    $('html,body').animate({scrollTop: $(selector).offset().top}, 1000);
+// function scroll_to(selector) {
+//     $('html,body').animate({scrollTop: $(selector).offset().top}, 1000);
+//     return false;
+// }
+
+var ele = document.getElementById("start");
+var ele2 = document.getElementById("functions");
+var ele3 = document.getElementById("registration");
+var ele4 = document.getElementById("aboutass");
+var ele5 = document.getElementById("aboutapp");
+
+$('a#st').click(function scroll_to(ele) {
+    $('html,body').animate({scrollTop: $(ele).offset().top}, 1000);
     return false;
-}
+});
+
+$('a#fu').click(function scroll_to(ele2) {
+    $('html,body').animate({scrollTop: $(ele2).offset().top}, 1000);
+    return false;
+});
 
 
 
