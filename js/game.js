@@ -10,6 +10,9 @@ verificationEmail.addEventListener("click", showGame);
 
 // / START GAME
 //
+
+
+
 var gameActive = false;
 //choic of level and start
 var level1 = document.getElementById("level-1"),
@@ -27,6 +30,20 @@ var level1 = document.getElementById("level-1"),
     score,
     positionFolder,
     screenWidth = window.innerWidth;
+
+function drawSector() {
+    var activeBorder = $("#activeBorder");
+    var deg = 0;
+    if (deg <= 180) {
+        activeBorder.css('background-image', 'linear-gradient(' + (90 + deg) + 'deg, transparent 50%, #A2ECFB 50%),linear-gradient(90deg, #A2ECFB 50%, transparent 50%)');
+    } else {
+        activeBorder.css('background-image', 'linear-gradient(' + (deg - 90) + 'deg, transparent 50%, #39B4CC 50%),linear-gradient(90deg, #A2ECFB 50%, transparent 50%)');
+    }
+
+    var startDeg = $("#startDeg").attr("class");
+    activeBorder.css('transform', 'rotate(' + startDeg + 'deg)');
+    $("#circle").css('transform', 'rotate(' + (-startDeg) + 'deg)');
+};
 
 
 function showGame(){
