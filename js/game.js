@@ -3,7 +3,10 @@ var email = document.getElementById("email");
 var verificationEmail = document.getElementById("verification")
 $("form").submit(function() { return false; });
 email.addEventListener('keydown', function(e){
-    showGame();
+    if(e.which === 13){
+        showGame();
+    }
+
 });
 
 verificationEmail.addEventListener("click", showGame);
@@ -27,8 +30,9 @@ var level1 = document.getElementById("level-1"),
     exitGame = document.getElementById('exit'),
     time = document.getElementById('time-to-end'),
     backInstruction = document.getElementById("back-with-instruction"),
-    timeToFinish = 10,
+    timeToFinish = 5,
     score,
+    points=0,
     positionFolder,
     screenWidth = window.innerWidth;
 var timeToStart =document.getElementById('seconds');
@@ -126,18 +130,23 @@ function timeStart(){
         setTimeout(function(){timeStart(time,--timeToFinish)},1000)
     } else {
         time.innerHTML='Koniec czasu';
-        stopGame();
         timeToFinish = 10;
-        posYtune1 = 90;
-        posYtune2 = 90;
-        posYtune3 = 90;
         document.getElementById('music-folder').style.opacity="0.1";
-        for(var i =1;i<=3;i++) {
-            document.getElementById('tune-'+i).style.top = "90px";
-        }
         gameActive=false;
-
         resetPosition();
+        for(var i =1;i<=3;i++) {
+            document.getElementById('tune-'+i).style.transition="1s";
+            document.getElementById('tune-'+i).style.opacity = "0";
+        }
+        clearInterval(moveInterval);
+        clearTimeout(tune2Timeout);
+        clearTimeout(tune3Timeout);
+       document.getElementById('text-end-game').style.opacity='1';
+        document.getElementById('text-end-game').innerText='KONIEC GRY! Twój wynik : ' + points;
+        setTimeout(function (){
+            document.getElementById('text-end-game').style.opacity='0';
+        },2500)
+        setTimeout(stopGame,3000);
     }
 }
 
@@ -150,21 +159,22 @@ function resetPosition(){
 }
 
 function stopGame() {
-    document.getElementById('points-label').style.display="block";
-    clearInterval(moveInterval);
-    clearTimeout(tune2Timeout);
-    clearTimeout(tune3Timeout);
+    $('#points-label').fadeIn(250);
+
     for(var i = 1; i <=3;i++){
         document.getElementById('tune-'+i).style.opacity= "0";
+        document.getElementById('tune-'+i).style.top = "90px";
+
     }
 }
 
 function addPoint(){
     if (checkCollision() === true){
-        var score = document.getElementById('score');
+        score = document.getElementById('score');
         var scoreNumber = parseInt(document.getElementById('score').innerText);
         var i = +1;
         score.innerHTML = scoreNumber+i;
+        points = scoreNumber+i;
     }
 }
 
@@ -228,7 +238,9 @@ function checkCollision(){
 function init() {
     $('#select-level').fadeOut('fast');
     setTimeout(setStartGame,400);
-
+    posYtune1 = 90;
+    posYtune2 = 90;
+    posYtune3 = 90;
 }
 
 function setStartGame(){
@@ -249,6 +261,7 @@ function runGame() {
     tune3Timeout = setTimeout(activeTune3,800);
     for(var i = 1; i <=3;i++){
         document.getElementById('tune-'+i).style.opacity= "1";
+        document.getElementById('tune-'+i).style.transition="unset";
     }
 }
 
