@@ -94,7 +94,8 @@ nav.navbar.navbar-default.navbar-fixed-top {
 
 /*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -> etap II - Rotacja zawartości w zajawce */
 
-#start{
+
+#start {
     height: 100%;
     background-color: #2D2E32;
 }
@@ -234,7 +235,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 
 h2.team-title {
-    background-color: rgba(45, 46, 50, 0.8);
+    background-color: rgba(45,46,50,0.8);
     border-radius: 5px;
     color: whitesmoke;
     display: inline-block;
@@ -244,7 +245,7 @@ h2.team-title {
 }
 
 p.member-name {
-    background-color: rgba(45, 46, 50, 0.8);
+    background-color: rgba(45,46,50,0.8);
     border-radius: 5px;
     color: whitesmoke;
     font-size: 1.5em;
@@ -254,50 +255,105 @@ p.member-name {
     display: inline-block;
 }
 
+
+.flip-container {
+    perspective: 1000px;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    position: relative;
+}
+
+.back {
+    transform: rotateY(180deg);
+    position: absolute;
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+.social-media {
+    border: 0.7em solid rgba(45, 46, 50, 0.8);
+    background-color: #dddddd;
+    height: 100%;
+    width: 70%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
 .social,
 .member {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.btn-social {
-    background-color: rgba(45, 46, 50, 0.8);
-    border: none;
+.social-media a {
+    background: rgba(45,46,50,0.8);
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: unset;
 }
 
-button.btn-social:hover {
-    background: rgba(45, 46, 50, 0.8);
+.social-media a:nth-child(1):hover i {
+    color: #0077B5;
+}
+
+.social-media a:nth-child(2):hover i {
+    color: #6e5494;
 }
 
 .fa.fa-linkedin,
 .fa.fa-github {
-    font-size: 20px;
     color: #f5f5f5;
-    padding: 6px;
-}
-
-.fa.fa-linkedin:hover {
-    color: #0077B5;
-}
-
-.fa.fa-github:hover {
-    color: #6e5494;
+    font-size: 3rem;
 }
 
 .member-foto {
     display: block;
     margin: auto;
     box-sizing: border-box;
-    border: 0.7em solid;
-    border-color: rgba(45, 46, 50, 0.8);
+    border: 0.7em solid rgba(45,46,50,0.8);
+    transition: 1s;
+    width: 70%;
 }
 
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
 
 .product {
-    padding-bottom: 40px;
+    padding-bottom: 200px;
     background: #2D2E32;
     text-align: center;
+    padding-top: 50px;
 }
 
 h2.product-info-header {
@@ -352,4 +408,26 @@ h2.product-info-header {
 }
 
 
+
+/*### PIOTREK ### feature-cookies*/
+
+.cookies{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    border: solid 1px;
+    border-top-color: #e7e7e7;
+}
+
+.cookies p {
+    margin: 0;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.fa.fa-close{
+    color: #f5f5f5;
+}
 
