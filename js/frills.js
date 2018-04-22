@@ -23,40 +23,45 @@ var $registration = $("#registration");
 var $aboutus = $("#aboutus");
 var $aboutapp = $("#aboutapp");
 
-$('#idStart').click(function() {
-    $('html,body').animate({scrollTop: $($start).offset().top}, 1000);
+function scroll_to(selector) {
+    $('html,body').animate({scrollTop: $(selector).offset().top}, 1000);
     return false;
-});
+}
 
-$('#idFunctions').click(function () {
-    $('html,body').animate({scrollTop: $($functions).offset().top}, 1000);
-    return false;
-});
+$('#idStart').on('click', scroll_to);
 
-$('#idRegistration').click(function () {
-    $('html,body').animate({scrollTop: $($registration).offset().top}, 1000);
-    return false;
-});
+//
+// $('#idStart').click(function() {
+//     scroll_to($start);
+//     return false;
+// });
+//
+// $('#idFunctions').click(function () {
+//     scroll_to($functions);
+//     return false;
+// });
+// $('#idRegistration').click(function () {
+//     scroll_to($registration)
+//     return false;
+// });
+// $('#idAboutus').click(function () {
+//     scroll_to($aboutus)
+//     return false;
+// });
+// $('#idAboutapp').click(function () {
+//     scroll_to($aboutapp)
+//     return false;
+// });
+// $('#logo').click(function () {
+//     scroll_to($start);
+//     return false;
+// });
+// $('#tubersi').click(function () {
+//     scroll_to($start);
+//     return false;
+// });
 
-$('#idAboutus').click(function () {
-    $('html,body').animate({scrollTop: $($aboutus).offset().top}, 1000);
-    return false;
-});
 
-$('#idAboutapp').click(function () {
-    $('html,body').animate({scrollTop: $($aboutapp).offset().top}, 1000);
-    return false;
-});
-
-$('#logo').click(function () {
-    $('html,body').animate({scrollTop: $($start).offset().top}, 1000);
-    return false;
-});
-
-$('#tubersi').click(function () {
-    $('html,body').animate({scrollTop: $($start).offset().top}, 1000);
-    return false;
-});
 
 
 // ##### Piotrek - cookies #####
