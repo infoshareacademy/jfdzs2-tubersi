@@ -8,7 +8,7 @@
 
 #select-level , #game-instuction{
     text-align: center;
-    top: 150px;
+    top: 100px;
     width: 100%;
     z-index: 100;
     position: absolute;
@@ -20,7 +20,7 @@
 }
 #menu-game {
     text-align: center;
-    top: 150px;
+    top: 100px;
     width: 100%;
     z-index: 100;
     position: absolute;
@@ -55,6 +55,43 @@ h2.game-title {
     opacity: 0;
 }
 
+#points-label {
+    text-align: center;
+    top: 100px;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    display: none;
+}
+
+
+#points-send{
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#point-1{
+    transition: 1s;
+    position: absolute;
+    top:350px;
+    left: 101px;
+    opacity: 0;
+}
+#point-2{
+    transition: 1s;
+    position: absolute;
+    top:350px;
+    left: 406px;
+    opacity: 0;
+}
+#point-3{
+    transition: 1s;
+    position: absolute;
+    top:350px;
+    left: 711px;
+    opacity: 0;
+}
+
 #score-info {
     width: 100%;
     border-bottom:solid 5px #2D2E32;
@@ -86,6 +123,9 @@ h2.game-title {
     top: 90px;
 }
 
+#tune-1, #tune-2, #tune-3 {
+  opacity: 0;
+}
 
 #music-folder{
     top:355px;

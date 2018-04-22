@@ -115,6 +115,9 @@ function stopGame() {
     clearInterval(moveInterval);
     clearTimeout(tune2Timeout);
     clearTimeout(tune3Timeout);
+    for(var i = 1; i <=3;i++){
+        document.getElementById('tune-'+i).style.opacity= "0";
+    }
 }
 
 function addPoint(){
@@ -150,16 +153,19 @@ function checkCollision(){
         posYtune1 = 90;
         youtubeFolderAnimation();
         $('#thumb-up-1').fadeIn('fast').fadeOut('slow');
+        animatePoint('point-1');
         return true;
     } else if (positionFolder===406 && positionTune2>335 && positionTune2<389 && screenWidthDesktop){
         posYtune2 = 90;
         $('#thumb-up-2').fadeIn('fast').fadeOut('slow');
         youtubeFolderAnimation();
+        animatePoint('point-2');
         return true;
     } else if (positionFolder===711 && positionTune3>335 && positionTune3<389 && screenWidthDesktop){
         posYtune3 = 90;
         $('#thumb-up-3').fadeIn('fast').fadeOut('slow');
         youtubeFolderAnimation();
+        animatePoint('point-3');
         return true;
     }
 
@@ -186,6 +192,9 @@ function init() {
     document.getElementById('music-folder').style.opacity= '1';
     positionFolder = parseInt(document.getElementById('music-folder').style.left);
     gameActive= true;
+    for(var i = 1; i <=3;i++){
+        document.getElementById('tune-'+i).style.opacity= "1";
+    }
     timeStart();
     moveInterval = setInterval(moveTunes,60);
     tune2Timeout = setTimeout(activeTune2,500);
@@ -234,6 +243,18 @@ function moveTunes() {
             posYtune3 = 90;
         }
     }
+}
+
+function animatePoint(selector){
+    selector = document.getElementById(selector);
+    selector.style.opacity='1';
+    selector.style.transition = "1s";
+    selector.style.top='300px';
+    setTimeout(function () {
+        selector.style.transition = "unset";
+        selector.style.top='350px';
+        selector.style.opacity='0';
+    },1000);
 }
 
 //move folder desktops
