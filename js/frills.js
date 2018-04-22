@@ -17,52 +17,22 @@ $('#scroll-up').click(function () {
 
 // #### DOROTA - scrollMenu #####
 
-var $start = $("#start");
-var $functions = $("#functions");
-var $registration = $("#registration");
-var $aboutus = $("#aboutus");
-var $aboutapp = $("#aboutapp");
+$(document).ready(function(){
+    $("a").on('click', function(event) {
 
-function scroll_to(selector) {
-    $('html,body').animate({scrollTop: $(selector).offset().top}, 1000);
-    return false;
-}
+        if (this.hash !== "") {
+            event.preventDefault();
 
-$('#idStart').on('click', scroll_to);
+            var hash = this.hash;
 
-//
-// $('#idStart').click(function() {
-//     scroll_to($start);
-//     return false;
-// });
-//
-// $('#idFunctions').click(function () {
-//     scroll_to($functions);
-//     return false;
-// });
-// $('#idRegistration').click(function () {
-//     scroll_to($registration)
-//     return false;
-// });
-// $('#idAboutus').click(function () {
-//     scroll_to($aboutus)
-//     return false;
-// });
-// $('#idAboutapp').click(function () {
-//     scroll_to($aboutapp)
-//     return false;
-// });
-// $('#logo').click(function () {
-//     scroll_to($start);
-//     return false;
-// });
-// $('#tubersi').click(function () {
-//     scroll_to($start);
-//     return false;
-// });
-
-
-
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                window.location.hash = hash;
+            });
+        }
+    });
+});
 
 // ##### Piotrek - cookies #####
 
