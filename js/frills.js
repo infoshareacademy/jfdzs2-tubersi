@@ -15,54 +15,46 @@ $('#scroll-up').click(function () {
     return false;
 });
 
-// #### DOROTA - scroll-menu #####
+// #### DOROTA - scrollMenu #####
 
-var ele = document.getElementById("start");
-var ele2 = document.getElementById("functions");
-var ele3 = document.getElementById("registration");
-var ele4 = document.getElementById("aboutus");
-var ele5 = document.getElementById("aboutapp");
+var $start = $("#start");
+var $functions = $("#functions");
+var $registration = $("#registration");
+var $aboutus = $("#aboutus");
+var $aboutapp = $("#aboutapp");
 
-// function scrollTo(selector) {
-//     $('html,body').animate({scrollTop: $(selector).offset().top}, 1000);
-//     return false;
-// }
-
-// $('#st').click(scrollTo(ele));
-
-
-$('#st').click(function() {
-    $('html,body').animate({scrollTop: $(ele).offset().top}, 1000);
+$('#idStart').click(function() {
+    $('html,body').animate({scrollTop: $($start).offset().top}, 1000);
     return false;
 });
 
-$('#fu').click(function () {
-    $('html,body').animate({scrollTop: $(ele2).offset().top}, 1000);
+$('#idFunctions').click(function () {
+    $('html,body').animate({scrollTop: $($functions).offset().top}, 1000);
     return false;
 });
 
-$('#reg').click(function () {
-    $('html,body').animate({scrollTop: $(ele3).offset().top}, 1000);
+$('#idRegistration').click(function () {
+    $('html,body').animate({scrollTop: $($registration).offset().top}, 1000);
     return false;
 });
 
-$('#au').click(function () {
-    $('html,body').animate({scrollTop: $(ele4).offset().top}, 1000);
+$('#idAboutus').click(function () {
+    $('html,body').animate({scrollTop: $($aboutus).offset().top}, 1000);
     return false;
 });
 
-$('#aa').click(function () {
-    $('html,body').animate({scrollTop: $(ele5).offset().top}, 1000);
+$('#idAboutapp').click(function () {
+    $('html,body').animate({scrollTop: $($aboutapp).offset().top}, 1000);
     return false;
 });
 
-$('#lo').click(function () {
-    $('html,body').animate({scrollTop: $(ele).offset().top}, 1000);
+$('#logo').click(function () {
+    $('html,body').animate({scrollTop: $($start).offset().top}, 1000);
     return false;
 });
 
-$('#tu').click(function () {
-    $('html,body').animate({scrollTop: $(ele).offset().top}, 1000);
+$('#tubersi').click(function () {
+    $('html,body').animate({scrollTop: $($start).offset().top}, 1000);
     return false;
 });
 
