@@ -30,10 +30,10 @@ var level1 = document.getElementById("level-1"),
     score,
     positionFolder,
     screenWidth = window.innerWidth;
+var timeToStart =document.getElementById('seconds');
 
-function drawSector() {
+function drawSector(deg) {
     var activeBorder = $("#activeBorder");
-    var deg = 0;
     if (deg <= 180) {
         activeBorder.css('background-image', 'linear-gradient(' + (90 + deg) + 'deg, transparent 50%, #A2ECFB 50%),linear-gradient(90deg, #A2ECFB 50%, transparent 50%)');
     } else {
@@ -43,7 +43,24 @@ function drawSector() {
     var startDeg = $("#startDeg").attr("class");
     activeBorder.css('transform', 'rotate(' + startDeg + 'deg)');
     $("#circle").css('transform', 'rotate(' + (-startDeg) + 'deg)');
+
+    if(deg === 360)
+    {
+        return
+    }
+    setTimeout(drawSector,1000/36,deg + 10);
 };
+
+
+
+function setTimer(time) {
+    if(time === 0){
+        return;
+    }
+    drawSector(0);
+    timeToStart.innerText = time;
+    setTimeout(setTimer,1000,time-1);
+}
 
 
 function showGame(){
@@ -209,13 +226,18 @@ function init() {
     document.getElementById('music-folder').style.opacity= '1';
     positionFolder = parseInt(document.getElementById('music-folder').style.left);
     gameActive= true;
-    for(var i = 1; i <=3;i++){
-        document.getElementById('tune-'+i).style.opacity= "1";
-    }
+    setTimer(3);
+    setTimeout(runGame,3000);
+}
+
+function runGame() {
     timeStart();
     moveInterval = setInterval(moveTunes,60);
     tune2Timeout = setTimeout(activeTune2,500);
     tune3Timeout = setTimeout(activeTune3,800);
+    for(var i = 1; i <=3;i++){
+        document.getElementById('tune-'+i).style.opacity= "1";
+    }
 }
 
 var activeTunes1 = true;
