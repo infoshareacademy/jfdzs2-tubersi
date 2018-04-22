@@ -22,6 +22,7 @@ var level1 = document.getElementById("level-1"),
     instructionSelect = document.getElementById("instruction"),
     selectLevel = $('#select-level'),
     backWithSelectLevel = document.getElementById('back-with-select-level'),
+    backEndGame = document.getElementById('back-with-end-game'),
     playGame = document.getElementById('play-game'),
     exitGame = document.getElementById('exit'),
     time = document.getElementById('time-to-end'),
@@ -35,9 +36,9 @@ var timeToStart =document.getElementById('seconds');
 function drawSector(deg) {
     var activeBorder = $("#activeBorder");
     if (deg <= 180) {
-        activeBorder.css('background-image', 'linear-gradient(' + (90 + deg) + 'deg, transparent 50%, #A2ECFB 50%),linear-gradient(90deg, #A2ECFB 50%, transparent 50%)');
+        activeBorder.css('background-image', 'linear-gradient(' + (90 + deg) + 'deg, transparent 50%, gray 50%),linear-gradient(90deg, gray 50%, transparent 50%)');
     } else {
-        activeBorder.css('background-image', 'linear-gradient(' + (deg - 90) + 'deg, transparent 50%, #39B4CC 50%),linear-gradient(90deg, #A2ECFB 50%, transparent 50%)');
+        activeBorder.css('background-image', 'linear-gradient(' + (deg - 90) + 'deg, transparent 50%, black 50%),linear-gradient(90deg, gray 50%, transparent 50%)');
     }
 
     var startDeg = $("#startDeg").attr("class");
@@ -93,6 +94,10 @@ exitGame.addEventListener("click", function(){
     },1250)
 })
 
+backEndGame.addEventListener("click", function(){
+    backToMenuGame('#points-label');
+})
+
 function selectLevelGame() {
     menuGame.fadeOut(250);
     setTimeout(function(){
@@ -145,7 +150,7 @@ function resetPosition(){
 }
 
 function stopGame() {
-    document.querySelector('#select-level').style.visibility= 'visible';
+    document.getElementById('points-label').style.display="block";
     clearInterval(moveInterval);
     clearTimeout(tune2Timeout);
     clearTimeout(tune3Timeout);
@@ -221,17 +226,24 @@ function checkCollision(){
 
 
 function init() {
-    document.querySelector('#select-level').style.visibility='hidden';
+    $('#select-level').fadeOut('fast');
+    setTimeout(setStartGame,400);
+
+}
+
+function setStartGame(){
     document.getElementById('music-folder').style.left ='406'+'px';
-    document.getElementById('music-folder').style.opacity= '1';
     positionFolder = parseInt(document.getElementById('music-folder').style.left);
     gameActive= true;
+    document.getElementsByClassName('timer-game')[0].style.opacity = '1';
     setTimer(3);
     setTimeout(runGame,3000);
 }
 
 function runGame() {
     timeStart();
+    document.getElementsByClassName('timer-game')[0].style.opacity = '0';
+    document.getElementById('music-folder').style.opacity= '1';
     moveInterval = setInterval(moveTunes,60);
     tune2Timeout = setTimeout(activeTune2,500);
     tune3Timeout = setTimeout(activeTune3,800);
