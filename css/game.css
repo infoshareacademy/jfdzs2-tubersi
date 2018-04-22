@@ -6,13 +6,29 @@
     text-align: center;
 }
 
-#select-level{
+#select-level , #game-instuction{
     text-align: center;
     top: 150px;
     width: 100%;
     z-index: 100;
     position: absolute;
+    display: none;
 
+}
+#start-game{
+    display: none;
+}
+#menu-game {
+    text-align: center;
+    top: 150px;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    display: none;
+}
+
+.btn.btn-default.btn-lg{
+    width: 200px;
 }
 
 h2.game-title {
@@ -33,9 +49,10 @@ h2.game-title {
     overflow: hidden;
     border: solid 5px #2D2E32;
     border-radius: 5px;
-
+    transition: 1s;
     background-image: url("../images/gameArea.jpg");
     background-size: cover;
+    opacity: 0;
 }
 
 #score-info {
@@ -73,6 +90,10 @@ h2.game-title {
 #music-folder{
     top:355px;
     position: absolute;
+    left: 406px;
+    transition: 0.25s linear;
+    transform: rotate(0deg);
+    opacity: 0.1;
 }
 
 #floor{

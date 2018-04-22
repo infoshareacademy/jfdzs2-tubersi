@@ -1,19 +1,85 @@
-// START GAME
-//
+// Verification emai-l//
+var email = document.getElementById("email");
+var verificationEmail = document.getElementById("verification")
+$("form").submit(function() { return false; });
+email.addEventListener('keydown', function(e){
+    showGame();
+});
 
+verificationEmail.addEventListener("click", showGame);
+
+// / START GAME
+//
+var gameActive = false;
 //choic of level and start
 var level1 = document.getElementById("level-1"),
     level2 = document.getElementById("level-2"),
+    menuGame = $('#menu-game'),
+    instructionMenu = $('#game-instuction'),
+    instructionSelect = document.getElementById("instruction"),
+    selectLevel = $('#select-level'),
+    backWithSelectLevel = document.getElementById('back-with-select-level'),
+    playGame = document.getElementById('play-game'),
+    exitGame = document.getElementById('exit'),
     time = document.getElementById('time-to-end'),
-    instuction = document.getElementById('game-instuction'),
+    backInstruction = document.getElementById("back-with-instruction"),
     timeToFinish = 10,
     score,
     positionFolder,
     screenWidth = window.innerWidth;
 
 
+function showGame(){
+    $("#start-game").slideDown("slow");
+    setTimeout(function (){
+        $('.game-area').css("opacity","1");
+    },750)
+    setTimeout(function (){
+        menuGame.slideDown("fast");
+    },1500)
+}
+
 level1.addEventListener("click", init);
 level2.addEventListener("click", init);
+playGame.addEventListener("click", selectLevelGame);
+backWithSelectLevel.addEventListener("click", function(){
+    backToMenuGame('#select-level');
+});
+instructionSelect.addEventListener("click", instruction);
+backInstruction.addEventListener("click",function(){
+    backToMenuGame('#game-instuction');
+})
+exitGame.addEventListener("click", function(){
+    menuGame.slideUp("fast");
+    setTimeout(function(){
+        $('.game-area').css("opacity","0");
+    },250);
+    setTimeout(function(){
+        $("#start-game").slideUp("slow");
+    },1250)
+})
+
+function selectLevelGame() {
+    menuGame.fadeOut(250);
+    setTimeout(function(){
+        selectLevel.fadeIn(250);
+    },250);
+}
+
+function instruction(){
+    menuGame.fadeOut(250);
+    setTimeout(function(){
+        instructionMenu.fadeIn(250);
+    },250);
+}
+
+function backToMenuGame(selector){
+    selector= $(selector);
+    selector.fadeOut(250);
+    setTimeout(function(){
+        menuGame.fadeIn(250);
+    },250);
+}
 
 function timeStart(){
     if(timeToFinish>0) {
@@ -26,7 +92,22 @@ function timeStart(){
         posYtune1 = 90;
         posYtune2 = 90;
         posYtune3 = 90;
+        document.getElementById('music-folder').style.opacity="0.1";
+        for(var i =1;i<=3;i++) {
+            document.getElementById('tune-'+i).style.top = "90px";
+        }
+        gameActive=false;
+
+        resetPosition();
     }
+}
+
+function resetPosition(){
+
+    $('#music-folder').css({"left":"406px", "transition":"unset"});
+    setTimeout(function(){
+        $('#music-folder').css("transition","0.25s linear");
+    },100);
 }
 
 function stopGame() {
@@ -42,7 +123,6 @@ function addPoint(){
         var scoreNumber = parseInt(document.getElementById('score').innerText);
         var i = +1;
         score.innerHTML = scoreNumber+i;
-        instuction.remove();
     }
 }
 
@@ -103,7 +183,9 @@ function checkCollision(){
 function init() {
     document.querySelector('#select-level').style.visibility='hidden';
     document.getElementById('music-folder').style.left ='406'+'px';
+    document.getElementById('music-folder').style.opacity= '1';
     positionFolder = parseInt(document.getElementById('music-folder').style.left);
+    gameActive= true;
     timeStart();
     moveInterval = setInterval(moveTunes,60);
     tune2Timeout = setTimeout(activeTune2,500);
@@ -157,23 +239,24 @@ function moveTunes() {
 //move folder desktops
 const folderMove = (e) =>
 {
-    switch (e.keyCode)
-    {
-        case 37:
-            if (positionFolder>130 && screenWidth>1170){
-                document.getElementById('music-folder').style.left = (positionFolder - 305).toString() + 'px';
-                document.getElementById('music-folder').style.transition= '0.25s linear';
-                positionFolder-=305;
-            }
-            break;
-        case 39:
-            if (positionFolder<630 && screenWidth>1170){
-                document.getElementById('music-folder').style.left = (positionFolder + 305).toString() + 'px';
-                document.getElementById('music-folder').style.transition= '0.25s linear';
-                positionFolder+=305;
-            }
-            break;
+    if(gameActive){
+        switch (e.keyCode)
+        {
+            case 37:
+                if (positionFolder>130 && screenWidth>1170){
+                    document.getElementById('music-folder').style.left = (positionFolder - 305).toString() + 'px';
+                    positionFolder-=305;
+                }
+                break;
+            case 39:
+                if (positionFolder<630 && screenWidth>1170){
+                    document.getElementById('music-folder').style.left = (positionFolder + 305).toString() + 'px';
+                    positionFolder+=305;
+                }
+                break;
+        }
     }
+
 }
 document.addEventListener('keydown',folderMove);
 

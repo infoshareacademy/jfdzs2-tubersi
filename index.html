@@ -95,10 +95,10 @@
                     <form class="form-group">
                         <div class="row">
                             <div class="col-md-offset-2 col-md-4 col-lg-3 col-lg-offset-3">
-                                <input type="email" class="form-control send" name="Adres e-mail" placeholder="E-mail">
+                                <input id="email" type="email"  class="form-control send" name="Adres e-mail" placeholder="E-mail">
                             </div>
                             <div class="col-md-4 col-lg-3">
-                                <input type="button" class="btn btn-lg btn-default contact-submit" value="Wyślij"  >
+                                <input type="button" id="verification" class="btn btn-lg btn-default contact-submit" value="Wyślij"  >
                                 <!--data-toggle="collapse" href="#start-game" aria-expanded="false" aria-controls="collapseExample"-->
 
                             </div>
@@ -131,17 +131,26 @@
                             <div id="tune-1" class="tune"><img src="images/tune.png" style=""></div>
                             <div id="tune-2" class="tune"><img src="images/tune.png"></div>
                             <div id="tune-3" class="tune"><img src="images/tune.png"></div>
-
-                            <div id="select-level">
-                                <div id="game-instuction">
-                                    <p>Zapraszamy do krótkiej gry zręcznościowej. Gra poleg na zbieraniu spadających nut wykorzystują strzałki boczne klawiatury. Na wykonanie zadania masz jedynie 60 sekund. Im więcej złapiesz tym więcej punktów zdobywasz. Gdy zwiększysz stopień trudności nuty będą spadały szybciej.
-                                    </p>
-                                </div>
-                                <p>Wybierz poziom i rozpocznij grę</p>
-                                <button type="button" class="btn btn-default btn-lg" id="level-1">Poziom 1</button>
-                                <button type="button" class="btn btn-default btn-lg" id="level-2">Poziom 2</button>
+                            <div id="menu-game">
+                                <p>Killers Tunes</p>
+                                <button type="button" class="btn btn-default btn-lg" id="play-game">Graj</button>
+                                <br><br>
+                                <button type="button" class="btn btn-default btn-lg" id="instruction">Instrukcje</button>
+                                <br><br>
+                                <button type="button" class="btn btn-default btn-lg" id="exit">Wyjście</button>
                             </div>
-
+                            <div id="select-level">
+                                <p>Wybierz poziom i rozpocznij grę</p>
+                                <button type="button" class="btn btn-default btn-lg" id="level-1">Łatwy</button>
+                                <br><br>
+                                <button type="button" class="btn btn-default btn-lg" id="level-2">Trudny</button>
+                                <br><br>
+                                <button type="button" class="btn btn-default btn-lg " id="back-with-select-level">Wróć</button>
+                            </div>
+                            <div id="game-instuction">
+                                <p>Zapraszamy do krótkiej gry zręcznościowej. Gra poleg na zbieraniu spadających nut wykorzystują strzałki boczne klawiatury. Na wykonanie zadania masz jedynie 60 sekund. Im więcej złapiesz tym więcej punktów zdobywasz. Gdy zwiększysz stopień trudności nuty będą spadały szybciej.</p>
+                                <button type="button" class="btn btn-default btn-lg " id="back-with-instruction">Wróć</button>
+                            </div>
                             <div id="music-folder"><img src="images/youtubeFolder.png"></div>
                             <div id="floor">
                                 <div id="thumb-up-1" class="thumb-up"><img src="images/up.png"></div>
