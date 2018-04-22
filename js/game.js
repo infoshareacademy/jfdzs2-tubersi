@@ -1,6 +1,6 @@
 // Verification emai-l//
 var email = document.getElementById("email");
-var verificationEmail = document.getElementById("verification")
+var verificationEmail = document.getElementById("verification");
 $("form").submit(function() { return false; });
 email.addEventListener('keydown', function(e){
     if(e.which === 13){
@@ -54,7 +54,7 @@ function drawSector(deg) {
         return
     }
     setTimeout(drawSector,1000/36,deg + 10);
-};
+}
 
 
 
@@ -72,7 +72,7 @@ function showGame(){
     $("#start-game").slideDown("slow");
     setTimeout(function (){
         $('.game-area').css("opacity","1");
-    },750)
+    },750);
     setTimeout(function (){
         menuGame.slideDown("fast");
     },1500)
@@ -87,7 +87,7 @@ backWithSelectLevel.addEventListener("click", function(){
 instructionSelect.addEventListener("click", instruction);
 backInstruction.addEventListener("click",function(){
     backToMenuGame('#game-instuction');
-})
+});
 exitGame.addEventListener("click", function(){
     menuGame.slideUp("fast");
     setTimeout(function(){
@@ -96,11 +96,11 @@ exitGame.addEventListener("click", function(){
     setTimeout(function(){
         $("#start-game").slideUp("slow");
     },1250)
-})
+});
 
 backEndGame.addEventListener("click", function(){
     backToMenuGame('#points-label');
-})
+});
 
 function selectLevelGame() {
     menuGame.fadeOut(250);
@@ -145,7 +145,7 @@ function timeStart(){
         document.getElementById('text-end-game').innerText='KONIEC GRY! Twój wynik : ' + points;
         setTimeout(function (){
             document.getElementById('text-end-game').style.opacity='0';
-        },2500)
+        },2500);
         setTimeout(stopGame,3000);
     }
 }
@@ -265,6 +265,8 @@ function runGame() {
     }
 }
 
+// #### START - falling tunes
+
 var activeTunes1 = true;
 var activeTunes2 = false;
 var activeTunes3 = false;
@@ -287,21 +289,21 @@ function moveTunes() {
     var tune3 = document.getElementById("tune-3");
 
     if(activeTunes1 === true){
-        posYtune1+=10;
+        posYtune1+=10; // falling speed
         tune1.style.top = posYtune1+'px' ;
         if(posYtune1 > 390){
             posYtune1 = 90;
         }
     }
     if(activeTunes2 === true){
-        posYtune2+=5;
+        posYtune2+=10;// falling speed
         tune2.style.top = posYtune2+'px' ;
         if(posYtune2 > 390){
             posYtune2 = 90;
         }
     }
     if(activeTunes3 === true){
-        posYtune3+=15;
+        posYtune3+=10;// falling speed
         tune3.style.top = posYtune3+'px' ;
         if(posYtune3 > 390){
             posYtune3 = 90;
