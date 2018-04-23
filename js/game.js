@@ -14,6 +14,23 @@ $("#email-click").click(showGame);
 // Section animate and set all option the window game //
 var menuGame = $("#menu-game");
 var selectLevel = $("#select-level");
+var tableRanking = $("#table-ranking");
+class Ranking {
+    constructor(){
+        this.listActually = 1;
+    }
+
+    addList() {
+        this.listActually += 5;
+    }
+    deductList() {
+        if(this.listActually !== 1) {
+            this.listActually -= 5;
+        }
+    }
+}
+
+var rankings = new Ranking();
 
 function showGame() {
     $("#start-game").slideDown("slow");
@@ -50,6 +67,12 @@ $("#exit").click(function() {
 $("#back-with-end-game").click(function(){
     backToMenuGame('#points-label');
 });
+$("#ranking").click(ranking)
+$("#back-with-ranking").click(function (){
+    backToMenuGame("#table-ranking");
+})
+$("#prev-score").click(prevScore);
+$("#next-score").click(nextScore);
 
 function selectLevelGame() {
     menuGame.fadeOut(250);
@@ -64,6 +87,37 @@ function instruction(){
         $("#game-instruction").fadeIn(250);
     },250);
 }
+
+function ranking() {
+    menuGame.fadeOut(250);
+    setTimeout(function(){
+        $("#table-ranking").fadeIn(250);
+    },250);
+}
+
+function prevScore() {
+    rankings.deductList();
+    for(let i = 0; i< 5 ;i++){
+        $("#score-" + (i + 1)).text(rankings.listActually + i);
+    }
+
+}
+
+function nextScore(){
+    rankings.addList();
+    tableRanking.animate({"left" : "1000px"});
+    setTimeout(function(){
+        tableRanking.css("left", "-1000px");
+    },250);
+    setTimeout(function(){
+        tableRanking.animate({"left" : "10%"});
+        for(let i = 0; i< 5 ;i++){
+            $("#score-" + (i + 1)).text(rankings.listActually + i);
+        }
+    },500);
+
+}
+
 
 function backToMenuGame(selector){
     selector= $(selector);
@@ -174,6 +228,7 @@ function setTimer(time) {
 }
 
 function runGame() {
+    $(".speaker").fadeIn("fast");
     $(".timer-game").css("opacity" , 0);
     $(folder.selector).css("opacity", 1);
     tunes.forEach(function(tune){
@@ -184,7 +239,6 @@ function runGame() {
     activeTunes();
     setActiveTunes = setInterval(activeTunes,700);
 }
-
 
 function Update(){
     if(timeToFinish>0) {
@@ -200,6 +254,7 @@ function Update(){
         tunes.forEach(function(tune){
             $(tune.selector).css({"opacity" : 0, "transition" : "1s"});
         });
+        $(".speaker").fadeOut("slow");
         tunes.splice(0,3);
         clearInterval(moveInterval);
         $('#text-end-game').css("opacity", 1);
@@ -231,7 +286,7 @@ function addPoint(value){
     $("#score").text(scoreNumber + value);
 }
 
-//checkCollision for three other resolutions
+
 function checkCollision(){
     let screenWidthDesktop = screenWidth>1170;
     tunes.forEach(function(tune, index) {
