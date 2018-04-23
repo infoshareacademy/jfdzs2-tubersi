@@ -272,7 +272,7 @@ function moveTunes() {
     })
 }
 
-async function activeTunes() {
+function activeTunes() {
     if(tunes[0].active && tunes[1].active && tunes[2].active) {
         clearInterval(setActiveTunes)
         return;
