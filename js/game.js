@@ -91,13 +91,13 @@ function drawSector(deg) {
 
 var gameActive = false;
 var time = $('#time-to-end');
-var timeToFinish = 5;
+var timeToFinish = 20;
 var screenWidth = window.innerWidth;
 var folder;
 var tunes = [];
 var moveInterval;
 var setActiveTunes;
-
+var accesCheckCollision = true;
 class Coordinates {
     constructor(x, y, selector) {
         this.x = x;
@@ -134,7 +134,7 @@ class Tune extends Coordinates {
         this.active = false;
     }
     moveY() {
-        this.y += 3;
+        this.y += 2;
     }
 }
 
@@ -190,12 +190,11 @@ function Update(){
         timeToFinish = 10;
         $(folder.selector).css("opacity", 0.1);
         gameActive = !gameActive;
-        tunes.splice(0,3);
         resetPosition();
-        for(var i =1;i<=3;i++) {
-            document.getElementById("tune-"+i).style.transition="1s";
-            document.getElementById('tune-'+i).style.opacity = "0";
-        }
+        tunes.forEach(function(tune){
+            $(tune.selector).css({"opacity" : 0, "transition" : "1s"});
+        });
+        tunes.splice(0,3);
         clearInterval(moveInterval);
         $('#text-end-game').css("opacity", 1);
         $('#text-end-game').text('KONIEC GRY! Twój wynik : ' + $("#score").text());
@@ -230,17 +229,13 @@ function addPoint(){
 function checkCollision(){
     let screenWidthDesktop = screenWidth>1170;
     tunes.forEach(function(tune, index) {
-        if(folder.x === tune.x && tune.y > 370 && tune.y < 389 && screenWidthDesktop) {
+        if(folder.x === tune.x && tune.y > 355 && tune.y < 389 && screenWidthDesktop) {
             tune.y = 90;
             tune.renderAfterColiisionFolder = true;
             youtubeFolderAnimation();
             $("#thumb-up-" + (index + 1)).fadeIn("fast").fadeOut("slow");
             animatePoint("#point-" + (index + 1));
             addPoint();
-        }
-        if(tune.y === 390 && tune.x !== folder.x && screenWidth>1170) {
-            tune.y = 90;
-            $("#thumb-down-" + (index + 1)).fadeIn("fast").fadeOut("slow");
         }
     })
 }
@@ -263,8 +258,20 @@ function animatePoint(selector) {
 // #### START - falling tunes
 
 function moveTunes() {
-    checkCollision();
-    tunes.forEach(function(tune) {
+    if(accesCheckCollision){
+        checkCollision();
+    }
+    else {
+        setTimeout(function() {
+            accesCheckCollision = true;
+        },250);
+    }
+    tunes.forEach(function(tune, index) {
+        if(tune.y >= 390  && screenWidth>1170) {
+            tune.y = 90;
+            $("#thumb-down-" + (index + 1)).fadeIn("fast").fadeOut("slow");
+        }
+
         if(tune.active){
             tune.moveY();
             $(tune.selector).css("top", tune.y + "px");
@@ -289,6 +296,9 @@ function activeTunes() {
 const folderMove = (e) => {
     if(gameActive) {
         folder.moveX(e);
+        if (accesCheckCollision) {
+            accesCheckCollision = false;
+        }
     }
 }
 
