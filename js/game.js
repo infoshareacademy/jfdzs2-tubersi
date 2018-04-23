@@ -24,8 +24,12 @@ function showGame() {
         menuGame.slideDown("fast");
     },1500)
 }
-$("#easy-level").click(init);
-$("#hard-level").click(init);
+$("#easy-level").click(function() {
+    init(1);
+});
+$("#hard-level").click(function() {
+    init(2);
+});
 $("#play-game").click(selectLevelGame);
 $("#back-with-select-level").click(function() {
     backToMenuGame("#select-level");
@@ -91,13 +95,14 @@ function drawSector(deg) {
 
 var gameActive = false;
 var time = $('#time-to-end');
-var timeToFinish = 20;
+var timeToFinish = 60;
 var screenWidth = window.innerWidth;
 var folder;
 var tunes = [];
 var moveInterval;
 var setActiveTunes;
 var accesCheckCollision = true;
+
 class Coordinates {
     constructor(x, y, selector) {
         this.x = x;
@@ -129,22 +134,23 @@ class Folder extends Coordinates {
 }
 
 class Tune extends Coordinates {
-    constructor(x, y, selector) {
+    constructor(x, y, selector, speed) {
         super(x, y, selector);
         this.active = false;
+        this.speed = speed;
     }
     moveY() {
-        this.y += 2;
+        this.y += this.speed;
     }
 }
 
-function init() {
+function init(speed) {
     selectLevel.fadeOut("fast");
     folder = new Folder(406, 355, "#music-folder");
     setTimeout(setStartGame,400);
     let nextPos = 101
     for(let i = 1; i <= 3; i++) {
-        tunes.push(new Tune (nextPos, 90, "#tune-" + i));
+        tunes.push(new Tune (nextPos, 90, "#tune-" + i, speed * 2));
         nextPos += 305;
         $(tunes[i - 1].selector).css("top", tunes[i - 1].y);
     }
@@ -187,7 +193,7 @@ function Update(){
     }
     else {
         time.html("Koniec czasu");
-        timeToFinish = 10;
+        timeToFinish = 60;
         $(folder.selector).css("opacity", 0.1);
         gameActive = !gameActive;
         resetPosition();
@@ -220,9 +226,9 @@ function stopGame() {
     })
 }
 
-function addPoint(){
+function addPoint(value){
     var scoreNumber = parseInt($("#score").text());
-    $("#score").text(scoreNumber + 1);
+    $("#score").text(scoreNumber + value);
 }
 
 //checkCollision for three other resolutions
@@ -235,7 +241,13 @@ function checkCollision(){
             youtubeFolderAnimation();
             $("#thumb-up-" + (index + 1)).fadeIn("fast").fadeOut("slow");
             animatePoint("#point-" + (index + 1));
-            addPoint();
+            if($(tune.selector + " img").attr("src") === "images/tune_evil.png") {
+                addPoint(-5);
+            }
+            else {
+                addPoint(1);
+            }
+            randomEvilTune(tune.selector);
         }
     })
 }
@@ -270,6 +282,7 @@ function moveTunes() {
         if(tune.y >= 390  && screenWidth>1170) {
             tune.y = 90;
             $("#thumb-down-" + (index + 1)).fadeIn("fast").fadeOut("slow");
+            randomEvilTune(tune.selector);
         }
 
         if(tune.active){
@@ -290,6 +303,16 @@ function activeTunes() {
             tunes[random].active = true;
             break;
         }
+    }
+}
+
+function randomEvilTune(selector){
+    let random = Math.round(Math.random()*2)
+    if(random === 2){
+        $(selector + " img").attr("src", "images/tune_evil.png")
+    }
+    else {
+        $(selector + " img").attr("src", "images/tune.png")
     }
 }
 
