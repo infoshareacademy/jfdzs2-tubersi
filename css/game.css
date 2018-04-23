@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-#select-level , #game-instuction{
+#select-level , #game-instruction{
     text-align: center;
     top: 100px;
     width: 100%;
@@ -186,7 +186,7 @@ h2.game-title {
 }
 
 .timer-game {
-    width: 110px;
+    width: 100px;
     height: 110px;
     margin: 100px auto;
     opacity: 0;
