@@ -243,6 +243,14 @@ h2.game-title {
     background-image: linear-gradient(91deg, transparent 50%, gray 50%), linear-gradient(90deg, gray 50%, transparent 50%);
 }
 
+.already-nick{
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
+    display: none;
+}
+
+
 #text-end-game {
     text-align: center;
     top: 100px;

@@ -19,6 +19,9 @@ var database = firebase.database();
 var ref = database.ref('scores');
 var allScore = [];
 var showRanking = false;
+var saveRanking = false;
+var email;
+
 function gotData(data){
     var scores = data.val();
     var keys = Object.keys(scores);
@@ -35,28 +38,23 @@ function gotData(data){
             $("#table-ranking").fadeIn(250);
         },250);
     }
+    if(saveRanking) {
+        saveRanking = false;
+        let nick = $("#points-send").val();
+        for(let i = 0; i <allScore.length; i++){
+            if(nick === allScore[i].name){
+                $(".already-nick").fadeIn("fast");
+                return;
+            }
+        }
+        $(".already-nick").fadeOut();
+        addRanking();
+    }
 }
 
 function errData(err) {
     console.log("Error!")
     console.log(err);
-}
-
-$("#points-send").keydown(function (e){
-    if(e.which === 13) {
-        addPointsToRanking();
-    }
-})
-$("#points-send-button").click(addPointsToRanking)
-
-function addPointsToRanking() {
-    var data = {
-        name: $("#points-send").val(),
-        points: parseInt($("#score").text()),
-    }
-    ref.push(data);
-    backToMenuGame("#points-label");
-    $("#score").text(0);
 }
 
 //Section verification e-mail//
@@ -71,6 +69,9 @@ $("#email-click").click(showGame);
 var menuGame = $("#menu-game");
 var selectLevel = $("#select-level");
 var tableRanking = $("#table-ranking");
+var animationScore;
+var setOpacity = 1;
+
 class Ranking {
     constructor(){
         this.listActually = 1;
@@ -93,7 +94,31 @@ class Ranking {
 
 var rankings = new Ranking();
 
+$("#points-send").keydown(function (e){
+    if(e.which === 13) {
+        addPointsToRanking();
+    }
+})
+$("#points-send-button").click(addPointsToRanking)
+
+function addPointsToRanking() {
+    saveRanking = true;
+    ref.on('value', gotData, errData);
+}
+
+function addRanking() {
+    var data = {
+        name: $("#points-send").val(),
+        points: parseInt($("#score").text()),
+        email: email
+    }
+    ref.push(data);
+    backToMenuGame("#points-label");
+    $("#score").text(0);
+}
+
 function showGame() {
+    email = $("#email-key-down").val();
     $("#start-game").slideDown("slow");
     setTimeout(function () {
         $('.game-area').css("opacity", "1");
@@ -134,6 +159,7 @@ $("#ranking").click(function () {
 })
 $("#back-with-ranking").click(function (){
     backToMenuGame("#table-ranking");
+    clearInterval(animationScore);
 })
 $("#prev-score").click(prevScore);
 $("#next-score").click(nextScore);
@@ -159,10 +185,26 @@ function updateRanking() {
 
 function setRanking() {
     let nextId = 1;
-    for (let i = 0; i < 5; i++) {
-        $("#score-" + (i + 1)).text(rankings.listActually + i);
+    //Refresh opacity//
+    for(let i = 0; i< 5;i++){
+        $("#score-" + (i+1)).css("opacity", 1);
+        $("#name-" + (i+1)).css("opacity", 1);
+        $("#result-" + (i+1)).css("opacity", 1);
     }
     for (let i = rankings.listActually - 1; i < rankings.score.length; i++) {
+        if(rankings.score[i]){
+            if(rankings.score[i].email === email) {
+                $("#score-" + nextId).css({"color" : "white", "background-color" : "black"});
+                $("#name-" + nextId).css({"color" : "white", "background-color" : "black"});
+                $("#result-" + nextId).css({"color" : "white", "background-color" : "black"});
+            }
+            else {
+                $("#score-" + nextId).css({"color" : "black", "background-color" : "unset"});
+                $("#name-" + nextId).css({"color" : "black", "background-color" : "unset"});
+                $("#result-" + nextId).css({"color" : "black", "background-color" : "unset"});
+            }
+        }
+        $("#score-" + nextId).text(i +1);
         $("#name-" + nextId).text(rankings.score[i].name);
         $("#result-" + nextId).text(rankings.score[i].points);
         nextId++;
@@ -170,14 +212,38 @@ function setRanking() {
     nextId = 1;
     for(let i = rankings.listActually; i < rankings.listActually + 5; i++){
         if(i > rankings.score.length) {
+            $("#score-" + nextId).css({"color" : "black", "background-color" : "unset"});
+            $("#score-" + nextId).text(i);
+            $("#name-" + nextId).css({"color" : "black", "background-color" : "unset"});
             $("#name-" + nextId).text("");
+            $("#result-" + nextId).css({"color" : "black", "background-color" : "unset"});
             $("#result-" + nextId).text("");
         }
         nextId++;
     }
+    animationScore = setInterval(animateOwnScore, 500);
+}
+
+function animateOwnScore() {
+    if(setOpacity !== 1) {
+        setOpacity = 1;
+    }
+    else {
+        setOpacity = 0;
+    }
+    for(let i = rankings.listActually; i < rankings.listActually + 5; i++) {
+        if(rankings.score[i - 1]){
+            if(rankings.score[i - 1].email === email) {
+                $("#score-" + (i - rankings.listActually + 1)).animate({"opacity": setOpacity});
+                $("#name-" + (i - rankings.listActually + 1)).animate({"opacity": setOpacity});
+                $("#result-" + (i - rankings.listActually + 1)).animate({"opacity": setOpacity});
+            }
+        }
+    }
 }
 
 function prevScore() {
+    clearInterval(animationScore);
     if(rankings.deductList()){
         tableRanking.css({"left" : "unset", "right" : "10%"});
         tableRanking.animate({"right" : "1000px"});
@@ -193,6 +259,7 @@ function prevScore() {
 }
 
 function nextScore(){
+    clearInterval(animationScore);
     rankings.addList();
     tableRanking.css({"right" : "unset", "left" : "10%"});
     tableRanking.animate({"left" : "1000px"});
@@ -205,7 +272,6 @@ function nextScore(){
         tableRanking.animate({"left" : "10%", "opacity" : "1"});
     },300);
 }
-
 
 function backToMenuGame(selector){
     selector= $(selector);
