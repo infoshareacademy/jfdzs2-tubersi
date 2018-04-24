@@ -3,6 +3,62 @@ $("form").submit(function() {
     return false;
 });
 
+// Section add points to the ranking//
+
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyAw4E-zblpi5ej4gm0VZxmijU3DrxIEp0E",
+    authDomain: "tubersi-score-game.firebaseapp.com",
+    databaseURL: "https://tubersi-score-game.firebaseio.com",
+    projectId: "tubersi-score-game",
+    storageBucket: "",
+    messagingSenderId: "738673376669"
+};
+firebase.initializeApp(config);
+var database = firebase.database();
+var ref = database.ref('scores');
+var allScore = [];
+var showRanking = false;
+function gotData(data){
+    var scores = data.val();
+    var keys = Object.keys(scores);
+    allScore = [];
+    for(let i = 0; i < keys.length; i++) {
+        allScore.push(scores[keys[i]]);
+    }
+    rankings.score = allScore;
+    if(showRanking) {
+        showRanking = false;
+        setRanking();
+        menuGame.fadeOut(250);
+        setTimeout(function() {
+            $("#table-ranking").fadeIn(250);
+        },250);
+    }
+}
+
+function errData(err) {
+    console.log("Error!")
+    console.log(err);
+}
+
+$("#points-send").keydown(function (e){
+    if(e.which === 13) {
+        addPointsToRanking();
+    }
+})
+$("#points-send-button").click(addPointsToRanking)
+
+function addPointsToRanking() {
+    var data = {
+        name: $("#points-send").val(),
+        points: parseInt($("#score").text()),
+    }
+    ref.push(data);
+    backToMenuGame("#points-label");
+    $("#score").text(0);
+}
+
 //Section verification e-mail//
 $("#email-key-down").keydown(function(e) {
     if(e.which === 13) {
@@ -18,6 +74,7 @@ var tableRanking = $("#table-ranking");
 class Ranking {
     constructor(){
         this.listActually = 1;
+        this.score = null;
     }
 
     addList() {
@@ -26,6 +83,10 @@ class Ranking {
     deductList() {
         if(this.listActually !== 1) {
             this.listActually -= 5;
+            return true;
+        }
+        else {
+            return false;
         }
     }
 }
@@ -67,7 +128,10 @@ $("#exit").click(function() {
 $("#back-with-end-game").click(function(){
     backToMenuGame('#points-label');
 });
-$("#ranking").click(ranking)
+$("#ranking").click(function () {
+    rankings.listActually = 1;
+    updateRanking();
+})
 $("#back-with-ranking").click(function (){
     backToMenuGame("#table-ranking");
 })
@@ -81,41 +145,65 @@ function selectLevelGame() {
     },250);
 }
 
-function instruction(){
+function instruction() {
     menuGame.fadeOut(250);
     setTimeout(function(){
         $("#game-instruction").fadeIn(250);
     },250);
 }
 
-function ranking() {
-    menuGame.fadeOut(250);
-    setTimeout(function(){
-        $("#table-ranking").fadeIn(250);
-    },250);
+function updateRanking() {
+    showRanking = true;
+    ref.on('value', gotData, errData);
+}
+
+function setRanking() {
+    let nextId = 1;
+    for (let i = 0; i < 5; i++) {
+        $("#score-" + (i + 1)).text(rankings.listActually + i);
+    }
+    for (let i = rankings.listActually - 1; i < rankings.score.length; i++) {
+        $("#name-" + nextId).text(rankings.score[i].name);
+        $("#result-" + nextId).text(rankings.score[i].points);
+        nextId++;
+    }
+    nextId = 1;
+    for(let i = rankings.listActually; i < rankings.listActually + 5; i++){
+        if(i > rankings.score.length) {
+            $("#name-" + nextId).text("");
+            $("#result-" + nextId).text("");
+        }
+        nextId++;
+    }
 }
 
 function prevScore() {
-    rankings.deductList();
-    for(let i = 0; i< 5 ;i++){
-        $("#score-" + (i + 1)).text(rankings.listActually + i);
+    if(rankings.deductList()){
+        tableRanking.css({"left" : "unset", "right" : "10%"});
+        tableRanking.animate({"right" : "1000px"});
+        setTimeout(function (){
+            tableRanking.css({"opacity" : "0"});
+            tableRanking.animate({"right" : "-1000px"});
+            setRanking();
+        },250);
+        setTimeout(function() {
+            tableRanking.animate({"right" : "10%", "opacity" : "1"});
+        },300);
     }
-
 }
 
 function nextScore(){
     rankings.addList();
+    tableRanking.css({"right" : "unset", "left" : "10%"});
     tableRanking.animate({"left" : "1000px"});
-    setTimeout(function(){
-        tableRanking.css("left", "-1000px");
+    setTimeout(function (){
+        tableRanking.css({"opacity" : "0"});
+        tableRanking.animate({"left" : "-1000px"});
+        setRanking();
     },250);
     setTimeout(function(){
-        tableRanking.animate({"left" : "10%"});
-        for(let i = 0; i< 5 ;i++){
-            $("#score-" + (i + 1)).text(rankings.listActually + i);
-        }
-    },500);
-
+        tableRanking.animate({"left" : "10%", "opacity" : "1"});
+    },300);
 }
 
 
@@ -149,7 +237,7 @@ function drawSector(deg) {
 
 var gameActive = false;
 var time = $('#time-to-end');
-var timeToFinish = 60;
+var timeToFinish = 5;
 var screenWidth = window.innerWidth;
 var folder;
 var tunes = [];
@@ -295,12 +383,13 @@ function checkCollision(){
             tune.renderAfterColiisionFolder = true;
             youtubeFolderAnimation();
             $("#thumb-up-" + (index + 1)).fadeIn("fast").fadeOut("slow");
-            animatePoint("#point-" + (index + 1));
             if($(tune.selector + " img").attr("src") === "images/tune_evil.png") {
                 addPoint(-5);
+                animatePoint("#point-" + (index + 1), "-5");
             }
             else {
                 addPoint(1);
+                animatePoint("#point-" + (index + 1), "+1");
             }
             randomEvilTune(tune.selector);
         }
@@ -314,8 +403,15 @@ function youtubeFolderAnimation() {
     },100);
 }
 
-function animatePoint(selector) {
+function animatePoint(selector, value) {
     selector = $(selector);
+    selector.text(value);
+    if(value === "-5") {
+        selector.css("color", "red");
+    }
+    else {
+        selector.css("color", "black");
+    }
     selector.css({"opacity" : 1, "transition" : "1s", "top" : "300px"});
     setTimeout(function () {
         selector.css({"opacity" : 0, "transition" : "unset", "top" : "350px"});
