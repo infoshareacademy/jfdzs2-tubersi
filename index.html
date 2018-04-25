@@ -100,10 +100,10 @@
                             <div class="col-md-4 col-lg-3">
                                 <input type="button" id="email-click" class="btn btn-lg btn-default contact-submit" value="Wyślij"  >
                                 <!--data-toggle="collapse" href="#start-game" aria-expanded="false" aria-controls="collapseExample"-->
-
                             </div>
                         </div>
                     </form>
+                    <p id="valid-email"></p>
                     <div class=" col-md-offset-3 col-md-6">
                         <p class="text-form-email">Zapewniamy że wyślemy tylko jedną wiadomość w celach informacyjnych, nie stosując spamu, na państwa skrzynce pocztowej.</p>
                     </div>
@@ -116,14 +116,18 @@
         <section id="start-game" class="game"> <!--class=collapse-->
             <h2 class="game-title">Dziękujemy za rejestrację</h2>
                 <div class="container">
-
                     <div class="lead well well-lg">
                         <div class="game-area">
+                            <div class="intro-game">
+                                <img src="images/logo_tubersi.png"/>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar">0%</div>
+                                </div>
+                            </div>
                             <div id="score-info">
                                 Wynik: <span id="score"><b>0</b></span>|
                                 Czas: <span id="time-to-end"><b>60</b>sekund</span>
                             </div>
-
                             <div id="speaker-1" class="speaker"><img src="images/sound.png"></div>
                             <div id="speaker-2" class="speaker"><img src="images/sound.png"></div>
                             <div id="speaker-3" class="speaker"><img src="images/sound.png"></div>
@@ -135,6 +139,7 @@
                             <div id="tune-1" class="tune"><img src="images/tune.png" style=""></div>
                             <div id="tune-2" class="tune"><img src="images/tune.png"></div>
                             <div id="tune-3" class="tune"><img src="images/tune.png"></div>
+                            <div id="music-folder"><img src="images/youtubeFolder.png"></div>
                             <div id="menu-game">
                                 <p>Killers Tunes</p>
                                 <button type="button" class="btn btn-default btn-lg" id="play-game">Graj</button>
@@ -153,28 +158,6 @@
                                 <br><br>
                                 <button type="button" class="btn btn-default btn-lg " id="back-with-select-level">Wróć</button>
                             </div>
-                            <div id="game-instruction">
-                                <p>Zapraszamy do krótkiej gry zręcznościowej. Gra polega na zbieraniu spadających nut wykorzystując strzałki boczne klawiatury. Na wykonanie zadania masz jedynie 60 sekund. Im więcej złapiesz tym więcej punktów zdobywasz. Gdy zwiększysz stopień trudności nuty będą spadały szybciej. Pamiętaj aby nie dotykać czerwonych nut bo odejmują 5 punktów. Twój wynik będzie animowany. Powodzenia!</p>
-                                <button type="button" class="btn btn-default btn-lg " id="back-with-instruction">Wróć</button>
-                            </div>
-                            <div id="points-label">
-                                <p>Podaj swoje imię aby zapisać twój ranking</p>
-                                <input id="points-send" class="form-control send" placeholder="Imie" type="text"/>
-                                <p class="already-nick">Nick jest zajęty podaj jeszcze raz!</p>
-                                <br>
-                                <button class="btn btn-lg btn-default" id="points-send-button">Wyślij</button>
-                                <button class="btn btn-lg btn-default" id="back-with-end-game">Powrót</button>
-                            </div>
-                            <div id="music-folder"><img src="images/youtubeFolder.png"></div>
-                            <div id="floor">
-                                <div id="thumb-up-1" class="thumb-up"><img src="images/up_green.png"></div>
-                                <div id="thumb-up-2" class="thumb-up"><img src="images/up_green.png"></div>
-                                <div id="thumb-up-3" class="thumb-up"><img src="images/up_green.png"></div>
-
-                                <div id="thumb-down-1" class="thumb-down"><img src="images/down_red.png"></div>
-                                <div id="thumb-down-2" class="thumb-down"><img src="images/down_red.png"></div>
-                                <div id="thumb-down-3" class="thumb-down"><img src="images/down_red.png"></div>
-                            </div>
                             <div class="timer-game">
                                 <div id="activeBorder" class="active-border">
                                     <div id="circle" class="circle">
@@ -185,6 +168,22 @@
                             </div>
                             <div id="text-end-game">
                                 <p>KONIEC GRY! Twój wynik :</p>
+                            </div>
+                            <div id="points-label">
+                                <p>Podaj swoje imię aby zapisać twój ranking</p>
+                                <input id="points-send" class="form-control send" placeholder="Imie" type="text"/>
+                                <p class="already-nick">Nick jest zajęty podaj jeszcze raz!</p>
+                                <br>
+                                <button class="btn btn-lg btn-default" id="points-send-button">Wyślij</button>
+                                <button class="btn btn-lg btn-default" id="back-with-end-game">Powrót</button>
+                            </div>
+                            <div id="game-instruction">
+                                <p>Podczas gry zbieraj nuty i zdobadź jak najwięcej punktów</p>
+                                <p><img src="images/tune.png"/>- Zbieraj czarną nutę która doda tobie kolejny punkt.</p>
+                                <p><img src="images/tune_evil.png"/>- Omijaj z daleka wściekłą nutę bo utracisz 5 punktów.</p>
+                                <p><img src="images/arrows_left.png"/> <img src="images/arrows_right.png"/> - Steruj postacią za pomocą strzałek lewo i prawo.</p>
+                                <p><img src="images/timer.png"/>- Masz tylko 60 sekund aby zdobyć punkty. Powodzenia!</p>
+                                <button type="button" class="btn btn-default btn-lg " id="back-with-instruction">Wróć</button>
                             </div>
                             <div id="table-ranking">
                                 <table class="table">
@@ -227,6 +226,15 @@
                                 <button id="next-score" class="btn btn-lg btn-default">Następne >></button>
                                 <br>
                                 <button id="back-with-ranking" class="btn btn-lg btn-default">Wróć</button>
+                            </div>
+                            <div id="floor">
+                                <div id="thumb-up-1" class="thumb-up"><img src="images/up_green.png"></div>
+                                <div id="thumb-up-2" class="thumb-up"><img src="images/up_green.png"></div>
+                                <div id="thumb-up-3" class="thumb-up"><img src="images/up_green.png"></div>
+
+                                <div id="thumb-down-1" class="thumb-down"><img src="images/down_red.png"></div>
+                                <div id="thumb-down-2" class="thumb-down"><img src="images/down_red.png"></div>
+                                <div id="thumb-down-3" class="thumb-down"><img src="images/down_red.png"></div>
                             </div>
                         </div>
                     </div>

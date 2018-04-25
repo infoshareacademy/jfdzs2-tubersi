@@ -3,8 +3,6 @@ $("form").submit(function() {
     return false;
 });
 
-// Section add points to the ranking//
-
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyAw4E-zblpi5ej4gm0VZxmijU3DrxIEp0E",
@@ -21,7 +19,7 @@ var allScore = [];
 var showRanking = false;
 var saveRanking = false;
 var email;
-
+var selectorText;
 function gotData(data){
     var scores = data.val();
     var keys = Object.keys(scores);
@@ -29,6 +27,18 @@ function gotData(data){
     for(let i = 0; i < keys.length; i++) {
         allScore.push(scores[keys[i]]);
     }
+
+    allScore.sort(function(obj1 ,obj2){
+        if(obj1.points > obj2.points) {
+            return -1;
+        }
+        else if(obj1.points < obj2.points) {
+            return 1;
+        } else {
+            return 0;
+        }
+    })
+
     rankings.score = allScore;
     if(showRanking) {
         showRanking = false;
@@ -42,7 +52,7 @@ function gotData(data){
         saveRanking = false;
         let nick = $("#points-send").val();
         for(let i = 0; i <allScore.length; i++){
-            if(nick === allScore[i].name){
+            if(nick.toLowerCase() === allScore[i].name.toLowerCase()){
                 $(".already-nick").fadeIn("fast");
                 return;
             }
@@ -55,15 +65,56 @@ function gotData(data){
 function errData(err) {
     console.log("Error!")
     console.log(err);
+    console.log("jest")
 }
 
 //Section verification e-mail//
 $("#email-key-down").keydown(function(e) {
-    if(e.which === 13) {
+    if(e.which === 13 && !activeGame) {
+        if(checkEmail()){
+        activeGame = true;
         showGame();
+        selectorText.text("");
+        }
     }
 });
-$("#email-click").click(showGame);
+
+$("#email-click").click(function(){
+ if(!activeGame) {
+     if(checkEmail()){
+         showGame();
+         activeGame = true;
+         selectorText.text("");
+     }
+ }
+});
+
+function checkEmail() {
+    selectorText = $("#valid-email");
+    let selectorInputValue = $("#email-key-down").val();
+    if(selectorInputValue === "") {
+        selectorText.text("Musisz podać email!");
+        return false;
+    }
+    for(let i = 0; i < selectorInputValue.length; i++) {
+        if(selectorInputValue.charAt(i) === "@") {
+            break;
+        }
+        if(selectorInputValue.charAt(i) !== "@" && i === selectorInputValue.length - 1 ) {
+            selectorText.text("Brakuje @ w twoim emailu!");
+            return false;
+        }
+    }
+    for(let i = 0; i < selectorInputValue.length; i++) {
+        if(selectorInputValue.charAt(i) === "@") {
+            if(selectorInputValue.substr(i + 1, i + 7)!== "wp.pl" && selectorInputValue.substr(i + 1, i + 10)!== "gmail.com" && selectorInputValue.substr(i + 1, i + 9)!== "onet.pl") {
+                selectorText.text("Brakuje nazwy poczty lub znaków w twoim emailu!");
+                return false;
+            }
+        }
+    }
+    return true;
+}
 
 // Section animate and set all option the window game //
 var menuGame = $("#menu-game");
@@ -71,6 +122,9 @@ var selectLevel = $("#select-level");
 var tableRanking = $("#table-ranking");
 var animationScore;
 var setOpacity = 1;
+var progressLoad;
+var percentToLoad ;
+var activeGame = false;
 
 class Ranking {
     constructor(){
@@ -99,11 +153,12 @@ $("#points-send").keydown(function (e){
         addPointsToRanking();
     }
 })
+
 $("#points-send-button").click(addPointsToRanking)
 
 function addPointsToRanking() {
     saveRanking = true;
-    ref.on('value', gotData, errData);
+    ref.on("value", gotData, errData);
 }
 
 function addRanking() {
@@ -120,13 +175,34 @@ function addRanking() {
 function showGame() {
     email = $("#email-key-down").val();
     $("#start-game").slideDown("slow");
-    setTimeout(function () {
+    setTimeout(function(){
+        $(".intro-game").fadeIn("slow");
         $('.game-area').css("opacity", "1");
-    },750);
+        percentToLoad = 0;
+        progressLoad = setInterval(function(){
+            percentToLoad++;
+            if(percentToLoad === 100){
+                clearInterval(progressLoad);
+            }
+            $(".progress-bar").css({"width" : percentToLoad + "%"});
+            $(".progress-bar").text(percentToLoad + "%");
+        },100);
+    },1000)
+    setTimeout(function(){
+        $(".intro-game").fadeOut("slow");
+    },12000);
+    setTimeout(function () {
+        $("#score-info").fadeIn("fast");
+        $(".progress-bar").css({"width" : "0%"});
+        $(".progress-bar").text("0%")
+        $("#floor").fadeIn("slow");
+        $(".game-area").css({"background-image" : "url('images/gameArea.jpg')", "border": "solid 5px #2D2E32", "border-radius": "5px"})
+    },13000);
     setTimeout(function () {
         menuGame.slideDown("fast");
-    },1500)
+    },13500)
 }
+
 $("#easy-level").click(function() {
     init(1);
 });
@@ -146,9 +222,14 @@ $("#exit").click(function() {
     setTimeout(function(){
         $('.game-area').css("opacity","0");
     },250);
+
     setTimeout(function(){
         $("#start-game").slideUp("slow");
+        $("#score-info").fadeOut();
+        $("#floor").fadeOut();
+        $(".game-area").css({"background-image" : "unset", "border": "unset"})
     },1250)
+    activeGame = false;
 });
 $("#back-with-end-game").click(function(){
     backToMenuGame('#points-label');
@@ -185,43 +266,49 @@ function updateRanking() {
 
 function setRanking() {
     let nextId = 1;
-    //Refresh opacity//
-    for(let i = 0; i< 5;i++){
-        $("#score-" + (i+1)).css("opacity", 1);
-        $("#name-" + (i+1)).css("opacity", 1);
-        $("#result-" + (i+1)).css("opacity", 1);
-    }
-    for (let i = rankings.listActually - 1; i < rankings.score.length; i++) {
-        if(rankings.score[i]){
-            if(rankings.score[i].email === email) {
-                $("#score-" + nextId).css({"color" : "white", "background-color" : "black"});
-                $("#name-" + nextId).css({"color" : "white", "background-color" : "black"});
-                $("#result-" + nextId).css({"color" : "white", "background-color" : "black"});
+    clearInterval(animationScore);
+    for(let i = rankings.listActually; i < rankings.listActually + 5; i++){
+        if(rankings.score[i - 1]) {
+            if(rankings.score[i - 1].email === email) {
+                setOwnPlayerScore(nextId, i);
             }
             else {
-                $("#score-" + nextId).css({"color" : "black", "background-color" : "unset"});
-                $("#name-" + nextId).css({"color" : "black", "background-color" : "unset"});
-                $("#result-" + nextId).css({"color" : "black", "background-color" : "unset"});
+                setAllPlayerScore(nextId, i);
             }
+            nextId++;
+            continue;
         }
-        $("#score-" + nextId).text(i +1);
-        $("#name-" + nextId).text(rankings.score[i].name);
-        $("#result-" + nextId).text(rankings.score[i].points);
-        nextId++;
-    }
-    nextId = 1;
-    for(let i = rankings.listActually; i < rankings.listActually + 5; i++){
-        if(i > rankings.score.length) {
-            $("#score-" + nextId).css({"color" : "black", "background-color" : "unset"});
-            $("#score-" + nextId).text(i);
-            $("#name-" + nextId).css({"color" : "black", "background-color" : "unset"});
-            $("#name-" + nextId).text("");
-            $("#result-" + nextId).css({"color" : "black", "background-color" : "unset"});
-            $("#result-" + nextId).text("");
-        }
+        resetViewTable(nextId, i);
         nextId++;
     }
     animationScore = setInterval(animateOwnScore, 500);
+}
+
+function setOwnPlayerScore(nextId, i) {
+    $("#score-" + nextId).css({"color" : "white", "background-color" : "black"});
+    $("#score-" + nextId).text(i);
+    $("#name-" + nextId).css({"color" : "white", "background-color" : "black"});
+    $("#name-" + nextId).text(rankings.score[i - 1].name);
+    $("#result-" + nextId).css({"color" : "white", "background-color" : "black"});
+    $("#result-" + nextId).text(rankings.score[i - 1].points);
+}
+
+function setAllPlayerScore(nextId, i) {
+    $("#score-" + nextId).css({"color" : "black", "background-color" : "unset", "opacity": 1});
+    $("#score-" + nextId).text(i);
+    $("#name-" + nextId).css({"color" : "black", "background-color" : "unset", "opacity": 1});
+    $("#name-" + nextId).text(rankings.score[i - 1].name);
+    $("#result-" + nextId).css({"color" : "black", "background-color" : "unset", "opacity": 1});
+    $("#result-" + nextId).text(rankings.score[i - 1].points);
+}
+
+function resetViewTable(nextId, i) {
+    $("#score-" + nextId).css({"color" : "black", "background-color" : "unset", "opacity": 1});
+    $("#score-" + nextId).text(i);
+    $("#name-" + nextId).css({"color" : "black", "background-color" : "unset", "opacity": 1});
+    $("#name-" + nextId).text("");
+    $("#result-" + nextId).css({"color" : "black", "background-color" : "unset", "opacity": 1});
+    $("#result-" + nextId).text("");
 }
 
 function animateOwnScore() {
@@ -243,34 +330,34 @@ function animateOwnScore() {
 }
 
 function prevScore() {
-    clearInterval(animationScore);
     if(rankings.deductList()){
-        tableRanking.css({"left" : "unset", "right" : "10%"});
+        tableRanking.css({"left" : "10%", "right" : "unset"});
+        tableRanking.animate({"left" : "1000px"});
+        setTimeout(function (){
+            tableRanking.css({"opacity" : "0"});
+            tableRanking.animate({"left" : "-1000px"});
+            setRanking();
+        },250);
+        setTimeout(function() {
+            tableRanking.animate({"left" : "10%", "opacity" : "1"});
+        },300);
+    }
+}
+
+function nextScore(){
+    if(rankings.score.length >= (rankings.listActually + 5)){
+        rankings.addList();
+        tableRanking.css({"right" : "10%", "left" : "unset"});
         tableRanking.animate({"right" : "1000px"});
         setTimeout(function (){
             tableRanking.css({"opacity" : "0"});
             tableRanking.animate({"right" : "-1000px"});
             setRanking();
         },250);
-        setTimeout(function() {
+        setTimeout(function(){
             tableRanking.animate({"right" : "10%", "opacity" : "1"});
         },300);
     }
-}
-
-function nextScore(){
-    clearInterval(animationScore);
-    rankings.addList();
-    tableRanking.css({"right" : "unset", "left" : "10%"});
-    tableRanking.animate({"left" : "1000px"});
-    setTimeout(function (){
-        tableRanking.css({"opacity" : "0"});
-        tableRanking.animate({"left" : "-1000px"});
-        setRanking();
-    },250);
-    setTimeout(function(){
-        tableRanking.animate({"left" : "10%", "opacity" : "1"});
-    },300);
 }
 
 function backToMenuGame(selector){
@@ -303,7 +390,7 @@ function drawSector(deg) {
 
 var gameActive = false;
 var time = $('#time-to-end');
-var timeToFinish = 5;
+var timeToFinish = 60;
 var screenWidth = window.innerWidth;
 var folder;
 var tunes = [];

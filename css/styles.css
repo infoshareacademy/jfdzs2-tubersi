@@ -146,6 +146,14 @@ nav.navbar.navbar-default.navbar-fixed-top{
     font-weight: 700;
 }
 
+#valid-email {
+    color: red;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
 .under-text
 {
     text-align: center;

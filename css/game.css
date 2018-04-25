@@ -1,49 +1,4 @@
 /*##### GAME #########*/
-
-.game {
-    padding-bottom: 40px;
-    background: #2D2E32;
-    text-align: center;
-}
-
-#start-game {
-    display: none;
-}
-
-#select-level {
-    text-align: center;
-    top: 100px;
-    width: 100%;
-    z-index: 100;
-    position: absolute;
-    display: none;
-
-}
-
-#game-instruction {
-    width: 80%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    display: none;
-    z-index: 100;
-    top: 100px;
-    text-align: center;
-}
-
-#menu-game {
-    text-align: center;
-    top: 100px;
-    width: 100%;
-    z-index: 100;
-    position: absolute;
-    display: none;
-}
-
-.btn.btn-default.btn-lg {
-    width: 200px;
-}
-
 h2.game-title {
     background-color: rgba(45, 46, 50, 0.8);
     border-radius: 5px;
@@ -60,56 +15,43 @@ h2.game-title {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    border: solid 5px #2D2E32;
-    border-radius: 5px;
     transition: 1s;
-    background-image: url("../images/gameArea.jpg");
     background-size: cover;
     opacity: 0;
 }
 
-#points-label {
-    text-align: center;
-    top: 100px;
+.intro-game {
+    position: absolute;
     width: 100%;
-    z-index: 100;
-    position: absolute;
     display: none;
+    z-index: 2;
 }
-
-#points-send {
-    width: 400px;
-    margin-right: auto;
+.progress {
+    width: 80%;
     margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 50px;
+}
+.progress-bar {
+    width: 0%;
+    background-color: red;
 }
 
-#point-1 {
-    transition: 1s;
-    position: absolute;
-    top: 350px;
-    left: 101px;
-    opacity: 0;
+.game {
+    padding-bottom: 40px;
+    background: #2D2E32;
+    text-align: center;
 }
 
-#point-2 {
-    transition: 1s;
-    position: absolute;
-    top: 350px;
-    left: 406px;
-    opacity: 0;
-}
-
-#point-3 {
-    transition: 1s;
-    position: absolute;
-    top: 350px;
-    left: 711px;
-    opacity: 0;
+#start-game {
+    display: none;
 }
 
 #score-info {
     width: 100%;
     border-bottom: solid 5px #2D2E32;
+    display: none;
 }
 
 .speaker {
@@ -149,58 +91,31 @@ h2.game-title {
     left: 406px;
     transition: 0.25s linear;
     transform: rotate(0deg);
-    opacity: 0.1;
-}
-
-#floor {
-    border-top: solid 5px #2D2E32;
-    position: absolute;
-    z-index: 1;
-    height: 50px;
-    width: 100%;
-    bottom: 0;
-}
-
-/*Ztracone punkty kciuk w dół*/
-.thumb-down,
-.thumb-up {
-    position: absolute;
-    width: 15%;
-}
-
-#thumb-down-1,
-#thumb-up-1 {
-    left: 80px;
-}
-
-#thumb-down-2,
-#thumb-up-2 {
-    left: 386px;
-}
-
-#thumb-down-3,
-#thumb-up-3 {
-    left: 690px;
-}
-
-#thumb-up-1,
-#thumb-up-2,
-#thumb-up-3,
-#thumb-down-1,
-#thumb-down-2,
-#thumb-down-3 {
-    display: none;
-}
-
-@media all and (max-width: 1170px) {
-    #start-game {
-        display: none;
-    }
+    opacity: 0;
 }
 
 .btn{
     position: relative;
     z-index: 2;
+}
+
+.btn.btn-default.btn-lg {
+    width: 200px;
+}
+
+#menu-game, #select-level {
+    text-align: center;
+    top: 100px;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+#points-send {
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .timer-game {
@@ -260,6 +175,24 @@ h2.game-title {
     transition: 0.5s;
 }
 
+#game-instruction {
+    width: 100%;
+    position: absolute;
+    display: none;
+    z-index: 2;
+    top: 40px;
+    text-align: center;
+}
+
+#points-label {
+    text-align: center;
+    top: 100px;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
 #table-ranking {
     position: absolute;
     top: 35px;
@@ -280,4 +213,75 @@ h2.game-title {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#point-1 {
+    transition: 1s;
+    position: absolute;
+    top: 350px;
+    left: 101px;
+    opacity: 0;
+}
+
+#point-2 {
+    transition: 1s;
+    position: absolute;
+    top: 350px;
+    left: 406px;
+    opacity: 0;
+}
+
+#point-3 {
+    transition: 1s;
+    position: absolute;
+    top: 350px;
+    left: 711px;
+    opacity: 0;
+}
+
+#floor {
+    border-top: solid 5px #2D2E32;
+    position: absolute;
+    z-index: 1;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    display: none;
+}
+
+/*Ztracone punkty kciuk w dół*/
+.thumb-down,
+.thumb-up {
+    position: absolute;
+    width: 15%;
+}
+
+#thumb-down-1,
+#thumb-up-1 {
+    left: 80px;
+}
+
+#thumb-down-2,
+#thumb-up-2 {
+    left: 386px;
+}
+
+#thumb-down-3,
+#thumb-up-3 {
+    left: 690px;
+}
+
+#thumb-up-1,
+#thumb-up-2,
+#thumb-up-3,
+#thumb-down-1,
+#thumb-down-2,
+#thumb-down-3 {
+    display: none;
+}
+
+@media all and (max-width: 1170px) {
+    #start-game {
+        display: none;
+    }
 }
