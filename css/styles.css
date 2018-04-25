@@ -144,7 +144,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     background-attachment: fixed;
     background-size: cover;
     text-align: center;
-    height: 30vh;
+    height: 50vh;
     clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
 }
 
@@ -161,6 +161,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     text-align: center;
     color: whitesmoke;
     padding-bottom: 40px;
+    padding-top: 40px;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -303,6 +304,7 @@ h2.product-info-header {
 .fa.fa-film,
 .fa.fa-toggle-right,
 .fa.fa-cog,
+.fa.fa-share,
 .fa.fa-calendar{
     font-size: 70px;
 }
