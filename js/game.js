@@ -20,6 +20,7 @@ var showRanking = false;
 var saveRanking = false;
 var email;
 var selectorText;
+
 function gotData(data){
     var scores = data.val();
     var keys = Object.keys(scores);
@@ -27,7 +28,7 @@ function gotData(data){
     for(let i = 0; i < keys.length; i++) {
         allScore.push(scores[keys[i]]);
     }
-
+    // Algorithm to sort with database points player //
     allScore.sort(function(obj1 ,obj2){
         if(obj1.points > obj2.points) {
             return -1;
@@ -65,10 +66,10 @@ function gotData(data){
 function errData(err) {
     console.log("Error!")
     console.log(err);
-    console.log("jest")
 }
 
 //Section verification e-mail//
+
 $("#email-key-down").keydown(function(e) {
     if(e.which === 13 && !activeGame) {
         if(checkEmail()){
@@ -107,7 +108,9 @@ function checkEmail() {
     }
     for(let i = 0; i < selectorInputValue.length; i++) {
         if(selectorInputValue.charAt(i) === "@") {
-            if(selectorInputValue.substr(i + 1, i + 7)!== "wp.pl" && selectorInputValue.substr(i + 1, i + 10)!== "gmail.com" && selectorInputValue.substr(i + 1, i + 9)!== "onet.pl") {
+            if(selectorInputValue.substr(i + 1, i + 7)!== "wp.pl" &&
+                selectorInputValue.substr(i + 1, i + 10)!== "gmail.com" &&
+                selectorInputValue.substr(i + 1, i + 9)!== "onet.pl") {
                 selectorText.text("Brakuje nazwy poczty lub znaków w twoim emailu!");
                 return false;
             }
@@ -186,37 +189,43 @@ function showGame() {
             }
             $(".progress-bar").css({"width" : percentToLoad + "%"});
             $(".progress-bar").text(percentToLoad + "%");
-        },100);
+        },50);
     },1000)
     setTimeout(function(){
         $(".intro-game").fadeOut("slow");
-    },12000);
+    },7500);
     setTimeout(function () {
         $("#score-info").fadeIn("fast");
         $(".progress-bar").css({"width" : "0%"});
         $(".progress-bar").text("0%")
         $("#floor").fadeIn("slow");
         $(".game-area").css({"background-image" : "url('images/gameArea.jpg')", "border": "solid 5px #2D2E32", "border-radius": "5px"})
-    },13000);
+    },8500);
     setTimeout(function () {
         menuGame.slideDown("fast");
-    },13500)
+    },9000)
 }
 
 $("#easy-level").click(function() {
     init(1);
 });
+
 $("#hard-level").click(function() {
     init(2);
 });
+
 $("#play-game").click(selectLevelGame);
+
 $("#back-with-select-level").click(function() {
     backToMenuGame("#select-level");
 });
+
 $("#instruction").click(instruction);
+
 $("#back-with-instruction").click(function() {
     backToMenuGame("#game-instruction");
 });
+
 $("#exit").click(function() {
     menuGame.slideUp("fast");
     setTimeout(function(){
@@ -231,18 +240,23 @@ $("#exit").click(function() {
     },1250)
     activeGame = false;
 });
+
 $("#back-with-end-game").click(function(){
     backToMenuGame('#points-label');
 });
+
 $("#ranking").click(function () {
     rankings.listActually = 1;
     updateRanking();
 })
+
 $("#back-with-ranking").click(function (){
     backToMenuGame("#table-ranking");
     clearInterval(animationScore);
 })
+
 $("#prev-score").click(prevScore);
+
 $("#next-score").click(nextScore);
 
 function selectLevelGame() {
@@ -278,7 +292,7 @@ function setRanking() {
             nextId++;
             continue;
         }
-        resetViewTable(nextId, i);
+        resetEmptyTable(nextId, i);
         nextId++;
     }
     animationScore = setInterval(animateOwnScore, 500);
@@ -302,7 +316,7 @@ function setAllPlayerScore(nextId, i) {
     $("#result-" + nextId).text(rankings.score[i - 1].points);
 }
 
-function resetViewTable(nextId, i) {
+function resetEmptyTable(nextId, i) {
     $("#score-" + nextId).css({"color" : "black", "background-color" : "unset", "opacity": 1});
     $("#score-" + nextId).text(i);
     $("#name-" + nextId).css({"color" : "black", "background-color" : "unset", "opacity": 1});

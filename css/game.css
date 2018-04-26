@@ -176,12 +176,17 @@ h2.game-title {
 }
 
 #game-instruction {
-    width: 100%;
+    width: 80%;
     position: absolute;
     display: none;
     z-index: 2;
     top: 40px;
-    text-align: center;
+    text-align: left;
+    left: 10%;
+}
+
+#game-instruction button {
+  left: 35%;
 }
 
 #points-label {
