@@ -49,8 +49,13 @@ nav.navbar.navbar-default.navbar-fixed-top {
     margin: 0 auto;
 }
 
-html.translated-ltr body nav.navbar.navbar-default.navbar-fixed-top {
-    padding-top: 40px;
+html.translated-ltr .skiptranslate,
+html.gr__localhost .skiptranslate {
+    display: none;
+}
+
+html.translated-ltr body {
+    top: 0!important;
 }
 
 .navbar {
