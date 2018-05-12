@@ -15,20 +15,47 @@ $('#scroll-up').click(function () {
     return false;
 });
 
+// #### DOROTA - scrollMenu #####
+
+$(document).ready(function(){
+    $("nav a").on('click', function(event) {
+
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){
+                window.location.hash = hash;
+            });
+        }
+    });
+});
+
+// ##### Piotrek - cookies #####
 
 
+$('#cookies-close').click(function () {
+    $('.cookies').fadeOut();
+    document.cookie = "tubers";
+});
+
+function checkAndDeletPopUp() {
+    if(document.cookie === "tubers"){
+        $('.cookies').remove();
+    }
+}
+
+checkAndDeletPopUp();
 // google translator lang en/pl pl/en
 
 $('#eng-lang').click(function googleTranslateElementInit() {
     new google.translate.TranslateElement(
         {pageLanguage: 'pl'},
-        'google_translate_element',
-        window.location='#googtrans(en)',
+        'google_translate_element'
     )}
 );
 
 $('#pol-lang').click(function () {
-    window.location='#googtrans(pl)';
     window.location.reload();
     return event.returnValue=true;
 });
