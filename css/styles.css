@@ -1,6 +1,6 @@
 /*### DOROTA ### feature-navi ### Pasek Nawigacyjny (FIXED) */
 
-.logo{
+.logo {
     padding: 0;
     margin: 0;
     width: 50px;
@@ -11,28 +11,45 @@ ul.nav.navbar-nav.navbar-right {
     margin-top: 0.5em;
 }
 
-main{
-    padding-top: 64px;
+main {
+    padding-top: 93px;
 
 }
 
-section{
-    padding-top: 64px;
-    margin-top: -64px;
+section {
+    padding-top: 93px;
+    margin-top: -93px;
 }
 
-@media all and (max-width: 283px){
-    section{
-        padding-top: 112px;
-        margin-top: -112px;
+@media all and (max-width: 283px) {
+
+    main {
+        padding-top: 153px;
+    }
+
+    section {
+        padding-top: 153px;
+        margin-top: -153px;
     }
 }
 
-nav.navbar.navbar-default.navbar-fixed-top{
+.affix {
+    padding: 0;
+    transition: padding 0.2s linear;
+
+}
+
+.affix-top {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: padding 0.5s linear;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top {
     margin: 0 auto;
 }
 
-.navbar{
+.navbar {
     background: #2D2E32;
 }
 
@@ -40,7 +57,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     color: #f5f5f5;
 }
 
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
     color: #f5f5f5;
     background-color: transparent;
 }
@@ -49,7 +66,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     background-color: #f5f5f5;
 }
 
-.navbar-brand{
+.navbar-brand {
     height: 100%;
     padding: 0.5em;
     text-align: center;
@@ -58,12 +75,12 @@ nav.navbar.navbar-default.navbar-fixed-top{
     font-weight: bold;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > li > a {
     color: #f5f5f5;
     font-size: 14px;
 }
 
-.navbar-default .navbar-nav>li>a:hover{
+.navbar-default .navbar-nav > li > a:hover {
     color: #5e5e5e;
 }
 
@@ -71,28 +88,33 @@ nav.navbar.navbar-default.navbar-fixed-top{
     border-color: #FE0000;
 }
 
-.navbar-brand > img{
+.navbar-brand > img {
     float: left;
 }
 
-/*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka*/
-
-.parallax{
-    background: url("../images/music-sound.jpg") no-repeat center fixed;
-    background-size: cover;
+.navbar-toggle{
+    margin-top: 14px;
 }
 
-.flash{
-    padding: 40px 0;
-    font-size: 30px;
-    color: #2D2E32;
+/*### DOROTA ### feature-sneakpeak ### Tzw. Zajawka -> etap II - Rotacja zawartości w zajawce */
+
+
+#start {
+    height: 100%;
+    background-color: #2D2E32;
 }
 
-.inner{
+.inner {
     color: #ffffff;
 }
 
-.top{
+@media all and (max-width: 450px){
+    div.carousel-caption h1{
+        font-size: 21px;
+    }
+}
+
+.top {
     font-size: 50px;
     font-weight: bold;
     margin-top: 2em;
@@ -100,48 +122,75 @@ nav.navbar.navbar-default.navbar-fixed-top{
     text-align: center;
 }
 
-.bottom{
+@media all and (min-width: 1200px){
+    div.carousel-caption h1{
+        font-size: 51px;
+    }
+}
+
+.bottom {
     text-align: center;
     margin-bottom: 1em;
 }
 
+#start div.wraper{
+    width: 100%;
+}
+
+@media screen and (min-width: 1200px){
+    #start div.wraper{
+        width: 1170px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
 
 /*### ERYK ### feature-functions ### Spis planowanych funkcji*/
 
-.main-functions
-{
+.main-functions {
     padding-bottom: 60px;
     background-color: #2D2E32;
     text-align: center;
     padding-top: 60px;
 }
 
-.title-function
-{
+.title-function {
     color: #f5f5f5;
     text-transform: uppercase;
     font-weight: 700;
     padding-bottom: 40px;
 }
 
-.text-function
-{
+.text-function {
     background-size: cover;
 }
-/*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
 
-.form-contact-messege
-{
+/*### ERYK ### feature-signin ### Zapis na premiera - formularz -*/
+.photo-separator{
+    background-image: url("../images/city.jpg");
+    /*!*background-repeat: no-repeat;*!*/
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    height: 50vh;
+    clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+}
+
+
+.form-contact-messege {
     background-color: #2D2E32;
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
-.form-contact-messege h2
-{
+.form-contact-messege h2 {
     text-align: center;
     color: whitesmoke;
     padding-bottom: 40px;
+    padding-top: 40px;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -154,15 +203,14 @@ nav.navbar.navbar-default.navbar-fixed-top{
     text-align: center;
 }
 
-.under-text
-{
+.under-text {
     text-align: center;
     color: whitesmoke;
     padding-bottom: 20px;
     word-spacing: 5px;
 }
 
-.form-control{
+.form-control {
     height: auto;
     padding: 10px 16px;
     font-size: 18px;
@@ -171,13 +219,11 @@ nav.navbar.navbar-default.navbar-fixed-top{
     border-radius: 6px;
 }
 
-.form-control.send
-{
+.form-control.send {
     text-align: center;
 }
 
-.text-form-email
-{
+.text-form-email {
     text-align: center;
     color: white;
     font-size: 12px;
@@ -185,19 +231,19 @@ nav.navbar.navbar-default.navbar-fixed-top{
     opacity: 0.5;
 }
 
-.btn.contact-submit
-{
+.btn.contact-submit {
     width: 100%;
 }
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px) {
     .btn.contact-submit {
         margin-top: 10px
     }
 }
+
 /*### PIOTREK ### feature-team ### Informacja o zespole*/
 
-.team{
+.team {
     background-image: url("../images/team-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -208,7 +254,7 @@ nav.navbar.navbar-default.navbar-fixed-top{
     text-align: center;
 }
 
-.three-foto{
+.three-foto {
     margin-top: 40px;
 }
 
@@ -233,50 +279,105 @@ p.member-name {
     display: inline-block;
 }
 
+
+.flip-container {
+    perspective: 1000px;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    position: relative;
+}
+
+.back {
+    transform: rotateY(180deg);
+    position: absolute;
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+.social-media {
+    border: 0.7em solid rgba(45, 46, 50, 0.8);
+    background-color: #dddddd;
+    height: 100%;
+    width: 70%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
 .social,
-.member{
+.member {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.btn-social{
-    background-color: rgba(45,46,50,0.8);
-    border: none;
+.social-media a {
+    background: rgba(45,46,50,0.8);
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: unset;
 }
 
-button.btn-social:hover{
-    background: rgba(45,46,50,0.8);
+.social-media a:nth-child(1):hover i {
+    color: #0077B5;
+}
+
+.social-media a:nth-child(2):hover i {
+    color: #6e5494;
 }
 
 .fa.fa-linkedin,
 .fa.fa-github {
-    font-size: 20px;
     color: #f5f5f5;
-    padding: 6px;
-}
-
-.fa.fa-linkedin:hover{
-    color: #0077B5;
-}
-
-.fa.fa-github:hover {
-    color: #6e5494;
+    font-size: 3rem;
 }
 
 .member-foto {
     display: block;
     margin: auto;
     box-sizing: border-box;
-    border: 0.7em solid;
-    border-color: rgba(45,46,50,0.8);
+    border: 0.7em solid rgba(45,46,50,0.8);
+    transition: 1s;
+    width: 70%;
 }
 
 /*### PIOTREK ### feature-product ### Dodatkowe informacje o produkcie */
 
 .product {
-    padding-bottom: 40px;
+    padding-bottom: 200px;
     background: #2D2E32;
     text-align: center;
+    padding-top: 50px;
 }
 
 h2.product-info-header {
@@ -292,15 +393,18 @@ h2.product-info-header {
 .fa.fa-film,
 .fa.fa-toggle-right,
 .fa.fa-cog,
-.fa.fa-calendar{
+.fa.fa-share,
+.fa.fa-calendar {
     font-size: 70px;
 }
 
 /* ### PIOTREK ### feature-footer ### Stopka */
 
 .copyright {
-    padding: 3em 0em;
+    padding: 3em 0;
     background: #2D2E32;
+    border: solid 1px;
+    border-top-color: #e7e7e7;
 }
 
 .copyright p {
@@ -310,6 +414,48 @@ h2.product-info-header {
     font-size: 1em;
     margin: 0;
     color: whitesmoke;
+}
+
+/* ### PIOTREK ### feature-scrollUP */
+
+.fa.fa-angle-up{
+    font-size: 40px;
+    color: #2D2E32;
+}
+
+.btn-scroll {
+    background: whitesmoke;
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    cursor: pointer;
+    border: solid 1px;
+    color: #2D2E32;
+}
+
+
+
+/*### PIOTREK ### feature-cookies*/
+
+.cookies{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    border: solid 1px;
+    border-top-color: #e7e7e7;
+}
+
+.cookies p {
+    margin: 0;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.fa.fa-close{
+    color: #f5f5f5;
 }
 
 
