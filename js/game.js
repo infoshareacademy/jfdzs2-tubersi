@@ -116,6 +116,9 @@ function checkEmail() {
             }
         }
     }
+    if(screenWidth <1024){
+        return false;
+    }
     return true;
 }
 

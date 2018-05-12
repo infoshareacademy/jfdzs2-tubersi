@@ -99,7 +99,7 @@ h2.game-title {
     z-index: 2;
 }
 
-.btn.btn-default.btn-lg {
+.button-game {
     width: 200px;
 }
 
@@ -285,8 +285,3 @@ h2.game-title {
     display: none;
 }
 
-@media all and (max-width: 1170px) {
-    #start-game {
-        display: none;
-    }
-}
