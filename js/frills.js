@@ -46,3 +46,17 @@ function checkAndDeletPopUp() {
 }
 
 checkAndDeletPopUp();
+// google translator lang en/pl pl/en
+
+$('#eng-lang').click(function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {pageLanguage: 'pl'},
+        'google_translate_element'
+    )}
+);
+
+$('#pol-lang').click(function () {
+    window.location.reload();
+    return event.returnValue=true;
+});
+
