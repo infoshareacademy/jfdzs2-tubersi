@@ -7,6 +7,7 @@
     <link rel="shortcut icon" type="image/jpg" href="images/logo_400x400.jpg"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/game.css" rel="stylesheet" type="text/css">
     <!--load font awesome-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -144,18 +145,149 @@
                     <form class="form-group">
                         <div class="row">
                             <div class="col-md-offset-2 col-md-4 col-lg-3 col-lg-offset-3">
-                                <input type="email" class="form-control send" name="Adres e-mail" placeholder="E-mail">
+                                <input id="email-key-down" type="email"  class="form-control send" name="Adres e-mail" placeholder="E-mail">
                             </div>
                             <div class="col-md-4 col-lg-3">
-                                <input type="button" class="btn btn-lg btn-default contact-submit" value="Wyślij">
+                                <input type="button" id="email-click" class="btn btn-lg btn-default contact-submit" value="Wyślij"/>
                             </div>
                         </div>
                     </form>
+                    <p id="valid-email"></p>
                     <div class=" col-md-offset-3 col-md-6">
                         <p class="text-form-email">Zapewniamy że wyślemy tylko jedną wiadomość w celach informacyjnych, nie stosując spamu, na państwa skrzynce pocztowej.</p>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!--### GAME ### -->
+
+        <section id="start-game" class="game">
+            <h2 class="game-title">Dziękujemy za rejestrację</h2>
+                <div class="container">
+                    <div class="lead well well-lg">
+                        <div class="game-area">
+                            <div class="intro-game">
+                                <img src="images/logo_tubersi.png"/>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar">0%</div>
+                                </div>
+                            </div>
+                            <div id="score-info">
+                                Wynik: <span id="score"><b>0</b></span>|
+                                Czas: <span id="time-to-end"><b>60</b>sekund</span>
+                            </div>
+                            <div id="speaker-1" class="speaker"><img src="images/sound.png"></div>
+                            <div id="speaker-2" class="speaker"><img src="images/sound.png"></div>
+                            <div id="speaker-3" class="speaker"><img src="images/sound.png"></div>
+
+                            <div id="point-1">+1</div>
+                            <div id="point-2">+1</div>
+                            <div id="point-3">+1</div>
+
+                            <div id="tune-1" class="tune"><img src="images/tune.png" style=""></div>
+                            <div id="tune-2" class="tune"><img src="images/tune.png"></div>
+                            <div id="tune-3" class="tune"><img src="images/tune.png"></div>
+                            <div id="music-folder"><img src="images/youtubeFolder.png"></div>
+                            <div id="menu-game">
+                                <p>Killers Tunes</p>
+                                <button type="button" class="btn btn-default btn-lg button-game" id="play-game">Graj</button>
+                                <br><br>
+                                <button type="button" class="btn btn-default btn-lg button-game" id="instruction">Instrukcje</button>
+                                <br><br>
+                                <button type="button" class="btn btn-default btn-lg button-game" id="ranking">Ranking</button>
+                                <br><br>
+                                <button type="button" class="btn btn-default btn-lg button-game" id="exit">Wyjście</button>
+                            </div>
+                            <div id="select-level">
+                                <p>Wybierz poziom i rozpocznij grę</p>
+                                <button type="button" class="btn btn-default btn-lg button-game" id="easy-level">Łatwy</button>
+                                <br><br>
+                                <button type="button" class="btn btn-default btn-lg button-game" id="hard-level">Trudny</button>
+                                <br><br>
+                                <button type="button" class="btn btn-default btn-lg button-game" id="back-with-select-level">Wróć</button>
+                            </div>
+                            <div class="timer-game">
+                                <div id="activeBorder" class="active-border">
+                                    <div id="circle" class="circle">
+                                        <p id="seconds">3</p>
+                                        <span id="startDeg" class="90"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="text-end-game">
+                                <p>KONIEC GRY! Twój wynik :</p>
+                            </div>
+                            <div id="points-label">
+                                <p>Podaj swoje imię aby zapisać twój ranking</p>
+                                <input id="points-send" class="form-control send" placeholder="Imie" type="text"/>
+                                <p class="already-nick">Nick jest zajęty podaj jeszcze raz!</p>
+                                <br>
+                                <button class="btn btn-lg btn-default" id="points-send-button">Wyślij</button>
+                                <button class="btn btn-lg btn-default" id="back-with-end-game">Powrót</button>
+                            </div>
+                            <div id="game-instruction">
+                                <p>Podczas gry zbieraj nuty i zdobadź jak najwięcej punktów</p>
+                                <p><img src="images/tune.png"/>- Zbieraj czarną nutę która doda tobie kolejny punkt.</p>
+                                <p><img src="images/tune_evil.png"/>- Omijaj z daleka wściekłą nutę bo utracisz 5 punktów.</p>
+                                <p><img src="images/arrows_left.png"/> <img src="images/arrows_right.png"/> - Steruj postacią za pomocą strzałek lewo i prawo.</p>
+                                <p><img src="images/timer.png"/>- Masz tylko 60 sekund aby zdobyć punkty. Powodzenia!</p>
+                                <button type="button" class="btn btn-default btn-lg " id="back-with-instruction">Wróć</button>
+                            </div>
+                            <div id="table-ranking">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <td scope="col">Nick</td>
+                                        <td scope="col">Wynik</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th id="score-1" scope="row">1</th>
+                                        <td id="name-1"></td>
+                                        <td id="result-1"></td>
+                                    </tr>
+                                    <tr>
+                                        <th id="score-2" scope="row">2</th>
+                                        <td id="name-2"></td>
+                                        <td id="result-2"></td>
+                                    </tr>
+                                    <tr>
+                                        <th id="score-3" scope="row">3</th>
+                                        <td id="name-3"></td>
+                                        <td id="result-3"></td>
+                                    </tr>
+                                    <tr>
+                                        <th id="score-4" scope="row">4</th>
+                                        <td id="name-4"></td>
+                                        <td id="result-4"></td>
+                                    </tr>
+                                    <tr>
+                                        <th id="score-5" scope="row">5</th>
+                                        <td id="name-5"></td>
+                                        <td id="result-5"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <button id="prev-score" class="btn btn-lg btn-default"><< Poprzednie</button>
+                                <button id="next-score" class="btn btn-lg btn-default">Następne >></button>
+                                <br>
+                                <button id="back-with-ranking" class="btn btn-lg btn-default">Wróć</button>
+                            </div>
+                            <div id="floor">
+                                <div id="thumb-up-1" class="thumb-up"><img src="images/up_green.png"></div>
+                                <div id="thumb-up-2" class="thumb-up"><img src="images/up_green.png"></div>
+                                <div id="thumb-up-3" class="thumb-up"><img src="images/up_green.png"></div>
+
+                                <div id="thumb-down-1" class="thumb-down"><img src="images/down_red.png"></div>
+                                <div id="thumb-down-2" class="thumb-down"><img src="images/down_red.png"></div>
+                                <div id="thumb-down-3" class="thumb-down"><img src="images/down_red.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
 
         <!--### PIOTREK ### feature-team ### Informacja o zespole -->
@@ -335,6 +467,9 @@
 <script src="bootstrap/jquery.min.js"></script>
 <script src="bootstrap/bootstrap.min.js"></script>
 <script src="js/frills.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script src="js/game.js"></script>
+
 
 </body>
 </html>

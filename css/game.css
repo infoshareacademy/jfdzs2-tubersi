@@ -1,0 +1,285 @@
+/*##### GAME #########*/
+h2.game-title {
+    background-color: rgba(45, 46, 50, 0.8);
+    border-radius: 5px;
+    color: whitesmoke;
+    display: inline-block;
+    padding: 0.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.game-area {
+    height: 500px;
+    width: 900px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+    background-size: cover;
+    opacity: 0;
+}
+
+.intro-game {
+    position: absolute;
+    width: 100%;
+    display: none;
+    z-index: 2;
+}
+.progress {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 50px;
+}
+.progress-bar {
+    width: 0%;
+    background-color: red;
+}
+
+.game {
+    padding-bottom: 40px;
+    background: #2D2E32;
+    text-align: center;
+}
+
+#start-game {
+    display: none;
+}
+
+#score-info {
+    width: 100%;
+    border-bottom: solid 5px #2D2E32;
+    display: none;
+}
+
+.speaker {
+    z-index: 100;
+    position: absolute;
+    top: 40px;
+    display: none;
+}
+
+#speaker-1,
+#tune-1 {
+    left: 120px;
+}
+
+#speaker-2,
+#tune-2 {
+    left: 426px;
+}
+
+#speaker-3,
+#tune-3 {
+    left: 730px;
+}
+
+.tune {
+    position: absolute;
+    top: 90px;
+}
+
+#tune-1, #tune-2, #tune-3 {
+    opacity: 0;
+}
+
+#music-folder {
+    top: 355px;
+    position: absolute;
+    left: 406px;
+    transition: 0.25s linear;
+    transform: rotate(0deg);
+    opacity: 0;
+}
+
+
+.button-game {
+    width: 200px;
+    position: relative;
+    z-index: 2;
+}
+
+#menu-game, #select-level {
+    text-align: center;
+    top: 100px;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+#points-send {
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.timer-game {
+    width: 100px;
+    height: 110px;
+    margin: 100px auto;
+    opacity: 0;
+}
+
+.circle p {
+    line-height: 100px;
+    font-family: "Arial Black";
+    font-size: 30px;
+}
+
+.seconds {
+    top: 30px;
+    position: relative;
+    font-size: 30px;
+}
+
+.circle {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #dddddd;
+}
+
+.active-border {
+    position: relative;
+    text-align: center;
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    background-color: black;
+    background-image: linear-gradient(91deg, transparent 50%, gray 50%), linear-gradient(90deg, gray 50%, transparent 50%);
+}
+
+.already-nick{
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
+    display: none;
+}
+
+
+#text-end-game {
+    text-align: center;
+    top: 100px;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#game-instruction {
+    width: 80%;
+    position: absolute;
+    display: none;
+    z-index: 2;
+    top: 40px;
+    text-align: left;
+    left: 10%;
+}
+
+#game-instruction button {
+  left: 35%;
+}
+
+#points-label {
+    text-align: center;
+    top: 100px;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+#table-ranking {
+    position: absolute;
+    top: 35px;
+    width: 80%;
+    left: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+.table {
+    text-align: center;
+}
+
+#back-with-ranking {
+    width: 405px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#point-1 {
+    transition: 1s;
+    position: absolute;
+    top: 350px;
+    left: 101px;
+    opacity: 0;
+}
+
+#point-2 {
+    transition: 1s;
+    position: absolute;
+    top: 350px;
+    left: 406px;
+    opacity: 0;
+}
+
+#point-3 {
+    transition: 1s;
+    position: absolute;
+    top: 350px;
+    left: 711px;
+    opacity: 0;
+}
+
+#floor {
+    border-top: solid 5px #2D2E32;
+    position: absolute;
+    z-index: 1;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    display: none;
+}
+
+/*Ztracone punkty kciuk w dół*/
+.thumb-down,
+.thumb-up {
+    position: absolute;
+    width: 15%;
+}
+
+#thumb-down-1,
+#thumb-up-1 {
+    left: 80px;
+}
+
+#thumb-down-2,
+#thumb-up-2 {
+    left: 386px;
+}
+
+#thumb-down-3,
+#thumb-up-3 {
+    left: 690px;
+}
+
+#thumb-up-1,
+#thumb-up-2,
+#thumb-up-3,
+#thumb-down-1,
+#thumb-down-2,
+#thumb-down-3 {
+    display: none;
+}
+
