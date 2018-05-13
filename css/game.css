@@ -94,13 +94,11 @@ h2.game-title {
     opacity: 0;
 }
 
-.btn{
-    position: relative;
-    z-index: 2;
-}
 
 .button-game {
     width: 200px;
+    position: relative;
+    z-index: 2;
 }
 
 #menu-game, #select-level {
